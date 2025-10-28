@@ -1,8 +1,9 @@
 "use client";
-import { FaInstagram, FaBehance, FaDribbble, FaTimes, FaEnvelope } from "react-icons/fa";
+import { FaInstagram, FaBehance, FaDribbble, FaTimes, FaEnvelope, FaFacebook, FaTiktok } from "react-icons/fa";
 import styles from "@/styles/components/common/footer.module.scss";
 import Image from "next/image";
 import { Button, Form, InputGroup } from "react-bootstrap";
+import { SiShopee } from "react-icons/si";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
@@ -76,10 +77,18 @@ export default function Footer() {
             </div>
 
             <div className={styles.socials}>
-              <FaTimes />
-              <FaDribbble />
-              <FaBehance />
-              <FaInstagram />
+              <Button className={styles.socialIcon}>
+                <SiShopee />
+              </Button>
+              <Button className={styles.socialIcon}>
+                <FaFacebook />
+              </Button>
+              <Button className={styles.socialIcon}>
+                <FaTiktok />
+              </Button>
+              <Button className={styles.socialIcon}>
+                <FaInstagram />
+              </Button>
             </div>
           </div>
         </div>
