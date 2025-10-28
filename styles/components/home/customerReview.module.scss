@@ -1,0 +1,125 @@
+.reviews {
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .heading {
+    margin-bottom: 50px;
+
+    .sub {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #fff9;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 36px;
+      font-family: var(--font-custom-family);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .desc {
+      font-family: var(--font-body-family);
+      font-size: 15px;
+      color: #ffffffb3;
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.item {
+  position: relative;
+  padding: 0 20px;
+   @media (max-width: 992px) {
+    padding: 0;
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  color: #222;
+  border-radius: 40px 0 40px 0;
+  padding: 40px 50px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  text-align: left;
+
+  @media (max-width: 992px) {
+    padding: 30px;
+  }
+}
+
+.quote {
+  font-size: 40px;
+  color: #0cb28a;
+}
+
+.text {
+  font-size: 20px;
+  line-height: 1.9;
+  color: #2a2a2a;
+
+  display: -webkit-box;         
+  -webkit-line-clamp: 3;        
+  -webkit-box-orient: vertical; 
+  overflow: hidden;          
+  text-overflow: ellipsis;      
+}
+
+.user {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-align: left;
+  z-index: 3;
+}
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px dashed #fff;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+
+  .image {
+    border-radius: 50%;
+  }
+}
+
+.meta {
+  .name {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: #fff;
+  }
+  .role {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #e8e8e8;
+  }
+}
+
+@media (max-width: 992px) {
+  .user {
+    left: 28px;
+    bottom: -84px;
+  }
+}

@@ -1,0 +1,211 @@
+:root {
+  --font-body-scale: 1;
+  --font-body-desktop-size: 1.6rem;
+  --font-body-mobile-size: 1.5rem;
+  --font-body-family: var(--font-jost), sans-serif;
+  --font-body-style: ;
+  --font-body-weight: 400;
+  --font-body-weight-bold: 400;
+  --font-heading-family: var(--font-jost), sans-serif;
+  --font-heading-style: ;
+  --font-heading-weight: 500;
+  --font-body-scale: 1;
+  --font-heading-scale: 1;
+  --font-custom-family: var(--font-cinzel), sans-serif;
+  --media-padding: px;
+  --media-border-opacity: 0.05;
+  --media-border-width: 0px;
+  --media-radius: 0px;
+  --media-shadow-opacity: 0;
+  --media-shadow-horizontal-offset: 0px;
+  --media-shadow-vertical-offset: 4px;
+  --media-shadow-blur-radius: 5px;
+  --media-shadow-visible: 0;
+  --page-width: 140rem;
+  --page-width-margin: 0rem;
+  --product-card-image-padding: 0rem;
+  --product-card-content-padding: 0rem;
+  --product-card-corner-radius: 0rem;
+  --product-card-text-alignment: center;
+  --product-card-border-width: 0rem;
+  --product-card-border-opacity: 0.1;
+  --product-card-shadow-opacity: 0;
+  --product-card-shadow-visible: 0;
+  --product-card-shadow-horizontal-offset: 0rem;
+  --product-card-shadow-vertical-offset: 0.4rem;
+  --product-card-shadow-blur-radius: 1.2rem;
+  --collection-card-image-padding: 0rem;
+  --collection-card-content-padding: 0rem;
+  --collection-card-corner-radius: 0.8rem;
+  --collection-card-text-alignment: center;
+  --collection-card-border-width: 0rem;
+  --collection-card-border-opacity: 0.1;
+  --collection-card-shadow-opacity: 0;
+  --collection-card-shadow-visible: 0;
+  --collection-card-shadow-horizontal-offset: 0rem;
+  --collection-card-shadow-vertical-offset: 0.4rem;
+  --collection-card-shadow-blur-radius: 1.2rem;
+  --article-card-image-padding: 0rem;
+  --article-card-content-padding: 0rem;
+  --article-card-corner-radius: 0rem;
+  --article-card-text-alignment: left;
+  --article-card-border-width: 0rem;
+  --article-card-border-opacity: 0.1;
+  --article-card-shadow-opacity: 0;
+  --article-card-shadow-visible: 0;
+  --article-card-shadow-horizontal-offset: 0rem;
+  --article-card-shadow-vertical-offset: 0.6rem;
+  --article-card-shadow-blur-radius: 1.6rem;
+  --badge-corner-radius: 0rem;
+  --modal-border-width: 0px;
+  --modal-border-opacity: 0;
+  --modal-corner-radius: 8px;
+  --modal-shadow-opacity: 0;
+  --modal-shadow-horizontal-offset: 0px;
+  --modal-shadow-vertical-offset: 0px;
+  --modal-shadow-blur-radius: 0px;
+  --modal-padding: 20px;
+  --modal-margin: 20px;
+  --modal-backdrop-opacity: 0.5;
+  --modal-backdrop-blur: 0px;
+  --drawer-border-width: 0px;
+  --drawer-border-opacity: 0;
+  --drawer-corner-radius: 0px;
+  --drawer-shadow-opacity: 0;
+  --drawer-shadow-horizontal-offset: 0px;
+  --drawer-shadow-vertical-offset: 0px;
+  --drawer-shadow-blur-radius: 0px;
+  --drawer-padding: 20px;
+  --drawer-margin: 0px;
+  --drawer-backdrop-opacity: 0.4;
+  --drawer-backdrop-blur: 0px;
+  --spacing-sections-desktop: 0px;
+  --spacing-sections-mobile: 0px;
+  --grid-desktop-vertical-spacing: 30px;
+  --grid-desktop-horizontal-spacing: 30px;
+  --grid-mobile-vertical-spacing: 15px;
+  --grid-mobile-horizontal-spacing: 15px;
+  --text-boxes-border-opacity: 0.1;
+  --text-boxes-border-width: 0px;
+  --text-boxes-radius: 8px;
+  --text-boxes-shadow-opacity: 0;
+  --text-boxes-shadow-visible: 0;
+  --text-boxes-shadow-horizontal-offset: 0px;
+  --text-boxes-shadow-vertical-offset: 4px;
+  --text-boxes-shadow-blur-radius: 5px;
+  --buttons-radius: 8px;
+  --buttons-radius-outset: 10px;
+  --buttons-border-width: 2px;
+  --buttons-border-opacity: 1;
+  --buttons-shadow-opacity: 0.05;
+  --buttons-shadow-visible: 1;
+  --buttons-shadow-horizontal-offset: 0px;
+  --buttons-shadow-vertical-offset: 3px;
+  --buttons-shadow-blur-radius: 6px;
+  --buttons-border-offset: 0.3px;
+  --buttons-background-opacity: 1;
+  --buttons-scale: 1;
+  --inputs-radius: 8px;
+  --inputs-border-width: 1px;
+  --inputs-border-opacity: 0.55;
+  --inputs-shadow-opacity: 0;
+  --inputs-shadow-background-opacity: 0;
+  --inputs-shadow-horizontal-offset: 0px;
+  --inputs-margin-offset: 0px;
+  --inputs-shadow-vertical-offset: 4px;
+  --inputs-shadow-blur-radius: 5px;
+  --inputs-radius-outset: 9px;
+  --variant-pills-radius: px;
+  --variant-pills-border-width: px;
+  --variant-pills-border-opacity: 0;
+  --variant-pills-shadow-opacity: 0;
+  --variant-pills-shadow-horizontal-offset: px;
+  --variant-pills-shadow-vertical-offset: px;
+  --variant-pills-shadow-blur-radius: px;
+  --color-background: 255, 255, 255;
+  --gradient-background: #ffffff;
+  --color-accent: 211, 152, 52;
+  --color-foreground: 0, 0, 0;
+  --color-shadow: 18, 18, 18;
+  --color-border: 0, 0, 0;
+  --color-button: 255, 255, 255;
+  --color-button-text: 0, 0, 0;
+  --color-secondary-button: 0, 0, 0;
+  --color-secondary-button-text: 255, 255, 255;
+  --color-tertiary-button: 75, 71, 255;
+  --color-tertiary-button-text: 255, 255, 255;
+  --color-gray-button: 238, 238, 238;
+  --color-gray-button-text: 18, 18, 18;
+  --color-dark-button: 0, 0, 0;
+  --color-dark-button-text: 255, 255, 255;
+  --color-light-button: 255, 255, 255;
+  --color-light-button-text: 0, 0, 0;
+  --color-link: 0, 0, 0;
+  --color-badge-foreground: 0, 0, 0;
+  --color-badge-background: 255, 255, 255;
+  --color-badge-border: 0, 0, 0;
+  --payment-terms-background-color: rgb(255 255 255);
+}
+
+:root {
+  --container-width: var(--page-width, 1400px);
+  --container-gap: var(--page-gap, 20px);
+  --grid-col-gap: var(--grid-mobile-horizontal-spacing, 30px);
+  --grid-row-gap: var(--grid-mobile-vertical-spacing, 30px);
+}
+
+@media (min-width: 576px) {
+  :root {
+    --grid-col-gap: var(--grid-desktop-horizontal-spacing, 15px);
+    --grid-row-gap: var(--grid-desktop-vertical-spacing, 15px);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body-family);
+  letter-spacing: 0;
+  line-height: 1.6;
+  line-height: calc(1 + 0.8 / var(--font-body-scale));
+  background: var(--gradient-background);
+  color: rgba(var(--color-foreground), 0.75);
+  transition: opacity ease-in 0.2s;
+}
+
+.container-width {
+  width: var(--container-width);
+  padding-left: var(--container-gap);
+  padding-right: var(--container-gap);
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+@media (min-width: 1400px) {
+  .container-width {
+    max-width: unset;
+    padding: 0 140px;
+  }
+}
+
+#pages-layout {
+  overflow: hidden;
+  display: flow-root;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+

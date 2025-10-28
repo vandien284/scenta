@@ -1,0 +1,62 @@
+.embla {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+}
+
+.embla__container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.embla__slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.embla__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.embla__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 20px;
+}
+
+.embla__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(100, 100, 100, 0.4);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.embla__dot:hover {
+  background: rgb(0, 0, 0);
+}
+
+.embla__dot.is-selected {
+  background: #000000;
+}

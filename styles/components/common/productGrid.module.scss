@@ -1,0 +1,29 @@
+.gridWrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.gridBox {
+  margin-top: 60px;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.gridRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
