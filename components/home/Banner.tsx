@@ -6,7 +6,6 @@ import { categoriesData } from "@/data/CategoriesData";
 export default function Banner() {
   const [bgImage, setBgImage] = useState("/images/banner/banner-desktop.webp");
 
-
   const handleHover = (image: string) => {
     if (window.innerWidth > 576) {
       setBgImage(image);
@@ -29,15 +28,15 @@ export default function Banner() {
         <div className="container-width">
           <div className={styles.grid}>
             {categoriesData.map((cat) => (
-              <Link href="/abc" key={cat.id} passHref className={styles.card}
+              <Link href="/abc" key={cat.id} passHref className={styles.card} onMouseEnter={() => handleHover(cat.image)}
+                  onMouseLeave={handleLeave}
                 style={{
                   "--bg-image": `url(${cat.image})`,
                   "--hover-bg-color": `${cat.hoverBgColor || "rgba(255, 255, 255, 0.3)"}`
 
                 } as React.CSSProperties}>
                 <div
-                  onMouseEnter={() => handleHover(cat.image)}
-                  onMouseLeave={handleLeave}
+                  
                   className={styles.info}
                 >
                   <div>
