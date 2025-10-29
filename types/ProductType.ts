@@ -8,4 +8,5 @@ export interface ProductType {
     description?: string;
     bestSeller?: boolean;
     outstanding?: boolean;
+    limited?: boolean;
 }

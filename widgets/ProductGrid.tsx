@@ -1,25 +1,26 @@
 "use client";
 import { ScrollReveal } from "@/ui/ScrollReveal";
-import styles from "@/styles/components/common/productGrid.module.scss";
-import { productData } from "@/data/ProductData";
+import styles from "@/styles/widgets/productGrid.module.scss";
+
 import { ProductType } from "@/types/ProductType";
-import Product from "@/ui/Product";
+import Product from "@/widgets/Product";
 import Tabs from "@/ui/Tabs";
 import { TabType } from "@/types/TabType";
 
 
 interface ProductGridProps {
   tab?: TabType;
+  data: ProductType[];
 }
 
-export default function ProductGrid({ tab }: ProductGridProps) {
+export default function ProductGrid({ tab, data }: ProductGridProps) {
   const chunkArray = (arr: ProductType[], size: number) =>
     arr.reduce((rows: ProductType[][], _, i) => {
       if (i % size === 0) rows.push(arr.slice(i, i + size));
       return rows;
     }, []);
 
-  const rows = chunkArray(productData, 4);
+  const rows = chunkArray(data, 4);
 
   return (
     <section className={styles.gridWrapper}>

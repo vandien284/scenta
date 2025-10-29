@@ -2,7 +2,7 @@
 import { Fragment } from "react";
 import { Col, Card } from "react-bootstrap";
 import Image from "next/image";
-import styles from "@/styles/ui/product.module.scss";
+import styles from "@/styles/widgets/product.module.scss";
 import { ProductType } from "@/types/ProductType";
 
 

@@ -27,7 +27,7 @@ export default function ParallaxContainer({
     mass: 1,
   });
 
-  const y = useTransform(smoothProgress, [0, 1], ["-30%", "30%"]);
+  const y = useTransform(smoothProgress, [-1, 1], ["-30%", "30%"]);
 
   return (
     <section ref={ref} className={styles.section} style={{ height }}>
@@ -37,7 +37,8 @@ export default function ParallaxContainer({
           backgroundImage: `url(${image})`,
           y,
         }}
-      />
+      >
+      </motion.div>
       <div className={styles.overlay} />
       <div className={styles.content}>
         <div className="container-width">

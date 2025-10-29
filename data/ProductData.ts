@@ -10,6 +10,7 @@ export const productData: ProductType[] = [
         description: "A soothing blend of lavender essential oils to help you relax and unwind.",
         bestSeller: true,
         outstanding: false,
+        limited: true,
     }, {
         id: 2,
         name: "Lavender Dreams 2",
@@ -19,6 +20,7 @@ export const productData: ProductType[] = [
         description: "A soothing blend of lavender essential oils to help you relax and unwind.",
         bestSeller: false,
         outstanding: true,
+        limited: true,
     }, {
         id: 3,
         name: "Lavender Dreams 3",
@@ -28,6 +30,7 @@ export const productData: ProductType[] = [
         description: "A soothing blend of lavender essential oils to help you relax and unwind.",
         bestSeller: true,
         outstanding: false,
+        limited: false,
     }, {
         id: 4,
         name: "Lavender Dreams 4",
@@ -37,6 +40,7 @@ export const productData: ProductType[] = [
         description: "A soothing blend of lavender essential oils to help you relax and unwind.",
         bestSeller: false,
         outstanding: true,
+        limited: false,
     }, {
         id: 5,
         name: "Lavender Dreams 5",
@@ -46,6 +50,7 @@ export const productData: ProductType[] = [
         description: "A soothing blend of lavender essential oils to help you relax and unwind.",
         bestSeller: true,
         outstanding: true,
+        limited: true,
     }, {
         id: 6,
         name: "Lavender Dreams 6",
@@ -55,6 +60,7 @@ export const productData: ProductType[] = [
         description: "A soothing blend of lavender essential oils to help you relax and unwind.",
         bestSeller: true,
         outstanding: true,
+        limited: false,
     }, {
         id: 7,
         name: "Lavender Dreams 7",
@@ -64,6 +70,7 @@ export const productData: ProductType[] = [
         description: "A soothing blend of lavender essential oils to help you relax and unwind.",
         bestSeller: true,
         outstanding: true,
+        limited: true,
     }, {
         id: 8,
         name: "Lavender Dreams 8",
@@ -73,6 +80,7 @@ export const productData: ProductType[] = [
         description: "A soothing blend of lavender essential oils to help you relax and unwind.",
         bestSeller: true,
         outstanding: true,
+        limited: false,
     }, {
         id: 9,
         name: "Lavender Dreams 9",
@@ -82,6 +90,7 @@ export const productData: ProductType[] = [
         description: "A soothing blend of lavender essential oils to help you relax and unwind.",
         bestSeller: true,
         outstanding: true,
+        limited: true,
     }, {
         id: 10,
         name: "Lavender Dreams 10",
@@ -91,6 +100,7 @@ export const productData: ProductType[] = [
         description: "A soothing blend of lavender essential oils to help you relax and unwind.",
         bestSeller: true,
         outstanding: true,
+        limited: true,
     }, {
         id: 11,
         name: "Lavender Dreams 11",
@@ -100,6 +110,7 @@ export const productData: ProductType[] = [
         description: "A soothing blend of lavender essential oils to help you relax and unwind.",
         bestSeller: true,
         outstanding: true,
+        limited: true,
     }, {
         id: 12,
         name: "Lavender Dreams 12",
@@ -109,5 +120,6 @@ export const productData: ProductType[] = [
         description: "A soothing blend of lavender essential oils to help you relax and unwind.",
         bestSeller: true,
         outstanding: true,
+        limited: true,
     }
 ]

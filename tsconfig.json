@@ -37,7 +37,7 @@
     "**/*.mts",
     ".next\\dev/types/**/*.ts",
     ".next\\dev/types/**/*.ts"
-, "components/common/ProductGrid.tsx"  ],
+, "widgets/ProductGrid.tsx"  ],
   "exclude": [
     "node_modules"
   ]

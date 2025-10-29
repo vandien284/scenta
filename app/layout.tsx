@@ -14,8 +14,8 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  title: "Scenta - Decor Home Shop",
-  description: "Your one-stop shop for premium home decor",
+  title: "Scenta - Cửa hàng trang trí nội thất",
+  description: "Nâng tầm không gian sống của bạn với bộ sưu tập trang trí nhà cao cấp của Scenta.",
 };
 
 export default function RootLayout({
