@@ -6,7 +6,9 @@ interface PagesLayoutProps {
     children: React.ReactNode;
 }
 
-const PagesLayout = async ({ children }: PagesLayoutProps) => {
+const PagesLayout = ({ children }: PagesLayoutProps) => {
+
+
     return (
         <Fragment>
             <Header />

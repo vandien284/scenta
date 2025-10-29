@@ -1,0 +1,58 @@
+.notFoundWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60vh;
+
+  .title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .desc {
+    font-size: 1.125rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    position: relative;
+    overflow: hidden;
+    padding: 12px 35px;
+    border-radius: 8px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body-family);
+    font-weight: 500;
+
+    span {
+      display: block;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .default {
+      transform: translateY(0);
+    }
+
+    .hover {
+      position: absolute;
+      left: 0;
+      right: 0;
+      transform: translateY(150%);
+    }
+
+    &:hover {
+      .default {
+        transform: translateY(-150%);
+      }
+      .hover {
+        transform: translateY(-100%);
+      }
+    }
+  }
+}

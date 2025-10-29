@@ -1,5 +1,4 @@
 
-import "@/styles/view/home.module.scss";
 import PagesLayout from "@/app/(pages)/layout";
 import Banner from "@/components/home/Banner";
 import Highlight from "@/components/home/Highlight";

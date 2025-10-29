@@ -1,16 +1,19 @@
 "use client";
-import { useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { Container, Nav, Navbar, Form, Button } from "react-bootstrap";
 import styles from "@/styles/components/common/header.module.scss";
 import { HeaderList } from "@/router/Header";
 import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +40,7 @@ export default function Header() {
 
   return (
     <header
-      className={`${styles.header} ${scrolled ? styles["header-scrolled"] : ""} container-width`}
+      className={`${styles.header} ${scrolled ? styles["fixed-header"] : ""} ${pathname === "/" ? styles["home-header"] : ""} container-width`}
     >
       <Navbar expand="lg" className={styles.navbar}>
         <Container fluid className={styles.container}>
@@ -55,7 +58,7 @@ export default function Header() {
 
           <Nav className={`${styles["nav-links"]} me-auto`}>
             {HeaderList.map((item, index) => (
-              <Nav.Link key={index} href={item.link} className={styles.link}>
+              <Nav.Link as={Link} key={index} href={item.link} className={styles.link}>
                 {item.title}
               </Nav.Link>
             ))}

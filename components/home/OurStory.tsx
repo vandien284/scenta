@@ -1,6 +1,7 @@
 "use client";
 import ParallaxBackground from "@/ui/ParallaxBackground";
 import styles from "@/styles/components/home/ourStrory.module.scss";
+import { Button } from "react-bootstrap";
 
 export default function OurStrory() {
   return (
@@ -16,10 +17,10 @@ export default function OurStrory() {
             including soy wax and reusable containers, to create products that are kind
             to both you and the planet.
           </p>
-          <button className={styles.btn}>
+          <Button className={styles.btn}>
             <span className={styles.default}>READ MORE</span>
             <span className={styles.hover}>READ MORE</span>
-          </button>
+          </Button>
 
         </div>
 
