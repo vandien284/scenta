@@ -30,7 +30,7 @@ export default function CategoryList({ categories, active, onChange }: CategoryL
 
   return (
     <div className={styles.categoryList}>
-      <h3 className={styles.heading}>CATEGORIES</h3>
+      <h3 className={styles.heading}>DANH MỤC</h3>
       <ul className={styles.list}>
         <li
           className={`${styles.item} ${selected === "" ? styles.active : ""}`}

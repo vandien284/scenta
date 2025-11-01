@@ -1,21 +1,21 @@
+"use client";
+
+import { Fragment, useState } from "react";
 import ProductSideBar from "@/widgets/ProductSideBar";
-import { Metadata } from "next";
-import styles from "@/styles/view/san-pham.module.scss";
-import { Fragment } from "react";
 import ProductGridWrapper from "@/widgets/ProductGridWrapper";
 import ParallaxBackground from "@/ui/ParallaxBackground";
 import Breadcrumb from "@/components/common/Breadcrumb";
 import Slider from "@/ui/Slider";
+import FullScreenModal from "@/ui/FullScreenModal";
+import styles from "@/styles/view/san-pham.module.scss";
 import { categoriesData } from "@/data/CategoriesData";
 import Image from "next/image";
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "Scenta - Cửa Hàng",
-    description: "Khám phá bộ sưu tập trang trí nhà cửa cao cấp tại Scenta",
-  }
-}
+import { IoFilter } from "react-icons/io5";
+import { Button } from "react-bootstrap";
 
-const ShopPage = async () => {
+export default function ShopPage() {
+  const [openFilter, setOpenFilter] = useState(false);
+
   return (
     <Fragment>
       <ParallaxBackground image="/images/parallax/banner-page.webp" height="70vh">
@@ -39,21 +39,31 @@ const ShopPage = async () => {
               ))}
             </Slider>
           </div>
-
         </div>
       </ParallaxBackground>
+
       <section className={styles.shopPage}>
         <div className="container-width">
           <div className={styles.shopContent}>
-            <ProductSideBar />
+            <div className={styles.desktopSidebar}>
+              <ProductSideBar />
+            </div>
+
+            <Button className={styles.filterButton} onClick={() => setOpenFilter(true)}>
+              <IoFilter className={styles.filterIcon} />
+              <span>Bộ lọc</span>
+            </Button>
+
             <div className={styles.rightContainer}>
               <ProductGridWrapper />
             </div>
           </div>
         </div>
       </section>
+
+      <FullScreenModal isOpen={openFilter} onClose={() => setOpenFilter(false)} title="Bộ lọc">
+        <ProductSideBar />
+      </FullScreenModal>
     </Fragment>
   );
 }
-
-export default ShopPage;

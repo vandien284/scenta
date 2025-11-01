@@ -73,7 +73,7 @@ export default function PriceRange({
 
     return (
         <div className={styles.priceRange}>
-            <h3 className={styles.heading}>PRICE</h3>
+            <h3 className={styles.heading}>GIÁ</h3>
 
             <div className={styles.sliderWrapper}>
                 <div
