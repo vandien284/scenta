@@ -2,11 +2,13 @@
 export interface ProductType {
     id: number;
     name: string;
+    url: string;
     categoriesId: number;
     price: number;
-    image: string;
+    images: string[];
     description?: string;
     bestSeller?: boolean;
     outstanding?: boolean;
     limited?: boolean;
+    [key: string]: boolean | number | string | string[] | undefined;
 }

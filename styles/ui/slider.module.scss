@@ -2,7 +2,17 @@
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: visible; 
+  
+  &:hover {
+    @media (min-width: 992px) {
+      .embla__button {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(-50%) translateX(0) scale(1);
+      }
+    }
+  }
 }
 
 .embla__viewport {
@@ -18,45 +28,50 @@
   width: 100%;
 }
 
-.embla__slide {
-  position: relative;
-  flex: 0 0 100%;
-  min-width: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 20px;
-}
-
-.embla__slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.embla__dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  padding-bottom: 20px;
-}
-
-.embla__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+.embla__button {
+  position: absolute;
+  top: 35%;
+  background: rgba(255, 255, 255, 0.8);
   border: none;
-  background: rgba(100, 100, 100, 0.4);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateY(-50%) scale(0.95);
+  opacity: 0;
+  pointer-events: none;
+
+  svg {
+    font-size: 18px;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.9);
+    svg {
+      color: #fff;
+    }
+  }
+
+  @media (max-width: 991px) {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(-50%) scale(1) !important;
+  }
 }
 
-.embla__dot:hover {
-  background: rgb(0, 0, 0);
+.embla__button__prev {
+  left: -40px; 
+  transform: translateY(-50%) translateX(-20px);
 }
 
-.embla__dot.is-selected {
-  background: #000000;
+.embla__button__next {
+  right: -40px; 
+  transform: translateY(-50%) translateX(20px);
 }

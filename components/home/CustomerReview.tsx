@@ -41,7 +41,9 @@ export default function CustomerReview() {
           dragFree: true,
         }}
           delay={4000}
-          showDots={false}>
+          showDots={false}
+          showNav={false}
+          >
           {slides.map((group, idx) => (
             <div key={idx} className={sliderStyles.embla__slide}>
               <div className={styles.cards}>

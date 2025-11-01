@@ -1,0 +1,10 @@
+.section {
+  display: flex;
+  width: 100%;
+  padding: 60px 0;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+}

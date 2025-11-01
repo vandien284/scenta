@@ -1,0 +1,84 @@
+.pageHero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 40px;
+
+
+  .sliderContainer {
+    width: 80%;
+    display: flex;
+  }
+
+  .categorySlide {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+    min-width: calc(100% / 6);
+
+    @media (max-width: 992px) {
+      min-width: calc(100% / 4);
+    }
+
+    @media (max-width: 768px) {
+      min-width: calc(100% / 3);
+    }
+
+    @media (max-width: 576px) {
+      min-width: calc(100% / 2);
+    }
+  }
+
+  .categoryCircle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .categoryImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .categoryName {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+}
+
+.shopPage {
+  display: flex;
+  width: 100%;
+  padding: 60px 0;
+}
+
+.shopContent {
+  display: flex;
+  flex: 1;
+  gap: 40px;
+
+  .rightContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

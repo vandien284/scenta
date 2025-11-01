@@ -5,8 +5,8 @@ export const HeaderList: HeaderType[] = [
         link: "/",
     },
     {
-        title: "Cửa Hàng",
-        link: "/cua-hang",
+        title: "Sản Phẩm",
+        link: "/san-pham",
     },
     // {
     //     title: "Tin tức",

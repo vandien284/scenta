@@ -21,13 +21,8 @@ export default function ParallaxContainer({
     offset: ["start end", "end start"],
   });
 
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 60,
-    damping: 30,
-    mass: 1,
-  });
-
-  const y = useTransform(smoothProgress, [-1, 1], ["-30%", "30%"]);
+  const smooth = useSpring(scrollYProgress, { stiffness: 80, damping: 30 })
+  const y = useTransform(smooth, [0, 1], ["0%", "30%"]);
 
   return (
     <section ref={ref} className={styles.section} style={{ height }}>

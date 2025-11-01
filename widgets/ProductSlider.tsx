@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useState, useEffect, useCallback, useRef } from "react";
+import { useMemo, useState, useEffect, useCallback, useRef, Fragment } from "react";
 import { Row } from "react-bootstrap";
 import Tabs from "@/ui/Tabs";
 import Product from "@/widgets/Product";
@@ -11,14 +11,12 @@ import { ProductType } from "@/types/ProductType";
 
 interface ProductListProps {
   tabs: TabType[];
-  dataBestSeller: ProductType[];
-  dataOutstanding: ProductType[];
+  data: ProductType[];
 }
 
 export default function ProductList({
   tabs,
-  dataBestSeller,
-  dataOutstanding,
+  data
 }: ProductListProps) {
   const [activeTab, setActiveTab] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
@@ -32,10 +30,26 @@ export default function ProductList({
   }, []);
 
   const products = useMemo(() => {
-    if (activeTab === 1) return dataBestSeller;
-    if (activeTab === 2) return dataOutstanding;
-    return [];
-  }, [activeTab, dataBestSeller, dataOutstanding]);
+    const currentTab = tabs.find(t => t.id === activeTab);
+    if (!currentTab) return data;
+
+    const { tag } = currentTab;
+
+    const validKey = tag in ({} as ProductType);
+
+    if (!validKey) return data;
+
+    return data.filter((item: ProductType) => {
+      if (!(tag in item)) return true;
+
+      const value = item[tag];
+      return typeof value === "boolean" ? value === true : false;
+    });
+  }, [activeTab, data, tabs]);
+
+
+
+
 
   const slides = useMemo(() => {
     const chunkSize = isMobile ? 1 : 4;
@@ -50,36 +64,35 @@ export default function ProductList({
   }, []);
 
   return (
-    <section className={styles.section}>
-      <div className="container-width">
-        <Tabs tabs={tabs} onChange={handleTabChange} />
-
-        <Row className="mt-4">
-          <Slider
-            ref={sliderRef}
-            options={{
-              loop: false,
-              align: "start",
-              axis: "x",
-              containScroll: "trimSnaps",
-              skipSnaps: true,
-              dragFree: true,
-            }}
-            delay={6000}
-            showDots={!isMobile}
-          >
-            {slides.map((group, idx) => (
-              <div key={idx} className={sliderStyles.embla__slide}>
-                <div className={styles.productRow}>
-                  {group.map((p) => (
-                    <Product key={p.id} data={p} />
-                  ))}
-                </div>
+    <Fragment>
+      <Tabs tabs={tabs} onChange={handleTabChange} />
+      <Row className="mt-4">
+        <Slider
+          ref={sliderRef}
+          options={{
+            loop: false,
+            align: "start",
+            axis: "x",
+            containScroll: "trimSnaps",
+            skipSnaps: true,
+            dragFree: true,
+          }}
+          delay={6000}
+          showDots={!isMobile}
+          showNav={false}
+        >
+          {slides.map((group, idx) => (
+            <div key={idx} className={sliderStyles.embla__slide}>
+              <div className={styles.productRow}>
+                {group.map((p) => (
+                  <Product key={p.id} data={p} />
+                ))}
               </div>
-            ))}
-          </Slider>
-        </Row>
-      </div>
-    </section>
+            </div>
+          ))}
+        </Slider>
+      </Row>
+    </Fragment>
+
   );
 }

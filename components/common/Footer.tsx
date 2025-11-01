@@ -31,7 +31,7 @@ export default function Footer() {
               </ul>
             </div>
           </ScrollReveal>
-          <ScrollReveal delay={0.2} direction="up" once={true}>
+          <ScrollReveal delay={0.1} direction="up" once={true}>
             <div className={styles.infoServicesWrapper}>
               <div className={styles.col}>
                 <h4 className={styles.heading}>INFO</h4>
@@ -57,7 +57,7 @@ export default function Footer() {
               </div>
             </div>
           </ScrollReveal>
-          <ScrollReveal delay={0.4} direction="up" once={true}>
+          <ScrollReveal delay={0.3} direction="up" once={true}>
 
             <div className={styles.colNews}>
               <h4 className={styles.heading}>NEWSLETTERS</h4>
@@ -92,7 +92,7 @@ export default function Footer() {
             </div>
           </ScrollReveal>
         </div>
-        <ScrollReveal delay={0.2} direction="up" once={true}>
+        <ScrollReveal delay={0.1} direction="up" once={true}>
           <div className={styles.bottom}>
             <p>
               © Copyright 2024 | <span>Scenta</span> By <strong>Scenta</strong>. Powered by{" "}

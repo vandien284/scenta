@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import {  Jost, Cinzel } from "next/font/google";
 import "@/styles/globals.scss";
 
-
 const jost = Jost({
   variable: "--font-jost",
   subsets: ["latin"]

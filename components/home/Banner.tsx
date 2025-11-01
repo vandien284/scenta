@@ -28,7 +28,7 @@ export default function Banner() {
         <div className="container-width">
           <div className={styles.grid}>
             {categoriesData.map((cat) => (
-              <Link href="/abc" key={cat.id} passHref className={styles.card} onMouseEnter={() => handleHover(cat.image)}
+              <Link href={`/san-pham?cateId=${cat.id}`} key={cat.id} passHref className={styles.card} onMouseEnter={() => handleHover(cat.image)}
                   onMouseLeave={handleLeave}
                 style={{
                   "--bg-image": `url(${cat.image})`,

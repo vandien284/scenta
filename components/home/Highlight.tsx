@@ -32,12 +32,14 @@ export default function Highlight() {
                 delay={4000}
                 onSelect={(i) => setActiveIndex(i)}
                 showDots={false}
+                showNav={false}
               >
                 {highlightData.map((item) => (
                   <div key={item.id} className={sliderStyles.embla__slide}>
                     <Image
                       src={item.image}
                       alt={item.title}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       fill
                       className={styles.image}
                     />

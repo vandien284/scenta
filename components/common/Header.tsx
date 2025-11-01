@@ -17,7 +17,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) setScrolled(true);
+      if (window.scrollY > 50) setScrolled(true);
       else setScrolled(false);
     };
     handleScroll();
@@ -63,7 +63,7 @@ export default function Header() {
               </Nav.Link>
             ))}
           </Nav>
-          <Navbar.Brand href="/" className={styles.logo}>
+          <Navbar.Brand as={Link} href="/" className={styles.logo}>
             <Image
               src={isMobile ? "/images/logo_black.webp" : "/images/logo_white.webp"}
               alt="Logo"
@@ -102,9 +102,9 @@ export default function Header() {
       {menuOpen && (
         <div className={styles["mobile-menu"]}>
           {HeaderList.map((item, index) => (
-            <a key={index} href={item.link} className={styles["mobile-link"]}>
+            <Link key={index} href={item.link} className={styles["mobile-link"]}>
               {item.title}
-            </a>
+            </Link>
           ))}
         </div>
       )}

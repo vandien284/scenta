@@ -2,19 +2,16 @@
 import { useState } from "react";
 import { Nav } from "react-bootstrap";
 import styles from "@/styles/ui/tabs.module.scss";
+import { TabType } from "@/types/TabType";
 
-interface TabItem {
-  id: number;
-  title: string;
-}
 
 interface TabsProps {
-  tabs: TabItem[] | TabItem;
+  tabs: TabType | TabType[];
   onChange?: (id: number) => void;
 }
 
 export default function Tabs({ tabs, onChange }: TabsProps) {
-  const normalizedTabs: TabItem[] = Array.isArray(tabs) ? tabs : [tabs];
+  const normalizedTabs: TabType[] = Array.isArray(tabs) ? tabs : [tabs];
 
   const [activeId, setActiveId] = useState<number>(
     normalizedTabs[0]?.id ?? 0

@@ -1,8 +1,15 @@
 "use client";
-import { ReactNode, useEffect, useState, forwardRef, useImperativeHandle } from "react";
+import {
+  ReactNode,
+  useEffect,
+  useState,
+  forwardRef,
+  useImperativeHandle,
+} from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { EmblaOptionsType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import styles from "@/styles/ui/slider.module.scss";
 
 interface UISliderProps {
@@ -11,6 +18,7 @@ interface UISliderProps {
   options?: EmblaOptionsType;
   onSelect?: (index: number) => void;
   showDots?: boolean;
+  showNav?: boolean;
 }
 
 export interface SliderRef {
@@ -18,10 +26,20 @@ export interface SliderRef {
 }
 
 const Slider = forwardRef<SliderRef, UISliderProps>(
-  ({ children, delay = 4000, options, onSelect, showDots = false }, ref) => {
-    const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-      Autoplay({ delay, stopOnInteraction: false }),
-    ]);
+  (
+    {
+      children,
+      delay = 4000,
+      options,
+      onSelect,
+      showDots = false,
+      showNav = true,
+    },
+    ref
+  ) => {
+    const plugins = delay > 0 ? [Autoplay({ delay, stopOnInteraction: false })] : [];
+
+    const [emblaRef, emblaApi] = useEmblaCarousel(options, plugins);
 
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
@@ -50,20 +68,41 @@ const Slider = forwardRef<SliderRef, UISliderProps>(
       },
     }));
 
+    const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
+    const scrollNext = () => emblaApi && emblaApi.scrollNext();
+
     return (
       <div className={styles.embla}>
         <div className={styles["embla__viewport"]} ref={emblaRef}>
           <div className={styles["embla__container"]}>{children}</div>
         </div>
 
+        {showNav && (
+          <>
+            <button
+              className={`${styles.embla__button} ${styles.embla__button__prev}`}
+              onClick={scrollPrev}
+              aria-label="Previous slide"
+            >
+              <FaChevronLeft />
+            </button>
+            <button
+              className={`${styles.embla__button} ${styles.embla__button__next}`}
+              onClick={scrollNext}
+              aria-label="Next slide"
+            >
+              <FaChevronRight />
+            </button>
+          </>
+        )}
+
         {showDots && (
           <div className={styles["embla__dots"]}>
             {scrollSnaps.map((_, index) => (
               <button
                 key={index}
-                className={`${styles["embla__dot"]} ${
-                  index === selectedIndex ? styles["is-selected"] : ""
-                }`}
+                className={`${styles["embla__dot"]} ${index === selectedIndex ? styles["is-selected"] : ""
+                  }`}
                 onClick={() => emblaApi?.scrollTo(index)}
               />
             ))}
@@ -74,5 +113,5 @@ const Slider = forwardRef<SliderRef, UISliderProps>(
   }
 );
 
-Slider.displayName = "Slider"; // cần cho forwardRef
+Slider.displayName = "Slider";
 export default Slider;
