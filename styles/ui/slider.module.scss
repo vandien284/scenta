@@ -28,6 +28,24 @@
   width: 100%;
 }
 
+.embla__slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.embla__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 .embla__button {
   position: absolute;
   top: 35%;
@@ -74,4 +92,29 @@
 .embla__button__next {
   right: -40px; 
   transform: translateY(-50%) translateX(20px);
+}
+
+.embla__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 20px;
+}
+
+.embla__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(100, 100, 100, 0.4);
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: rgb(0, 0, 0);
+  }
+
+  &.is-selected {
+    background: #000000;
+  }
 }
