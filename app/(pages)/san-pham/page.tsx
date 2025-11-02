@@ -7,7 +7,7 @@ import ParallaxBackground from "@/ui/ParallaxBackground";
 import Breadcrumb from "@/components/common/Breadcrumb";
 import Slider from "@/ui/Slider";
 import FullScreenModal from "@/ui/FullScreenModal";
-import styles from "@/styles/view/san-pham.module.scss";
+import styles from "@/styles/view/product.module.scss";
 import { categoriesData } from "@/data/CategoriesData";
 import Image from "next/image";
 import { IoFilter } from "react-icons/io5";

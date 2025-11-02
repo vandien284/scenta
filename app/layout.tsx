@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
-import {  Jost, Cinzel } from "next/font/google";
+import {   Playfair_Display, Be_Vietnam_Pro } from "next/font/google";
 import "@/styles/globals.scss";
 
-const jost = Jost({
-  variable: "--font-jost",
-  subsets: ["latin"]
+const beVietnamPro = Be_Vietnam_Pro({
+  variable: "--font-be-vietnam-pro",
+  subsets: ["latin", "vietnamese"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
 });
 
-const cinzel = Cinzel({
-  variable: "--font-cinzel",
-  subsets: ["latin"]
+const playfair = Playfair_Display({
+  subsets: ["latin", "vietnamese"],
+  weight: ["400", "700"],
+  variable: "--font-playfair-display",
 });
+
 
 export const metadata: Metadata = {
   title: "Scenta - Cửa hàng trang trí nội thất",
@@ -23,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jost.variable} ${cinzel.variable}`}>
+    <html lang="en" className={`${beVietnamPro.variable} ${playfair.variable}`}>
       <body>
         {children}
       </body>

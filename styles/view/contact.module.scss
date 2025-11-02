@@ -1,0 +1,301 @@
+.mapSection {
+  width: 100%;
+
+  .mapContainer {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+  }
+}
+
+.contactSection {
+  display: flex;
+  width: 100%;
+  padding: 100px 0;
+
+  .contactContent {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    flex-wrap: wrap;
+  }
+
+  .infoBlock {
+    flex: 1;
+    min-width: 320px;
+
+    h2 {
+      font-size: 34px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #00000080;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .infoItem {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 25px;
+
+      svg {
+        font-size: 22px;
+        color: #000;
+        margin-top: 4px;
+      }
+
+      h5 {
+        font-weight: 600;
+        font-size: 17px;
+        margin-bottom: 4px;
+      }
+
+      p {
+        color: #00000080;
+        font-size: 15px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .formBlock {
+    flex: 1;
+    min-width: 320px;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 14px 18px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 15px;
+        outline: none;
+        transition: border-color 0.3s ease;
+        background: #ffffff;
+        color: #000000;
+
+        &:focus {
+          border-color: #000;
+        }
+        &::placeholder {
+          color: #00000080;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .contactSection .contactContent {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 0;
+  background: #000000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body-family);
+  font-weight: 500;
+  border-bottom: 2px solid #000;
+
+  span {
+    display: block;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .default {
+    transform: translateY(0);
+  }
+
+  .hover {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(155%);
+  }
+
+  &:hover {
+    .default {
+      transform: translateY(-155%);
+    }
+    .hover {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+.newsletterSection {
+  padding: 50px 0;
+  width: 100%;
+  display: flex;
+  border-top: 1px solid #ddd;
+
+  .newsletterContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .newsLeft {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+
+    .mailIcon {
+      font-size: 48px;
+      color: #000;
+    }
+
+    .textBlock {
+      h4 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #000;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .newsCenter {
+    flex: 1;
+    p {
+      font-size: 15px;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  .newsForm {
+    display: flex;
+    align-items: center;
+    gap: 0;
+
+    input {
+      padding: 16px 20px;
+      border: none;
+      background: #0000000d;
+      color: #000;
+      font-size: 15px;
+      outline: none;
+      border-radius: 4px 0 0 4px;
+      min-width: 400px;
+
+      &::placeholder {
+        color: #00000080;
+      }
+    }
+
+    button {
+      background: #000;
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 15.2px 28px;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #333;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+  .newsletterSection {
+    justify-content: center;
+    text-align: center;
+   
+    .newsletterContent {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .newsLeft {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 10px;
+
+      .mailIcon {
+        font-size: 42px;
+      }
+
+      .textBlock {
+        h4 {
+          font-size: 17px;
+        }
+      }
+    }
+
+    .divider {
+      display: none;
+    }
+
+    .newsCenter {
+      p {
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    }
+
+    .newsForm {
+      width: 100%;
+      max-width: 480px;
+      justify-content: center;
+
+      input {
+        flex: 1;
+        min-width: unset;
+        width: 100%;
+        border-radius: 4px 0 0 4px;
+      }
+
+      button {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+  }
+}

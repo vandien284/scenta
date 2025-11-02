@@ -12,7 +12,7 @@ const PagesLayout = ({ children }: PagesLayoutProps) => {
     return (
         <Fragment>
             <Header />
-            <div id="pages-layout">{children}</div>
+            <main id="pages-layout">{children}</main>
             <Footer />
         </Fragment>
     );

@@ -51,7 +51,7 @@ const DetailProductPage = async (props: { params: Params }) => {
 
     return (
         <div className={styles.pageWrapper}>
-            <div className="container-width">
+            <div className={`container-width ${styles.fadeInUp}`}>
                 <ProductDetail product={product} />
                 <InfoTabs />
                 <ProductSlider tabs={TabProductSlider} data={productData} />

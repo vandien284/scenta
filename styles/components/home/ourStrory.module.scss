@@ -53,12 +53,12 @@
     position: absolute;
     left: 0;
     right: 0;
-    transform: translateY(150%);
+    transform: translateY(155%);
   }
 
   &:hover {
     .default {
-      transform: translateY(-150%);
+      transform: translateY(-155%);
     }
     .hover {
       transform: translateY(-100%);
