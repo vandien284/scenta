@@ -85,13 +85,6 @@ export default function Header() {
             </button>
           </div>
 
-          <Nav className={`${styles["nav-links"]} me-auto`}>
-            {HeaderList.map((item, index) => (
-              <Nav.Link as={Link} key={index} href={item.link} className={styles.link}>
-                {item.title}
-              </Nav.Link>
-            ))}
-          </Nav>
           <Navbar.Brand as={Link} href="/" className={styles.logo}>
             <Image
               src={isMobile ? "/images/logo_black.webp" : "/images/logo_white.webp"}
@@ -101,6 +94,14 @@ export default function Header() {
               priority
             />
           </Navbar.Brand>
+
+          <Nav className={`${styles["nav-links"]} me-auto`}>
+            {HeaderList.map((item, index) => (
+              <Nav.Link as={Link} key={index} href={item.link} className={styles.link}>
+                {item.title}
+              </Nav.Link>
+            ))}
+          </Nav>
 
           <div className={styles["mobile-icons"]}>
             <Button
@@ -113,23 +114,27 @@ export default function Header() {
               {searchOpen ? <FaTimes /> : <FaSearch />}
             </Button>
           </div>
-          <Form onSubmit={handleSearchSubmit} className={styles["search-form"]}>
-            <div className={styles["search-box"]}>
-              <input
-                type="text"
-                placeholder="Tìm kiếm..."
-                className={styles["search-input"]}
-                name="search"
-              />
-              <button type="submit" className={styles["search-button"]}>
-                <FaSearch />
-              </button>
-            </div>
-          </Form>
-          <button className={styles.cartButton} onClick={handleCartNavigate}>
-            <FiShoppingBag />
-            {cartCount > 0 && <span className={styles.cartCount}>{cartCount}</span>}
-          </button>
+          <div className={styles.searchCartGroup}>
+            <Form onSubmit={handleSearchSubmit} className={styles.searchForm}>
+              <div className={styles.searchBox}>
+                <input
+                  type="text"
+                  placeholder="Tìm kiếm..."
+                  className={styles.searchInput}
+                  name="search"
+                />
+                <button type="submit" className={styles.searchButton}>
+                  <FaSearch />
+                </button>
+              </div>
+            </Form>
+
+            <button className={styles.cartButton} onClick={handleCartNavigate}>
+              <FiShoppingBag />
+              {cartCount > 0 && <span className={styles.cartCount}>{cartCount}</span>}
+            </button>
+          </div>
+
         </Container>
       </Navbar>
       {menuOpen && (
