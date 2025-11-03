@@ -55,7 +55,7 @@ export default function ShopPage() {
             </Button>
 
             <div className={styles.rightContainer}>
-              <ProductGridWrapper />
+              <ProductGridWrapper/>
             </div>
           </div>
         </div>

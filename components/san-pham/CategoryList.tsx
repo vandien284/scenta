@@ -39,7 +39,7 @@ export default function CategoryList({ categories, active, onChange }: CategoryL
           <span className={styles.arrow}>
             <FaChevronRight />
           </span>
-          All PRODUCTS
+          TẤT CẢ SẢN PHẨM
         </li>
         {categories.map((cat) => (
 

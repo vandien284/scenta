@@ -6,6 +6,7 @@ export interface ProductFilter {
   priceMax?: number;
   itemsPerPage?: number;
   cateId?: number;
+  q?: string;
 }
 
 export function getProducts({
@@ -13,12 +14,18 @@ export function getProducts({
   priceMin = 0,
   priceMax = Infinity,
   itemsPerPage = 8,
-  cateId = 0
+  cateId = 0,
+  q = "",
 }: ProductFilter) {
+  const filtered = productData.filter((p) => {
+    const matchPrice = p.price >= priceMin && p.price <= priceMax;
+    const matchCate = cateId ? p.categoriesId === cateId : true;
+    const matchQuery = q
+      ? p.name.toLowerCase().includes(q.toLowerCase())
+      : true;
 
-  const filtered = productData.filter(
-    (p) => p.price >= priceMin && p.price <= priceMax && (cateId ? p.categoriesId === cateId : true)
-  );
+    return matchPrice && matchCate && matchQuery;
+  });
 
   const totalPages = Math.ceil(filtered.length / itemsPerPage);
   const start = (page - 1) * itemsPerPage;
@@ -27,8 +34,10 @@ export function getProducts({
   return {
     products: filtered.slice(start, end),
     totalPages,
+    totalProducts: filtered.length,
   };
 }
+
 
 export function getProductByUrl(url: string) {
   return productData.find((p) => p.url === url) || null;

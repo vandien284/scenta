@@ -1,5 +1,5 @@
 "use client";
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Nav, Navbar, Form, Button } from "react-bootstrap";
 import styles from "@/styles/components/common/header.module.scss";
 import { HeaderList } from "@/router/Header";
@@ -7,6 +7,7 @@ import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -14,6 +15,7 @@ export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +39,17 @@ export default function Header() {
     window.addEventListener("resize", checkScreenSize);
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
+
+  const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const searchQuery = (formData.get("search") as string)?.trim();
+
+    if (!searchQuery) return;
+
+    router.push(`/tim-kiem?q=${encodeURIComponent(searchQuery)}`);
+  };
 
   return (
     <header
@@ -84,7 +97,7 @@ export default function Header() {
               {searchOpen ? <FaTimes /> : <FaSearch />}
             </Button>
           </div>
-          <Form className={styles["search-form"]}>
+          <Form onSubmit={handleSearchSubmit} className={styles["search-form"]}>
             <div className={styles["search-box"]}>
               <input
                 type="text"
@@ -110,7 +123,7 @@ export default function Header() {
       )}
       {searchOpen && (
         <div className={styles["mobile-search"]}>
-          <Form className={styles["search-form-mobile"]}>
+          <Form onSubmit={handleSearchSubmit} className={styles["search-form-mobile"]}>
             <div className={styles["search-box"]}>
               <input
                 type="text"

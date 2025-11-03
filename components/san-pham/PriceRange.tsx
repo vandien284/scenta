@@ -108,7 +108,7 @@ export default function PriceRange({
             </div>
 
             <p className={styles.priceText}>
-                Price: <span>${minValue}</span> - <span>${maxValue}</span>
+                Giá: <span>{minValue} VND</span> - <span>{maxValue} VND</span>
             </p>
         </div>
     );

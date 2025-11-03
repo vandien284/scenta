@@ -7,6 +7,7 @@ export async function getProductsAction(params: {
   priceMin?: number;
   priceMax?: number;
   cateId?: number;
+  q?: string;
 }) {
   return getProducts(params);
 }
