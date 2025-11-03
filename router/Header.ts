@@ -8,6 +8,10 @@ export const HeaderList: HeaderType[] = [
         title: "Sản Phẩm",
         link: "/san-pham",
     },
+    {
+        title: "Gợi Ý Quà Tặng",
+        link: "/goi-y-qua-tang",
+    },
     // {
     //     title: "Tin tức",
     //     link: "/tin-tuc",

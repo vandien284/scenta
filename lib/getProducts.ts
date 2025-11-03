@@ -1,4 +1,4 @@
-import { productData } from "@/data/ProductData";
+import { getAllProducts } from "@/lib/productSource";
 
 export interface ProductFilter {
   page?: number;
@@ -9,7 +9,7 @@ export interface ProductFilter {
   q?: string;
 }
 
-export function getProducts({
+export async function getProducts({
   page = 1,
   priceMin = 0,
   priceMax = Infinity,
@@ -17,7 +17,9 @@ export function getProducts({
   cateId = 0,
   q = "",
 }: ProductFilter) {
-  const filtered = productData.filter((p) => {
+  const products = await getAllProducts();
+
+  const filtered = products.filter((p) => {
     const matchPrice = p.price >= priceMin && p.price <= priceMax;
     const matchCate = cateId ? p.categoriesId === cateId : true;
     const matchQuery = q
@@ -39,6 +41,7 @@ export function getProducts({
 }
 
 
-export function getProductByUrl(url: string) {
-  return productData.find((p) => p.url === url) || null;
+export async function getProductByUrl(url: string) {
+  const products = await getAllProducts();
+  return products.find((p) => p.url === url) || null;
 }

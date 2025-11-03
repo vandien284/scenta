@@ -8,6 +8,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { FiShoppingBag } from "react-icons/fi";
+import { useCart } from "@/components/common/CartProvider";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -16,6 +18,8 @@ export default function Header() {
   const [isMobile, setIsMobile] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+  const { cart } = useCart();
+  const cartCount = cart?.totalQuantity ?? 0;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,6 +57,12 @@ export default function Header() {
     form.reset();
   };
 
+  const handleCartNavigate = () => {
+    router.push("/gio-hang");
+    setMenuOpen(false);
+    setSearchOpen(false);
+  };
+
   return (
     <header
       className={`${styles.header} ${scrolled ? styles["fixed-header"] : ""} ${pathname === "/" ? styles["home-header"] : ""} container-width`}
@@ -69,6 +79,10 @@ export default function Header() {
             >
               {menuOpen ? <FaTimes /> : <FaBars />}
             </Button>
+            <button className={styles.cartIconButton} onClick={handleCartNavigate}>
+              <FiShoppingBag />
+              {cartCount > 0 && <span className={styles.cartBadge}>{cartCount}</span>}
+            </button>
           </div>
 
           <Nav className={`${styles["nav-links"]} me-auto`}>
@@ -112,6 +126,10 @@ export default function Header() {
               </button>
             </div>
           </Form>
+          <button className={styles.cartButton} onClick={handleCartNavigate}>
+            <FiShoppingBag />
+            {cartCount > 0 && <span className={styles.cartCount}>{cartCount}</span>}
+          </button>
         </Container>
       </Navbar>
       {menuOpen && (

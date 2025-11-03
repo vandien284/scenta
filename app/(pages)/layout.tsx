@@ -1,5 +1,6 @@
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
+import ChatAssistant from "@/components/common/ChatAssistant";
 import { Fragment } from "react";
 
 interface PagesLayoutProps {
@@ -14,6 +15,7 @@ const PagesLayout = ({ children }: PagesLayoutProps) => {
             <Header />
             <main id="pages-layout">{children}</main>
             <Footer />
+            <ChatAssistant />
         </Fragment>
     );
 };

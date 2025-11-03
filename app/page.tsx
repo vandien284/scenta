@@ -8,9 +8,10 @@ import { TabsData } from "@/data/TabsData";
 import { TabData } from "@/data/TabsData";
 import OurStory from "@/components/home/OurStory";
 import CustomerReviews from "@/components/home/CustomerReview";
-import { productData } from "@/data/ProductData";
+import { getAllProducts } from "@/lib/productSource";
 import styles from "@/styles/view/home.module.scss";
-export default function Home() {
+export default async function Home() {
+  const productData = await getAllProducts();
   return (
     <PagesLayout>
       <Banner />

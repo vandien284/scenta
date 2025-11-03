@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import {   Playfair_Display, Be_Vietnam_Pro } from "next/font/google";
 import "@/styles/globals.scss";
+import CartProvider from "@/components/common/CartProvider";
 
 const beVietnamPro = Be_Vietnam_Pro({
   variable: "--font-be-vietnam-pro",
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${beVietnamPro.variable} ${playfair.variable}`}>
       <body>
-        {children}
+        <CartProvider>{children}</CartProvider>
       </body>
     </html>
   );

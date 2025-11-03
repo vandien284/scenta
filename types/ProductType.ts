@@ -10,5 +10,7 @@ export interface ProductType {
     bestSeller?: boolean;
     outstanding?: boolean;
     limited?: boolean;
+    quantity: number;
+    sold: number;
     [key: string]: boolean | number | string | string[] | undefined;
 }

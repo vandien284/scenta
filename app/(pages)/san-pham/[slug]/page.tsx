@@ -3,11 +3,11 @@ import ProductDetail from "@/components/san-pham/ProductDetail";
 import { Metadata } from "next";
 import styles from "@/styles/components/san-pham/productDetail.module.scss";
 import InfoTabs from "@/components/san-pham/InfoTabs";
-import { productData } from "@/data/ProductData";
 import ProductSlider from "@/widgets/ProductSlider";
 import { TabProductSlider } from "@/data/TabsData";
 import { getProductByUrlAction } from "@/app/actions/getProductsAction";
 import { notFound } from "next/navigation";
+import { getAllProducts } from "@/lib/productSource";
 
 type Params = Promise<{ slug: string }>;
 
@@ -49,12 +49,17 @@ const DetailProductPage = async (props: { params: Params }) => {
         notFound();
     }
 
+    const allProducts = await getAllProducts();
+
     return (
         <div className={styles.pageWrapper}>
-            <div className={`container-width ${styles.fadeInUp}`}>
-                <ProductDetail product={product} />
-                <InfoTabs />
-                <ProductSlider tabs={TabProductSlider} data={productData} />
+            <div className={`container-width`}>
+                <div className={styles.pageContainer}> 
+                    <ProductDetail product={product} />
+                    <InfoTabs />
+                    <ProductSlider tabs={TabProductSlider} data={allProducts} />
+                </div>
+
             </div>
         </div>
     );
