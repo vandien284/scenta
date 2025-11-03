@@ -49,6 +49,8 @@ export default function Header() {
     if (!searchQuery) return;
 
     router.push(`/tim-kiem?q=${encodeURIComponent(searchQuery)}`);
+
+    form.reset();
   };
 
   return (

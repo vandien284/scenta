@@ -13,6 +13,7 @@ import ProductGrid from "@/widgets/ProductGrid";
 import Pagination from "@/ui/Pagination";
 import { getProductsAction } from "@/app/actions/getProductsAction";
 import { ProductType } from "@/types/ProductType";
+import styles from "@/styles/widgets/productGridWrapper.module.scss";
 
 export interface ProductGridWrapperHandle {
   triggerSearch: (q: string) => void;
@@ -22,14 +23,19 @@ interface ProductGridWrapperProps {
   onResultCount?: (count: number) => void;
 }
 
+const DEFAULT_PAGE = 1;
+const DEFAULT_PRICE_MIN = 0;
+const DEFAULT_PRICE_MAX = 1000;
+const DEFAULT_CATE_ID = 0;
+
 const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapperProps>(
   ({ onResultCount }, ref) => {
     const gridRef = useRef<HTMLDivElement>(null);
 
-    const [page, setPage] = useState(1);
-    const [priceMin, setPriceMin] = useState(0);
-    const [priceMax, setPriceMax] = useState(1000);
-    const [cateId, setCateId] = useState(0);
+    const [page, setPage] = useState(DEFAULT_PAGE);
+    const [priceMin, setPriceMin] = useState(DEFAULT_PRICE_MIN);
+    const [priceMax, setPriceMax] = useState(DEFAULT_PRICE_MAX);
+    const [cateId, setCateId] = useState(DEFAULT_CATE_ID);
     const [q, setQ] = useState("");
     const [data, setData] = useState<ProductType[]>([]);
     const [totalPages, setTotalPages] = useState(1);
@@ -91,10 +97,11 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
 
       const syncParams = () => {
         const params = new URLSearchParams(window.location.search);
-        const urlPage = Number(params.get("page")) || 1;
-        const urlMin = Number(params.get("priceMin")) || 0;
-        const urlMax = Number(params.get("priceMax")) || 1000;
-        const urlCate = Number(params.get("cateId")) || 0;
+        const urlPage = Number(params.get("page")) || DEFAULT_PAGE;
+        const urlMin = Number(params.get("priceMin")) || DEFAULT_PRICE_MIN;
+        const urlMax = Number(params.get("priceMax")) || DEFAULT_PRICE_MAX;
+        const urlCateParam = params.get("cateId");
+        const urlCate = urlCateParam ? Number(urlCateParam) || DEFAULT_CATE_ID : DEFAULT_CATE_ID;
         const urlQ = params.get("q") || "";
 
         setQ(urlQ);
@@ -105,7 +112,11 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
 
         window.dispatchEvent(
           new CustomEvent("initFilter", {
-            detail: { cateId: urlCate, priceMin: urlMin, priceMax: urlMax },
+            detail: {
+              cateId: urlCateParam ?? "",
+              priceMin: urlMin,
+              priceMax: urlMax,
+            },
           })
         );
 
@@ -127,7 +138,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
       return () => window.removeEventListener("popstate", syncParams);
     }, []);
 
-    
+
     useImperativeHandle(ref, () => ({
       triggerSearch: (query: string) => {
         setQ(query);
@@ -154,9 +165,9 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
         setPage(1);
       };
 
-      const handleCategoryChange = (e: CustomEvent<{ cateId: number }>) => {
+      const handleCategoryChange = (e: CustomEvent<{ cateId: number | string }>) => {
         isInternalChange.current = true;
-        setCateId(Number(e.detail.cateId));
+        setCateId(Number(e.detail.cateId) || DEFAULT_CATE_ID);
         setPage(1);
       };
 
@@ -182,10 +193,60 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
       );
     };
 
+    const handleClearFilters = () => {
+      if (typeof window === "undefined") return;
+      isInternalChange.current = true;
+      const params = new URLSearchParams(window.location.search);
+      params.delete("priceMin");
+      params.delete("priceMax");
+      params.delete("cateId");
+      params.delete("page");
+      const queryString = params.toString();
+      const newUrl = queryString ? `${window.location.pathname}?${queryString}` : window.location.pathname;
+      window.history.pushState({}, "", newUrl);
+
+      setPriceMin(DEFAULT_PRICE_MIN);
+      setPriceMax(DEFAULT_PRICE_MAX);
+      setCateId(DEFAULT_CATE_ID);
+      setPage(DEFAULT_PAGE);
+
+      window.dispatchEvent(
+        new CustomEvent("initFilter", {
+          detail: {
+            cateId: "",
+            priceMin: DEFAULT_PRICE_MIN,
+            priceMax: DEFAULT_PRICE_MAX,
+          },
+        })
+      );
+
+      startTransition(() =>
+        fetchData({
+          page: DEFAULT_PAGE,
+          priceMin: DEFAULT_PRICE_MIN,
+          priceMax: DEFAULT_PRICE_MAX,
+          cateId: DEFAULT_CATE_ID,
+        })
+      );
+    };
+
     return (
       <Fragment>
         <div ref={gridRef}>
-          <ProductGrid data={data} />
+          {data.length > 0 ? (
+            <ProductGrid data={data} />
+          ) : (
+            <div className={styles.emptyState}>
+              <div className={styles.iconWrapper}>?</div>
+              <h3 className={styles.title}>Không tìm thấy sản phẩm nào</h3>
+              <p className={styles.message}>
+                Sử dụng ít bộ lọc hơn hoặc{" "}
+                <button type="button" className={styles.clearButton} onClick={handleClearFilters}>
+                  xóa tất cả
+                </button>
+              </p>
+            </div>
+          )}
         </div>
         {totalPages > 1 && (
           <Pagination

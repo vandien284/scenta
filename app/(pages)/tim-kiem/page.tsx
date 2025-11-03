@@ -1,6 +1,6 @@
 "use client";
-import { Fragment, Suspense, useMemo, useRef, useState } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { Fragment, Suspense, useEffect, useMemo, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { FaSearch } from "react-icons/fa";
 import { IoFilter } from "react-icons/io5";
 import { Button } from "react-bootstrap";
@@ -15,13 +15,17 @@ const SearchContent = () => {
     const searchParams = useSearchParams();
 
     const [openFilter, setOpenFilter] = useState(false);
-    const [results, setResults] = useState<number | null>(null); 
-
+    const [results, setResults] = useState<number | null>(null);
+    const [hasPositiveResults, setHasPositiveResults] = useState(false);
 
     const queryFromParam = useMemo(() => searchParams.get("q") || "", [searchParams]);
     const [query, setQuery] = useState(queryFromParam);
 
     const gridRef = useRef<ProductGridWrapperHandle>(null);
+
+    useEffect(() => {
+        setQuery(queryFromParam);
+    }, [queryFromParam]);
 
     const handleSearch = (e: React.FormEvent) => {
         e.preventDefault();
@@ -36,13 +40,20 @@ const SearchContent = () => {
         window.history.pushState({}, "", newUrl);
 
         setResults(null);
+        setHasPositiveResults(false);
 
         gridRef.current?.triggerSearch(qTrim);
     };
 
     const handleResultCount = (count: number) => {
         setResults(count);
+        if (count > 0) {
+            setHasPositiveResults(true);
+        }
     };
+
+    const shouldShowResultsSection =
+        results !== null && (results > 0 || hasPositiveResults);
 
     return (
         <Fragment>
@@ -64,45 +75,38 @@ const SearchContent = () => {
                             </form>
                         </div>
 
-
                         {results !== null && (
                             <>
-                                {results && results > 0 ? (
+                                {results > 0 ? (
                                     <p className={styles.resultText}>
                                         {results} kết quả cho từ khóa “{query}”
                                     </p>
-                                ) : (
+                                ) : !hasPositiveResults ? (
                                     <p className={styles.noResultText}>
                                         Không tìm thấy kết quả nào cho “{query}”. Kiểm tra chính tả hoặc sử dụng một từ hoặc cụm từ khác.
                                     </p>
-                                )}
+                                ) : null}
                             </>
                         )}
                     </div>
 
-                    <div
-                        className={styles.shopContent}
-                        style={{ display: results && results > 0 ? "flex" : "none" }}
-                    >
-                        <div className={styles.desktopSidebar}>
-                            <ProductSideBar />
-                        </div>
+          <div
+            className={styles.shopContent}
+            style={{ display: shouldShowResultsSection ? "flex" : "none" }}
+          >
+            <div className={styles.desktopSidebar}>
+              <ProductSideBar />
+            </div>
 
-                        <Button
-                            className={styles.filterButton}
-                            onClick={() => setOpenFilter(true)}
-                        >
-                            <IoFilter className={styles.filterIcon} />
-                            <span>Bộ lọc</span>
-                        </Button>
+            <Button className={styles.filterButton} onClick={() => setOpenFilter(true)}>
+              <IoFilter className={styles.filterIcon} />
+              <span>Bộ lọc</span>
+            </Button>
 
-                        <div className={styles.rightContainer}>
-                            <ProductGridWrapper
-                                ref={gridRef}
-                                onResultCount={handleResultCount}
-                            />
-                        </div>
-                    </div>
+            <div className={styles.rightContainer}>
+              <ProductGridWrapper ref={gridRef} onResultCount={handleResultCount} />
+            </div>
+          </div>
                 </div>
             </section>
 
@@ -118,9 +122,9 @@ const SearchContent = () => {
 };
 
 export default function SearchPage() {
-  return (
-    <Suspense fallback={<div className="loading">Đang tải trang tìm kiếm...</div>}>
-      <SearchContent />
-    </Suspense>
-  );
+    return (
+        <Suspense fallback={<div className="loading">Đang tải trang tìm kiếm...</div>}>
+            <SearchContent />
+        </Suspense>
+    );
 }
