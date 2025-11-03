@@ -1,5 +1,5 @@
 "use client";
-import { Fragment, useMemo, useRef, useState } from "react";
+import { Fragment, Suspense, useMemo, useRef, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { FaSearch } from "react-icons/fa";
 import { IoFilter } from "react-icons/io5";
@@ -11,7 +11,7 @@ import ProductGridWrapper, {
 } from "@/widgets/ProductGridWrapper";
 import FullScreenModal from "@/ui/FullScreenModal";
 
-const SearchPage = () => {
+const SearchContent = () => {
     const searchParams = useSearchParams();
 
     const [openFilter, setOpenFilter] = useState(false);
@@ -117,4 +117,10 @@ const SearchPage = () => {
     );
 };
 
-export default SearchPage;
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<div className="loading">Đang tải trang tìm kiếm...</div>}>
+      <SearchContent />
+    </Suspense>
+  );
+}
