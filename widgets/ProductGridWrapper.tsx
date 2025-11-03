@@ -43,14 +43,27 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
     }, [onResultCount]);
 
     const fetchData = useCallback(
-      async (searchQ = q,) => {
+      async (
+        overrides?: Partial<{
+          page: number;
+          priceMin: number;
+          priceMax: number;
+          cateId: number;
+          q: string;
+        }>
+      ) => {
+        const nextPage = overrides?.page ?? page;
+        const nextPriceMin = overrides?.priceMin ?? priceMin;
+        const nextPriceMax = overrides?.priceMax ?? priceMax;
+        const nextCateId = overrides?.cateId ?? cateId;
+        const nextQ = overrides?.q ?? q;
 
         const res = await getProductsAction({
-          page,
-          priceMin,
-          priceMax,
-          cateId,
-          q: searchQ,
+          page: nextPage,
+          priceMin: nextPriceMin,
+          priceMax: nextPriceMax,
+          cateId: nextCateId,
+          q: nextQ,
         });
 
         setData(res.products);
@@ -90,7 +103,21 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
         setPriceMax(urlMax);
         setCateId(urlCate);
 
-        startTransition(() => fetchData(urlQ));
+        window.dispatchEvent(
+          new CustomEvent("initFilter", {
+            detail: { cateId: urlCate, priceMin: urlMin, priceMax: urlMax },
+          })
+        );
+
+        startTransition(() =>
+          fetchData({
+            page: urlPage,
+            priceMin: urlMin,
+            priceMax: urlMax,
+            cateId: urlCate,
+            q: urlQ,
+          })
+        );
 
         isInitialLoad.current = true;
       };
@@ -105,7 +132,12 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
       triggerSearch: (query: string) => {
         setQ(query);
         setPage(1);
-        startTransition(() => fetchData(query));
+        startTransition(() =>
+          fetchData({
+            q: query,
+            page: 1,
+          })
+        );
       },
     }));
 
@@ -117,14 +149,14 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
     useEffect(() => {
       const handlePriceChange = (e: CustomEvent<{ min: number; max: number }>) => {
         isInternalChange.current = true;
-        setPriceMin(e.detail.min);
-        setPriceMax(e.detail.max);
+        setPriceMin(Number(e.detail.min));
+        setPriceMax(Number(e.detail.max));
         setPage(1);
       };
 
       const handleCategoryChange = (e: CustomEvent<{ cateId: number }>) => {
         isInternalChange.current = true;
-        setCateId(e.detail.cateId);
+        setCateId(Number(e.detail.cateId));
         setPage(1);
       };
 
@@ -143,7 +175,11 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
       const newUrl = `${window.location.pathname}?${params.toString()}`;
       window.history.pushState({}, "", newUrl);
       setPage(newPage);
-      startTransition(() => fetchData());
+      startTransition(() =>
+        fetchData({
+          page: newPage,
+        })
+      );
     };
 
     return (

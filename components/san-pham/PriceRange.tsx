@@ -61,10 +61,13 @@ export default function PriceRange({
     };
 
     useEffect(() => {
-        const handleInitFilter = (e: CustomEvent<{ priceMin: number; priceMax: number }>) => {
-            if (e.detail.priceMin || e.detail.priceMax) {
-                setMinValue(e.detail.priceMin);
-                setMaxValue(e.detail.priceMax);
+        const handleInitFilter = (e: CustomEvent<{ priceMin?: number; priceMax?: number }>) => {
+            const { priceMin: nextMin, priceMax: nextMax } = e.detail;
+            if (typeof nextMin === "number") {
+                setMinValue(nextMin);
+            }
+            if (typeof nextMax === "number") {
+                setMaxValue(nextMax);
             }
         };
         window.addEventListener("initFilter", handleInitFilter as EventListener);
