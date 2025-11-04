@@ -27,9 +27,9 @@ export default function CustomerReview() {
     <ParallaxBackground image="/images/parallax/customer.webp" height="100vh">
       <section className={styles.reviews}>
         <div className={styles.heading}>
-          <span className={styles.sub}>TESTIMONIAL</span>
-          <h2 className={styles.title}>CUSTOMER REVIEWS</h2>
-          <p className={styles.desc}>What Our Satisfied Clients Are Saying</p>
+          {/* <span className={styles.sub}>ĐÁNH GIÁ</span> */}
+          <h2 className={styles.title}>ĐÁNH GIÁ TỪ KHÁCH HÀNG</h2>
+          <p className={styles.desc}>Khách hàng của chúng tôi đang nói gì</p>
         </div>
 
         <Slider options={{
@@ -80,8 +80,6 @@ export default function CustomerReview() {
           ))}
 
         </Slider>
-
-
 
       </section>
     </ParallaxBackground>

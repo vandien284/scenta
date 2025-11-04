@@ -1,3 +1,5 @@
+import { randomUUID } from "crypto";
+import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import { CartResponse, CartItemSnapshot } from "@/types/CartType";
 import { getAllProducts } from "@/lib/productSource";
@@ -8,21 +10,35 @@ import {
   findCartItem,
 } from "@/lib/cartSource";
 
-function getClientIdentifier(request: Request) {
-  const forwarded = request.headers.get("x-forwarded-for");
-  if (forwarded) {
-    const ip = forwarded.split(",")[0]?.trim();
-    if (ip) return sanitizeIdentifier(ip);
+const CART_COOKIE_NAME = "cart_id";
+const CART_COOKIE_MAX_AGE = 60 * 60 * 24 * 30; // 30 days
+const IS_PRODUCTION = process.env.NODE_ENV === "production";
+
+async function resolveCartIdentifier(): Promise<string> {
+  const cookieStore = await cookies();
+  const cookieValue = cookieStore.get(CART_COOKIE_NAME)?.value;
+  const sanitized = cookieValue ? sanitizeIdentifier(cookieValue) : "";
+  if (sanitized) {
+    return sanitized;
   }
-  const realIp = request.headers.get("x-real-ip");
-  if (realIp) {
-    return sanitizeIdentifier(realIp);
-  }
-  return "local";
+  return sanitizeIdentifier(randomUUID());
 }
 
 function sanitizeIdentifier(value: string) {
   return value.replace(/[^a-zA-Z0-9._-]/g, "_");
+}
+
+function attachCartCookie(response: NextResponse, identifier: string) {
+  response.cookies.set({
+    name: CART_COOKIE_NAME,
+    value: identifier,
+    httpOnly: true,
+    sameSite: "lax",
+    secure: IS_PRODUCTION,
+    path: "/",
+    maxAge: CART_COOKIE_MAX_AGE,
+  });
+  return response;
 }
 
 function buildCartResponse(
@@ -93,35 +109,48 @@ async function buildResponse(identifier: string) {
   return NextResponse.json(response);
 }
 
-export async function GET(request: Request) {
+export async function GET() {
+  const identifier = await resolveCartIdentifier();
   try {
-    const identifier = getClientIdentifier(request);
-    return await buildResponse(identifier);
+    const response = await buildResponse(identifier);
+    return attachCartCookie(response, identifier);
   } catch (error) {
     console.error("[Cart API][GET]", error);
-    return NextResponse.json(
-      { error: "Unable to load cart information." },
-      { status: 500 }
+    return attachCartCookie(
+      NextResponse.json(
+        { error: "Unable to load cart information." },
+        { status: 500 }
+      ),
+      identifier
     );
   }
 }
 
 export async function POST(request: Request) {
+  const identifier = await resolveCartIdentifier();
   try {
-    const identifier = getClientIdentifier(request);
     const { productId, quantity = 1 } = await request.json();
     if (!productId) {
-      return NextResponse.json({ error: "Missing product to add." }, { status: 400 });
+      return attachCartCookie(
+        NextResponse.json({ error: "Missing product to add." }, { status: 400 }),
+        identifier
+      );
     }
 
     const productsMap = await loadProductsMap();
     const product = productsMap.get(Number(productId));
     if (!product) {
-      return NextResponse.json({ error: "Product not found." }, { status: 404 });
+      return attachCartCookie(
+        NextResponse.json({ error: "Product not found." }, { status: 404 }),
+        identifier
+      );
     }
 
     if (product.available <= 0) {
-      return NextResponse.json({ error: "This product is out of stock." }, { status: 400 });
+      return attachCartCookie(
+        NextResponse.json({ error: "This product is out of stock." }, { status: 400 }),
+        identifier
+      );
     }
 
     await upsertCartSnapshot(identifier, (cart) => {
@@ -151,28 +180,38 @@ export async function POST(request: Request) {
       return cart;
     });
 
-    return await buildResponse(identifier);
+    const response = await buildResponse(identifier);
+    return attachCartCookie(response, identifier);
   } catch (error) {
     console.error("[Cart API][POST]", error);
-    return NextResponse.json(
-      { error: error instanceof Error ? error.message : "Unable to add the product to cart." },
-      { status: 500 }
+    return attachCartCookie(
+      NextResponse.json(
+        { error: error instanceof Error ? error.message : "Unable to add the product to cart." },
+        { status: 500 }
+      ),
+      identifier
     );
   }
 }
 
 export async function PATCH(request: Request) {
+  const identifier = await resolveCartIdentifier();
   try {
-    const identifier = getClientIdentifier(request);
     const { productId, quantity = 1 } = await request.json();
     if (!productId) {
-      return NextResponse.json({ error: "Missing product to update." }, { status: 400 });
+      return attachCartCookie(
+        NextResponse.json({ error: "Missing product to update." }, { status: 400 }),
+        identifier
+      );
     }
 
     const productsMap = await loadProductsMap();
     const product = productsMap.get(Number(productId));
     if (!product) {
-      return NextResponse.json({ error: "Product not found." }, { status: 404 });
+      return attachCartCookie(
+        NextResponse.json({ error: "Product not found." }, { status: 404 }),
+        identifier
+      );
     }
 
     if (quantity <= 0) {
@@ -180,7 +219,8 @@ export async function PATCH(request: Request) {
         ...cart,
         items: cart.items.filter((item) => item.productId !== product.id),
       }));
-      return await buildResponse(identifier);
+      const response = await buildResponse(identifier);
+      return attachCartCookie(response, identifier);
     }
 
     const desiredQuantity = Math.min(Number(quantity), product.available);
@@ -207,21 +247,25 @@ export async function PATCH(request: Request) {
       return cart;
     });
 
-    return await buildResponse(identifier);
+    const response = await buildResponse(identifier);
+    return attachCartCookie(response, identifier);
   } catch (error) {
     console.error("[Cart API][PATCH]", error);
-    return NextResponse.json(
-      {
-        error: error instanceof Error ? error.message : "Unable to update item quantity.",
-      },
-      { status: 500 }
+    return attachCartCookie(
+      NextResponse.json(
+        {
+          error: error instanceof Error ? error.message : "Unable to update item quantity.",
+        },
+        { status: 500 }
+      ),
+      identifier
     );
   }
 }
 
 export async function DELETE(request: Request) {
+  const identifier = await resolveCartIdentifier();
   try {
-    const identifier = getClientIdentifier(request);
     const body = await request.json().catch(() => ({}));
     const productId = body?.productId;
 
@@ -230,22 +274,29 @@ export async function DELETE(request: Request) {
         ...cart,
         items: cart.items.filter((item) => item.productId !== Number(productId)),
       }));
-      return await buildResponse(identifier);
+      const response = await buildResponse(identifier);
+      return attachCartCookie(response, identifier);
     }
 
     await removeCart(identifier);
-    return NextResponse.json({
-      identifier,
-      items: [],
-      updatedAt: new Date().toISOString(),
-      totalQuantity: 0,
-      totalPrice: 0,
-    });
+    return attachCartCookie(
+      NextResponse.json({
+        identifier,
+        items: [],
+        updatedAt: new Date().toISOString(),
+        totalQuantity: 0,
+        totalPrice: 0,
+      }),
+      identifier
+    );
   } catch (error) {
     console.error("[Cart API][DELETE]", error);
-    return NextResponse.json(
-      { error: "Unable to remove the product from cart." },
-      { status: 500 }
+    return attachCartCookie(
+      NextResponse.json(
+        { error: "Unable to remove the product from cart." },
+        { status: 500 }
+      ),
+      identifier
     );
   }
 }

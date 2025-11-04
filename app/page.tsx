@@ -17,7 +17,7 @@ export default async function Home() {
       <Banner />
       <Highlight />
       <section className={styles.section}>
-        <div className="container-width">
+        <div className="container-width"  style={{ overflow: "hidden" }}>
           <ProductSlider tabs={TabsData} data={productData} />
         </div>
       </section>

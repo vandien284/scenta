@@ -36,7 +36,7 @@ export default function ParallaxContainer({
       </motion.div>
       <div className={styles.overlay} />
       <div className={styles.content}>
-        <div className="container-width">
+        <div className="container-width" style={{ overflow: "hidden" }}>
           {children}
         </div>
       </div>
