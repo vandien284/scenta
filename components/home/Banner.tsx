@@ -41,7 +41,7 @@ export default function Banner() {
                 >
                   <div>
                     <h3 className={styles.title}>{cat.name}</h3>
-                    <p className={styles.items}>{cat.items} sản phẩm</p>
+                    {/* <p className={styles.items}>{cat.items} sản phẩm</p> */}
                   </div>
 
                   <div className={styles["view-collection"]}>
