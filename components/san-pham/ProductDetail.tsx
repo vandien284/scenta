@@ -35,6 +35,13 @@ export default function ProductDetail({ product }: ProductDetailProps) {
     return Math.min(Math.max(1, value), available);
   };
 
+  const descriptionHtml = useMemo(() => {
+    if (product.description?.trim()) {
+      return product.description;
+    }
+    return "<strong>Mô tả:</strong> Được rót bằng tay với hương thơm nhẹ nhàng, hoàn hảo để nâng tầm mọi không gian sống.";
+  }, [product.description]);
+
   const handleIncrease = () => {
     setQuantity((prev) => clampQuantity(prev + 1));
   };
@@ -115,10 +122,10 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             </span>
           </div>
 
-          <p className={styles.desc}>
-            {product.description ??
-              "Được rót bằng tay với hương thơm nhẹ nhàng, hoàn hảo để nâng tầm mọi không gian sống."}
-          </p>
+          <div
+            className={styles.desc}
+            dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+          />
 
           <div className={styles.actionsWrapper}>
             <div className={styles.quantitySelector}>

@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "name": "Lavender Dreams 1",
-    "categoriesId": 1,
-    "url": "lavender-dreams-1",
+    "name": "Rose Quartz Glow",
+    "categoriesId": 2,
+    "url": "rose-quartz-glow",
     "price": 29.99,
     "images": [
       "/images/product/p-1.webp"
     ],
-    "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
+    "description": "<strong>Hương:</strong> Hoa hồng & gỗ tuyết tùng<br /> <strong>Cảm giác:</strong> Nồng nàn và ấm áp như ánh hoàng hôn.<br /> <strong>Mô tả:</strong> Từng tia sáng hồng lan tỏa hương yêu thương, xoa dịu trái tim sau ngày dài.",
     "bestSeller": true,
     "outstanding": false,
     "limited": true,
@@ -17,14 +17,14 @@
   },
   {
     "id": 2,
-    "name": "Lavender Dreams 2",
-    "categoriesId": 1,
-    "url": "lavender-dreams-2",
+    "name": "Autumn Ember",
+    "categoriesId": 2,
+    "url": "autumn-ember",
     "price": 29.99,
     "images": [
       "/images/product/p-2.webp"
     ],
-    "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
+    "description": "<strong>Hương:</strong> Quế, cam ngọt, vani<br /> <strong>Cảm giác:</strong> Ngọt ấm như tách trà buổi chiều thu.<br /> <strong>Mô tả:</strong> Một ngọn nến mang hương quế cay nhẹ, gói trọn không gian ấm áp.",
     "bestSeller": false,
     "outstanding": true,
     "limited": true,
@@ -33,14 +33,14 @@
   },
   {
     "id": 3,
-    "name": "Lavender Dreams 3",
+    "name": "Midnight Balance",
     "categoriesId": 2,
-    "url": "lavender-dreams-3",
+    "url": "midnight-balance",
     "price": 29.99,
     "images": [
       "/images/product/p-3.webp"
     ],
-    "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
+    "description": "<strong>Hương:</strong> Oải hương, xô thơm, hổ phách<br /> <strong>Cảm giác:</strong> Cân bằng, thư giãn, xoa dịu tâm trí.<br /> <strong>Mô tả:</strong> Mỗi hơi thở là một nhịp lắng lại giữa thế giới vội vàng.",
     "bestSeller": true,
     "outstanding": false,
     "limited": false,
@@ -49,14 +49,14 @@
   },
   {
     "id": 4,
-    "name": "Lavender Dreams 4",
+    "name": "Ocean Whisper",
     "categoriesId": 2,
-    "url": "lavender-dreams-4",
+    "url": "ocean-whisper",
     "price": 29.99,
     "images": [
       "/images/product/p-4.webp"
     ],
-    "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
+    "description": "<strong>Hương:</strong> Bạc hà, muối biển, lavender<br /> <strong>Cảm giác:</strong> Mát lạnh và tự do như gió đại dương.<br /> <strong>Mô tả:</strong> Thắp lên, và gió biển như ùa về từ ký ức xa xăm.",
     "bestSeller": false,
     "outstanding": true,
     "limited": false,
@@ -65,14 +65,14 @@
   },
   {
     "id": 5,
-    "name": "Lavender Dreams 5",
-    "categoriesId": 3,
-    "url": "lavender-dreams-5",
+    "name": "Blooming Meadow",
+    "categoriesId": 2,
+    "url": "blooming-meadow",
     "price": 29.99,
     "images": [
       "/images/product/p-5.webp"
     ],
-    "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
+    "description": "<strong>Hương:</strong> Hoa nhài, oải hương, hổ phách trắng<br /> <strong>Cảm giác:</strong> Tươi mới, ngọt ngào và nữ tính.<br /> <strong>Mô tả:</strong> Hương đồng nội dịu nhẹ len lỏi giữa căn phòng nhỏ.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
@@ -81,14 +81,14 @@
   },
   {
     "id": 6,
-    "name": "Lavender Dreams 6",
-    "categoriesId": 3,
-    "url": "lavender-dreams-6",
+    "name": "Marble Serenity",
+    "categoriesId": 2,
+    "url": "marble-serenity",
     "price": 29.99,
     "images": [
       "/images/product/p-6.webp"
     ],
-    "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
+    "description": "<strong>Hương:</strong> Lavender, white musk, vanilla<br /> <strong>Cảm giác:</strong> Tối giản, tinh tế, yên bình.<br /> <strong>Mô tả:</strong> Như làn khói mỏng tan giữa không gian thiền tĩnh.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
@@ -97,14 +97,14 @@
   },
   {
     "id": 7,
-    "name": "Lavender Dreams 7",
-    "categoriesId": 4,
-    "url": "lavender-dreams-7",
+    "name": "Forest Soul",
+    "categoriesId": 2,
+    "url": "forest-soul",
     "price": 29.99,
     "images": [
       "/images/product/p-7.webp"
     ],
-    "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
+    "description": "<strong>Hương:</strong> Gỗ đàn hương, cam bergamot, hoắc hương<br /> <strong>Cảm giác:</strong> Trầm ấm, thiên nhiên và cổ điển.<br /> <strong>Mô tả:</strong> Thắp lên để tìm lại hơi thở của rừng sâu.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
@@ -113,14 +113,14 @@
   },
   {
     "id": 8,
-    "name": "Lavender Dreams 8",
-    "categoriesId": 4,
-    "url": "lavender-dreams-8",
+    "name": "Golden Hour",
+    "categoriesId": 2,
+    "url": "golden-hour",
     "price": 29.99,
     "images": [
       "/images/product/p-8.webp"
     ],
-    "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
+    "description": "<strong>Hương:</strong> Mật ong, oải hương, hổ phách<br /> <strong>Cảm giác:</strong> Ấm áp và lãng mạn.<br /> <strong>Mô tả:</strong> Khoảnh khắc cuối ngày – ánh nến vàng như mặt trời sắp tắt.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
@@ -129,14 +129,14 @@
   },
   {
     "id": 9,
-    "name": "Lavender Dreams 9",
+    "name": "Misty Calm",
     "categoriesId": 5,
-    "url": "lavender-dreams-9",
+    "url": "misty-calm",
     "price": 29.99,
     "images": [
       "/images/product/p-9.webp"
     ],
-    "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
+    "description": "<strong>Hương:</strong> Trà xanh & lá bạc hà<br /> <strong>Cảm giác:</strong> Mát lạnh, sạch sẽ và an nhiên.<br /> <strong>Mô tả:</strong> Mùi trà ấm vương trên da, mang bình yên đến từng hơi thở.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
@@ -145,14 +145,14 @@
   },
   {
     "id": 10,
-    "name": "Lavender Dreams 10",
+    "name": "Purple Haven",
     "categoriesId": 5,
-    "url": "lavender-dreams-10",
+    "url": "purple-haven",
     "price": 29.99,
     "images": [
       "/images/product/p-10.webp"
     ],
-    "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
+    "description": "<strong>Hương:</strong> Lavender nguyên bản & cam bergamot<br /> <strong>Cảm giác:</strong> Trị liệu, giúp ngủ ngon và giải tỏa căng thẳng.<br /> <strong>Mô tả:</strong> Chỉ cần thắp một ngọn, căn phòng hóa thành spa thư giãn.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
@@ -161,14 +161,14 @@
   },
   {
     "id": 11,
-    "name": "Lavender Dreams 11",
-    "categoriesId": 6,
-    "url": "lavender-dreams-11",
+    "name": "Noir Essence",
+    "categoriesId": 2,
+    "url": "noir-essence",
     "price": 29.99,
     "images": [
       "/images/product/p-11.webp"
     ],
-    "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
+    "description": "<strong>Hương:</strong> Gỗ tuyết tùng, xạ hương & hổ phách đen<br /> <strong>Cảm giác:</strong> Sang trọng, tinh tế, đậm chất minimal.<br /> <strong>Mô tả:</strong> Dành cho những tâm hồn yêu sự tĩnh lặng và phong cách.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
@@ -177,14 +177,14 @@
   },
   {
     "id": 12,
-    "name": "Lavender Dreams 12",
-    "categoriesId": 6,
-    "url": "lavender-dreams-12",
+    "name": "Rustic Woodlight",
+    "categoriesId": 2,
+    "url": "rustic-woodlight",
     "price": 29.99,
     "images": [
       "/images/product/p-12.webp"
     ],
-    "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
+    "description": "<strong>Hương:</strong> Hương gỗ sồi, vanilla & khói nhè nhẹ<br /> <strong>Cảm giác:</strong> Vintage, mộc mạc và ấm áp.<br /> <strong>Mô tả:</strong> Ngọn nến nhỏ mang theo hơi thở của núi rừng.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
