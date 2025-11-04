@@ -183,7 +183,7 @@ body {
   padding-right: var(--container-gap);
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 @media (min-width: 1400px) {
@@ -194,7 +194,7 @@ body {
 }
 
 #pages-layout {
-  overflow: hidden;
+  // overflow: hidden;
   display: flow-root;
 }
 

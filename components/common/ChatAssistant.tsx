@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { FiMessageCircle, FiSend, FiX } from "react-icons/fi";
+import { FiArrowUp, FiMessageCircle, FiSend, FiX } from "react-icons/fi";
 import styles from "@/styles/components/common/chatAssistant.module.scss";
 
 interface ChatMessage {
@@ -30,6 +30,7 @@ export default function ChatAssistant() {
   const [messages, setMessages] = useState<ChatMessage[]>([INITIAL_MESSAGE]);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -57,11 +58,26 @@ export default function ChatAssistant() {
     listRef.current.scrollTop = listRef.current.scrollHeight;
   }, [messages, isOpen]);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 200);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const isDisabled = useMemo(() => {
     return isLoading || !inputValue.trim();
   }, [isLoading, inputValue]);
 
   const handleToggle = () => setIsOpen((prev) => !prev);
+  const handleScrollTop = () => {
+    if (typeof window === "undefined") return;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const cx = (...args: Array<string | false | null | undefined>) =>
     args.filter(Boolean).join(" ");
@@ -243,6 +259,16 @@ export default function ChatAssistant() {
       >
         {isOpen ? <FiX /> : <FiMessageCircle />}
       </button>
+
+      {showScrollTop && (
+        <button
+          className={styles.scrollTop}
+          onClick={handleScrollTop}
+          aria-label="Lên đầu trang"
+        >
+          <FiArrowUp />
+        </button>
+      )}
     </div>
   );
 }

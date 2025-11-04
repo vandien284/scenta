@@ -273,17 +273,30 @@
 .mobile-search {
   background: rgb(255, 255, 255);
   animation: fadeIn 0.4s ease;
-  padding: 10px 15px;
+  padding: 16px 18px;
   margin-top: 20px;
 }
 
 .search-form-mobile {
   display: flex;
+  width: 100%;
+}
+
+.search-box {
+  display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 25px;
-  overflow: hidden;
-  padding: 6px 10px;
+  gap: 0;
+  width: 100%;
+  background: #f3f3f3;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 4px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+
+  &:focus-within {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.25);
+  }
 }
 
 .mobile-input {
@@ -292,27 +305,34 @@
   border: none;
   outline: none;
   color: #000000;
-  padding: 15px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+
   &::placeholder {
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.55);
   }
 }
 
 .mobile-search-btn {
-  background: transparent;
+  background: #000;
   border: none;
-  padding: 8px 14px;
-  color: #000000;
-  font-size: 1rem;
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border-radius: 0 25px 25px 0;
-  transition: background 0.3s ease;
+  border-radius: 999px;
+  transition: background 0.3s ease, transform 0.3s ease;
 
   svg {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+
+  &:hover {
+    background: #222;
+    transform: translateY(-1px);
   }
 }
 

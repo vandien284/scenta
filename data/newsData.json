@@ -1,0 +1,962 @@
+[
+  {
+    "id": 1,
+    "slug": "lam-nen-thom-khong-co-nhiet-ke",
+    "legacySlugs": [
+      "candle-care-essentials"
+    ],
+    "title": "Làm Nến Thơm Mà Không Có Nhiệt Kế? Cách Ước Lượng Nhiệt Độ Đơn Giản Tại Nhà",
+    "excerpt": "Thiếu nhiệt kế khi làm nến thơm? Học ngay mẹo ước lượng nhiệt độ và thời điểm thêm tinh dầu chuẩn xác nhất có thể ngay tại nhà.",
+    "publishedAt": "2024-08-12",
+    "readingTime": "5 phút đọc",
+    "image": "/images/blog/blog-1.png",
+    "category": "Guides",
+    "author": "Scenta Team",
+    "heroImage": "/images/blog/blog-1.png",
+    "heroCaption": "Giữ trọn mùi hương và ánh sáng dịu dàng ở mỗi lần thắp nến.",
+    "tableOfContents": [
+      {
+        "id": "gioi-thieu",
+        "label": "Làm nến thơm mà không có nhiệt kế?",
+        "level": 2
+      },
+      {
+        "id": "nhiet-do-then-chot",
+        "label": "Nhiệt độ – yếu tố then chốt",
+        "level": 2
+      },
+      {
+        "id": "loai-sap",
+        "label": "Các loại sáp nến",
+        "level": 2
+      },
+      {
+        "id": "sap-dau-nanh-wonder-soy-wax",
+        "label": "Sáp Đậu Nành Wonder Soy Wax",
+        "level": 3
+      },
+      {
+        "id": "sap-ong-royale-beeswax",
+        "label": "Sáp Ong Royale Beeswax",
+        "level": 3
+      },
+      {
+        "id": "meo-uoc-luong",
+        "label": "Mẹo ước lượng nhiệt độ",
+        "level": 2
+      },
+      {
+        "id": "nhiet-ke-y-te",
+        "label": "Có dùng nhiệt kế y tế?",
+        "level": 3
+      },
+      {
+        "id": "tham-khao",
+        "label": "Tham khảo thêm",
+        "level": 2
+      }
+    ],
+    "sections": [
+      {
+        "id": "gioi-thieu",
+        "title": "Làm nến thơm mà không có nhiệt kế?",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Bạn đang bắt đầu hành trình tự tay làm nến thơm tại nhà nhưng lại thiếu chiếc nhiệt kế chuyên dụng? Đừng lo, bạn vẫn có thể theo dõi nhiệt độ tương đối bằng những mẹo nhỏ ngay trong căn bếp của mình."
+          },
+          {
+            "type": "paragraph",
+            "text": "Bài viết này mang đến cách ước lượng nhiệt độ khi làm nến để hạn chế tối đa lỗi sai thường gặp, đồng thời giúp bạn hiểu vì sao kiểm soát nhiệt độ là bước quan trọng nhất cho mỗi mẻ nến thơm."
+          }
+        ]
+      },
+      {
+        "id": "nhiet-do-then-chot",
+        "title": "Nhiệt độ – yếu tố then chốt khi làm nến thơm",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Với những người chỉ làm nến trang trí không mùi, độ chính xác nhiệt độ không phải là vấn đề lớn. Tuy nhiên khi bạn mong muốn nến cháy ổn định và tỏa hương bền bỉ, nhiệt độ lại đóng vai trò quyết định."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nếu sáp quá nóng khi thêm tinh dầu, phân tử hương sẽ bay hơi nhanh, khiến thành phẩm nhạt mùi. Ngược lại, nếu sáp quá nguội, tinh dầu không thể hòa tan hoàn toàn và dễ kết tủa. Dấu hiệu nhận biết là sáp bắt đầu dẻo lại, xuất hiện màng mỏng hoặc bám vào thành cốc."
+          },
+          {
+            "type": "paragraph",
+            "text": "Vì vậy hãy ưu tiên khuấy đều và theo dõi trạng thái của sáp thay vì chỉ nhìn vào đồng hồ thời gian."
+          }
+        ]
+      },
+      {
+        "id": "loai-sap",
+        "title": "Các loại sáp nến và nhiệt độ xử lý tương ứng",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Mỗi loại sáp nến sở hữu điểm nóng chảy và phạm vi nhiệt thích hợp riêng. Nắm được khoảng nhiệt này giúp tinh dầu bám mùi tốt hơn và bề mặt nến láng mịn."
+          }
+        ]
+      },
+      {
+        "id": "sap-dau-nanh-wonder-soy-wax",
+        "title": "Sáp Đậu Nành Wonder Soy Wax",
+        "level": 3,
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "Sáp mềm, phù hợp cho nến đựng ly và hũ thủy tinh.",
+              "Thêm tinh dầu khi sáp hạ còn khoảng 70°C để hương bám tốt nhất.",
+              "Rót vào ly khi sáp đạt khoảng 60°C để hạn chế nứt bề mặt."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sap-ong-royale-beeswax",
+        "title": "Sáp Ong Royale Beeswax",
+        "level": 3,
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "Sáp cứng, thích hợp tạo hình hoặc đổ khuôn.",
+              "Thêm tinh dầu khi nhiệt độ ở mức 65°C để tránh bay hương.",
+              "Rót khuôn ở 60°C để nến giữ chi tiết sắc nét."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "meo-uoc-luong",
+        "title": "Mẹo ước lượng nhiệt độ khi không có nhiệt kế",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Chưa kịp sắm nhiệt kế? Vẫn có thể ước lượng nhiệt độ bằng cảm quan và thời gian."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Đun chảy sáp bằng phương pháp cách thủy, lò vi sóng hoặc ca inox chịu nhiệt.",
+              "Khi sáp chảy hoàn toàn và không còn cặn, nhấc khỏi nguồn nhiệt.",
+              "Chờ 3–4 phút để sáp nguội nhẹ rồi mới cho tinh dầu.",
+              "Khuấy đều trong 2 phút để hỗn hợp đồng nhất.",
+              "Rót hỗn hợp vào ly hoặc khuôn ngay khi hỗn hợp vẫn còn loãng."
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Lưu ý nhanh",
+            "text": "Không đo được nhiệt độ chính xác có thể khiến nến bị lõm đáy, rỗ mặt hoặc tách lớp hương. Theo dõi trạng thái của sáp là cách bù đắp cho sự thiếu chính xác này."
+          }
+        ]
+      },
+      {
+        "id": "nhiet-ke-y-te",
+        "title": "Có dùng nhiệt kế y tế thay thế không?",
+        "level": 3,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Nhiệt kế y tế không phải lựa chọn an toàn: giới hạn đo thường dưới 42°C trong khi sáp nóng chảy có thể đạt 90–100°C."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nhúng trực tiếp đầu cảm biến vào sáp còn làm hỏng thiết bị và gây sai số lớn. Tốt nhất hãy đầu tư một chiếc nhiệt kế thủy ngân hoặc nhiệt kế điện tử chịu nhiệt dành riêng cho nến."
+          }
+        ]
+      },
+      {
+        "id": "tham-khao",
+        "title": "Tham khảo thêm",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "link",
+            "label": ">> XEM THÊM: Kit Làm Nến Handmade: Tự Tay Tạo Nên Hương Của Riêng Mình",
+            "href": "/tin-tuc/kit-lam-nen-handmade"
+          }
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "kit-lam-nen-handmade"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "xa-phong-thien-nhien-handmade",
+    "title": "Xà Phòng Thiên Nhiên Handmade: Sạch Da, Sạch Cả Tâm Hồn",
+    "excerpt": "Đổi sang xà phòng thiên nhiên để cảm nhận làn da mịn sạch, mẹo bảo quản và gợi ý hương phù hợp từng nhu cầu chăm sóc cơ thể.",
+    "publishedAt": "2024-08-03",
+    "readingTime": "7 phút đọc",
+    "image": "/images/blog/blog-2.webp",
+    "category": "Wellness",
+    "author": "Anh Nguyen",
+    "heroImage": "/images/blog/blog-2.webp",
+    "heroCaption": "Một bánh xà phòng handmade đủ để biến routine tắm gội thành liệu pháp thư giãn.",
+    "tableOfContents": [
+      {
+        "id": "ly-do-chuyen-doi",
+        "label": "Vì sao nên chuyển sang xà phòng thiên nhiên?",
+        "level": 2
+      },
+      {
+        "id": "cac-loai-pho-bien",
+        "label": "Các loại xà phòng handmade phổ biến",
+        "level": 2
+      },
+      {
+        "id": "bao-quan-xa-phong",
+        "label": "Mẹo bảo quản để không bị mềm",
+        "level": 2
+      },
+      {
+        "id": "xa-phong-than-tre",
+        "label": "Xà phòng than tre – bí mật làn da mịn",
+        "level": 2
+      },
+      {
+        "id": "cung-trai-nghiem",
+        "label": "Cảm giác sau khi tắm",
+        "level": 2
+      }
+    ],
+    "sections": [
+      {
+        "id": "ly-do-chuyen-doi",
+        "title": "Vì sao nên chuyển sang xà phòng thiên nhiên?",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Sau một ngày dài mệt mỏi, không gì dễ chịu bằng tắm bằng xà phòng thiên nhiên handmade. Mùi thơm thoang thoảng của than tre, cam thảo hay cà phê khiến làn da như được “reset”."
+          },
+          {
+            "type": "paragraph",
+            "text": "Xà phòng công nghiệp có thể tạo nhiều bọt, nhưng lại chứa chất tẩy mạnh. Trong khi đó, xà phòng handmade được làm từ dầu thực vật – vừa làm sạch, vừa dưỡng ẩm tự nhiên."
+          }
+        ]
+      },
+      {
+        "id": "cac-loai-pho-bien",
+        "title": "Các loại xà phòng handmade phổ biến hiện nay",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "Than tre: làm sạch sâu, giảm mụn lưng và điều tiết dầu.",
+              "Cà phê: tẩy tế bào chết nhẹ nhàng và làm sáng da.",
+              "Cam thảo: làm đều màu và xoa dịu vùng da nhạy cảm."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/blog/blog-2.webp",
+            "alt": "Xà phòng thiên nhiên handmade từ Scenta",
+            "caption": "Xà phòng thiên nhiên handmade từ Scenta"
+          }
+        ]
+      },
+      {
+        "id": "bao-quan-xa-phong",
+        "title": "Mẹo bảo quản xà phòng để không bị mềm",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "Đặt bánh xà phòng trên khay gỗ thoát nước tốt.",
+              "Không để trong hộp kín ngay sau khi sử dụng.",
+              "Để bánh xà phòng khô tự nhiên giữa các lần tắm."
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Tip nhỏ",
+            "text": "Cắt bánh xà phòng lớn thành hai phần để sử dụng lâu hơn mà vẫn giữ mùi hương nguyên bản."
+          }
+        ]
+      },
+      {
+        "id": "xa-phong-than-tre",
+        "title": "Xà phòng than tre – bí mật của làn da mịn sạch",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Hoạt tính từ than tre giúp hút dầu thừa và bụi bẩn, mang lại bề mặt da khô thoáng nhưng không căng rít."
+          }
+        ]
+      },
+      {
+        "id": "cung-trai-nghiem",
+        "title": "Cảm giác sau khi tắm – liệu pháp cho tâm hồn",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Khoảnh khắc lau khô người và cảm nhận làn da mềm mại là liệu pháp giúp bạn thư giãn sâu."
+          },
+          {
+            "type": "link",
+            "label": ">> XEM THÊM: Xà Phòng Thiên Nhiên – Sạch Da, Dịu Hồn: Khi Việc Tắm Trở Thành Nghi Lễ An Yên",
+            "href": "/tin-tuc/xa-phong-thien-nhien-sach-da-diu-hon"
+          }
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "tinh-dau-thien-nhien",
+      "kit-lam-nen-handmade"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "tinh-dau-thien-nhien",
+    "title": "Tinh Dầu Thiên Nhiên: Chạm Nhẹ Vào Cảm Xúc",
+    "excerpt": "Từ lý do nên dùng tinh dầu đến cách chọn mùi cho từng tâm trạng, kết hợp và sử dụng an toàn để chăm sóc tinh thần mỗi ngày.",
+    "publishedAt": "2024-07-25",
+    "readingTime": "6 phút đọc",
+    "image": "/images/blog/blog-3.png",
+    "category": "Wellness",
+    "author": "Linh Tran",
+    "heroImage": "/images/blog/blog-3.png",
+    "heroCaption": "Tinh dầu thiên nhiên giúp làm mới không khí và nhẹ nhàng đánh thức cảm xúc.",
+    "tableOfContents": [
+      {
+        "id": "vi-sao-tinh-dau",
+        "label": "Vì sao tinh dầu thiên nhiên được yêu thích?",
+        "level": 2
+      },
+      {
+        "id": "chon-theo-tam-trang",
+        "label": "Cách chọn tinh dầu theo tâm trạng",
+        "level": 2
+      },
+      {
+        "id": "cach-dung-an-toan",
+        "label": "Cách dùng tinh dầu an toàn",
+        "level": 2
+      },
+      {
+        "id": "bac-ha-bi-quyet",
+        "label": "Tinh dầu bạc hà – bí quyết tập trung",
+        "level": 2
+      },
+      {
+        "id": "meo-phoi",
+        "label": "Mẹo phối tinh dầu tạo hương độc đáo",
+        "level": 2
+      }
+    ],
+    "sections": [
+      {
+        "id": "vi-sao-tinh-dau",
+        "title": "Vì sao tinh dầu thiên nhiên được yêu thích?",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Có những ngày căng thẳng, chỉ vài giọt tinh dầu trong máy khuếch tán đã khiến bầu không khí trở nên dễ chịu. Hương bạc hà đánh thức giác quan trong khi lavender lại giúp ru tâm trí."
+          },
+          {
+            "type": "paragraph",
+            "text": "Tinh dầu thiên nhiên không đơn thuần để làm thơm phòng mà là liệu pháp trị liệu nhẹ nhàng, hỗ trợ cải thiện giấc ngủ, giảm căng thẳng và tái tạo năng lượng."
+          }
+        ]
+      },
+      {
+        "id": "chon-theo-tam-trang",
+        "title": "Cách chọn tinh dầu phù hợp tâm trạng",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "Khi mệt mỏi: bạc hà, sả chanh giúp làm mới không khí.",
+              "Khi stress: lavender, cam bergamot xoa dịu thần kinh.",
+              "Khi buồn ngủ: gỗ tuyết tùng, trầm hương mang lại cảm giác tĩnh tại."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cach-dung-an-toan",
+        "title": "Cách dùng tinh dầu an toàn và hiệu quả",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Luôn pha loãng tinh dầu trước khi tiếp xúc trực tiếp với da. Với máy khuếch tán, chỉ cần 5–7 giọt cho 100 ml nước để tránh mùi quá đậm."
+          },
+          {
+            "type": "callout",
+            "title": "Mẹo",
+            "text": "Kết hợp tinh dầu với nước ấm để ngâm chân hoặc nhỏ vào bồn tắm giúp thư giãn sâu hơn."
+          }
+        ]
+      },
+      {
+        "id": "bac-ha-bi-quyet",
+        "title": "Tinh dầu bạc hà – bí quyết tập trung và thư giãn",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Bạc hà giúp mở rộng đường hô hấp, giảm cảm giác mệt mỏi và hỗ trợ bạn tập trung vào công việc."
+          }
+        ]
+      },
+      {
+        "id": "meo-phoi",
+        "title": "Mẹo phối tinh dầu để tạo hương độc đáo",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "Buổi sáng: bạc hà + cam tạo cảm giác sảng khoái.",
+              "Chiều thư giãn: lavender + vanilla mang lại sự yên bình.",
+              "Tối lãng mạn: hoa hồng + gỗ đàn hương tạo không khí ấm áp."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "/images/blog/blog-3.png",
+            "alt": "Tinh dầu thiên nhiên handmade từ Scenta",
+            "caption": "Tinh dầu thiên nhiên handmade từ Scenta"
+          },
+          {
+            "type": "link",
+            "label": ">> XEM THÊM: Trải nghiệm tinh dầu thiên nhiên nguyên chất từ SCENTA – mỗi giọt hương là một nốt nhạc cảm xúc.",
+            "href": "/san-pham/tinh-dau"
+          }
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "xa-phong-thien-nhien-handmade"
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "kit-lam-nen-handmade",
+    "title": "Kit Làm Nến Handmade: Tự Tay Tạo Nên Hương Của Riêng Mình",
+    "excerpt": "Cuối tuần thử đổ nến tại nhà với bộ kit đầy đủ, khám phá từng bước đơn giản và gợi ý phối hương sáng tạo cho người mới bắt đầu.",
+    "publishedAt": "2024-07-12",
+    "readingTime": "6 phút đọc",
+    "image": "/images/blog/blog-4.png",
+    "category": "DIY",
+    "author": "Scenta Editors",
+    "heroImage": "/images/blog/blog-4.png",
+    "heroCaption": "Bộ kit làm nến giúp bạn dành thời gian chậm lại và sáng tạo mùi hương riêng.",
+    "tableOfContents": [
+      {
+        "id": "ly-do-thu",
+        "label": "Tại sao nên thử làm nến tại nhà?",
+        "level": 2
+      },
+      {
+        "id": "noi-dung-kit",
+        "label": "Bộ kit làm nến gồm những gì?",
+        "level": 2
+      },
+      {
+        "id": "cach-lam-don-gian",
+        "label": "Cách làm nến đơn giản",
+        "level": 2
+      },
+      {
+        "id": "goi-y-huong",
+        "label": "Gợi ý phối hương sáng tạo",
+        "level": 2
+      },
+      {
+        "id": "lieu-phap-chua-lanh",
+        "label": "Tại sao đổ nến là liệu pháp chữa lành?",
+        "level": 2
+      }
+    ],
+    "sections": [
+      {
+        "id": "ly-do-thu",
+        "title": "Tại sao nên thử làm nến tại nhà?",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Cuối tuần, thay vì cắm mặt vào điện thoại, thử đổ nến xem sao. Mình từng thử một kit làm nến mini, và phải công nhận: vừa vui, vừa… thiền. Mỗi bước khuấy sáp, đổ tinh dầu, chờ nguội đều khiến mình học được cách chậm lại."
+          }
+        ]
+      },
+      {
+        "id": "noi-dung-kit",
+        "title": "Bộ kit làm nến gồm những gì?",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Một hộp nhỏ mà có đủ: sáp đậu nành, bấc, ly thủy tinh, tinh dầu và hướng dẫn chi tiết. Không cần dụng cụ chuyên nghiệp, chỉ cần bếp nhỏ hoặc nồi nước nóng."
+          },
+          {
+            "type": "paragraph",
+            "text": "Bạn chỉ cần thêm bếp nhỏ hoặc nồi nước nóng là đã có thể bắt đầu."
+          }
+        ]
+      },
+      {
+        "id": "cach-lam-don-gian",
+        "title": "Cách làm nến đơn giản cho người mới",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Buổi sáng: Bạc hà + cam",
+              "Chiều thư giãn: Lavender + vanilla.",
+              "Buổi tối lãng mạn: Hoa hồng + trầm hương."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "goi-y-huong",
+        "title": "Gợi ý phối hương sáng tạo từ tinh dầu",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "Buổi sáng: bạc hà + cam tạo nguồn năng lượng mới.",
+              "Chiều thư giãn: lavender + vanilla giúp dễ ngủ.",
+              "Buổi tối lãng mạn: hoa hồng + trầm hương tạo không gian ấm áp."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "lieu-phap-chua-lanh",
+        "title": "Tại sao \"đổ nến\" lại là một liệu pháp chữa lành?",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Việc tự tay tạo ra một hũ nến giúp bạn cảm nhận thành quả rõ rệt và học cách trân quý thời gian dành cho bản thân."
+          },
+          {
+            "type": "link",
+            "label": ">> XEM THÊM: Làm Nến Thơm Mà Không Có Nhiệt Kế? Cách Ước Lượng Nhiệt Độ Đơn Giản Tại Nhà",
+            "href": "/tin-tuc/lam-nen-thom-khong-co-nhiet-ke"
+          }
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "lam-nen-thom-khong-co-nhiet-ke",
+      "kit-lam-nen-handmade"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "xa-phong-thien-nhien-sach-da-diu-hon",
+    "title": "Xà Phòng Thiên Nhiên – Sạch Da, Dịu Hồn: Khi Việc Tắm Trở Thành Nghi Lễ An Yên",
+    "excerpt": "Khám phá bí mật của xà phòng thiên nhiên handmade nhà SCENTA – làm sạch làn da, làm dịu tâm trí. Từ công thức dầu thực vật đến mùi hương tinh dầu thư giãn, hãy để việc tắm mỗi ngày trở thành nghi lễ an lành.",
+    "publishedAt": "2024-07-12",
+    "readingTime": "6 phút đọc",
+    "image": "/images/blog/blog-5.png",
+    "category": "Wellness",
+    "author": "Scenta Editors",
+    "heroImage": "/images/blog/blog-5.png",
+    "heroCaption": "Khám phá bí mật của xà phòng thiên nhiên handmade nhà SCENTA – làm sạch làn da, làm dịu tâm trí. Từ công thức dầu thực vật đến mùi hương tinh dầu thư giãn, hãy để việc tắm mỗi ngày trở thành nghi lễ an lành.",
+    "tableOfContents": [
+      {
+        "id": "tam-tuong-la-chuyen-nho-hoa-ra-la-cach-cham-soc-tam-hon",
+        "label": "Tắm – tưởng là chuyện nhỏ, hóa ra là cách chăm sóc tâm hồn",
+        "level": 2
+      },
+      {
+        "id": "xa-phong-thien-nhien-khac-gi-so-voi-xa-phong-cong-nghiep",
+        "label": "Xà phòng thiên nhiên khác gì so với xà phòng công nghiệp?",
+        "level": 2
+      },
+      {
+        "id": "thanh-phan-tao-nen-su-khac-biet-bi-quyet-cua-lan-da-khoe",
+        "label": "Thành phần tạo nên sự khác biệt – bí quyết của làn da khỏe",
+        "level": 2
+      },
+      {
+        "id": "cac-loai-xa-phong-thien-nhien-duoc-yeu-thich-nhat-hien-nay",
+        "label": "Các loại xà phòng thiên nhiên được yêu thích nhất hiện nay",
+        "level": 2
+      },
+      {
+        "id": "cach-su-dung-va-bao-quan-de-xa-phong-luon-thom-va-ben",
+        "label": "Cách sử dụng và bảo quản để xà phòng luôn thơm và bền",
+        "level": 2
+      },
+      {
+        "id": "kham-pha-bo-xa-phong-thien-nhien-cua-SCENTA-an-lanh-cho-lan-da-diu-nhe-cho-tam-hon",
+        "label": "Khám phá bộ xà phòng thiên nhiên của SCENTA – an lành cho làn da, dịu nhẹ cho tâm hồn",
+        "level": 2
+      }
+    ],
+    "sections": [
+      {
+        "id": "tam-tuong-la-chuyen-nho-hoa-ra-la-cach-cham-soc-tam-hon",
+        "title": "Tắm – tưởng là chuyện nhỏ, hóa ra là cách chăm sóc tâm hồn",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Ngày nào cũng tắm. Nhưng có bao giờ anh để ý, tắm bằng gì có thể quyết định cả tâm trạng của mình?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Có hôm đi làm về mệt, mình bước vào phòng tắm, mở vòi nước, lấy bánh xà phòng thiên nhiên than tre ra – mùi hương nhẹ của cỏ và gỗ lan tỏa. Không biết là do hương thơm hay do mình đang cần được “rửa trôi” khỏi những ồn ào ngoài kia – mà thấy lòng dịu lại, cơ thể nhẹ nhõm như vừa bỏ xuống cả ngày dài."
+          },
+          {
+            "type": "paragraph",
+            "text": "Tắm lúc đó không chỉ là làm sạch, mà là nghi lễ của an yên."
+          }
+        ]
+      },
+      {
+        "id": "xa-phong-thien-nhien-khac-gi-so-voi-xa-phong-cong-nghiep",
+        "title": "Xà phòng thiên nhiên khác gì so với xà phòng công nghiệp?",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Khác biệt lớn nhất nằm ở chất tẩy và chất dưỡng."
+          },
+          {
+            "type": "list",
+            "items": [
+              "Xà phòng công nghiệp dùng chất tẩy mạnh (SLS, SLES) để tạo bọt nhanh, khiến da khô, dễ kích ứng.",
+              "Xà phòng thiên nhiên handmade được nấu từ dầu thực vật (dầu dừa, dầu oliu, dầu hạnh nhân...) – vừa làm sạch, vừa cấp ẩm tự nhiên."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Thay vì mùi hóa học, xà phòng thiên nhiên có mùi tinh dầu thật: nhẹ, trong, dịu – thứ mùi khiến bạn muốn ở lại phòng tắm thêm vài phút chỉ để hít sâu một hơi."
+          },
+          {
+            "type": "callout",
+            "title": "Mẹo nhỏ",
+            "text": "Nếu bạn thường bị khô da sau khi tắm, hãy thử dùng xà phòng handmade trong 1 tuần – bạn sẽ thấy sự khác biệt ngay ở lần đầu tiên."
+          }
+        ]
+      },
+      {
+        "id": "thanh-phan-tao-nen-su-khac-biet-bi-quyet-cua-lan-da-khoe",
+        "title": "Thành phần tạo nên sự khác biệt – bí quyết của làn da khỏe",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Một bánh xà phòng thiên nhiên handmade là sự kết hợp hoàn hảo giữa dầu nền, tinh dầu, bơ thực vật và phụ gia tự nhiên."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Dầu dừa (Coconut Oil): tạo bọt mịn và dưỡng ẩm sâu.",
+              "Dầu oliu (Olive Oil): giúp mềm da, giảm bong tróc.",
+              "Than tre hoạt tính: hút sạch bụi bẩn, làm sáng da tự nhiên.",
+              "Bơ hạt mỡ (Shea Butter): phục hồi da khô, nứt nẻ."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Tất cả đều được nấu thủ công (cold process) – giữ lại glycerin tự nhiên, dưỡng chất không bay hơi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Kết quả là một bánh xà phòng sạch mà không khô, thơm mà không gắt."
+          }
+        ]
+      },
+      {
+        "id": "cac-loai-xa-phong-thien-nhien-duoc-yeu-thich-nhat-hien-nay",
+        "title": "Các loại xà phòng thiên nhiên được yêu thích nhất hiện nay",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "Xà phòng than tre hoạt tính: Phù hợp cho da dầu, da mụn. Giúp hút bã nhờn và làm dịu da sau nắng.",
+              "Xà phòng cà phê: Tẩy tế bào chết tự nhiên, làm sáng da, giữ mùi hương nhẹ nhàng, dễ chịu.",
+              "Xà phòng cam chanh xả: Cân bằng sắc tố da, giúp da sáng mịn, đều màu.",
+              "Xà phòng hoa hồng – bơ hạt mỡ: Dưỡng ẩm chuyên sâu, hương hoa nhẹ, cực hợp cho buổi tối thư giãn."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cach-su-dung-va-bao-quan-de-xa-phong-luon-thom-va-ben",
+        "title": "Cách sử dụng và bảo quản để xà phòng luôn thơm và bền",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "Dùng bông tắm hoặc túi lưới tạo bọt, giúp tiết kiệm và làm sạch tốt hơn.",
+              "Sau khi dùng, đặt bánh xà phòng lên khay gỗ có rãnh thoát nước, tránh tan nhanh.",
+              "Không để bánh xà phòng trong hộp kín khi còn ướt.",
+              "Có thể cắt đôi bánh xà phòng để dùng dần – giữ hương tốt hơn và tiện khi đi du lịch."
+            ]
+          },
+          {
+            "type": "callout",
+            "title": "Lưu ý:",
+            "text": "Xà phòng handmade không có chất bảo quản – vì vậy bảo quản đúng cách sẽ giúp hương và độ cứng bền lâu hơn 30–40%."
+          }
+        ]
+      },
+      {
+        "id": "kham-pha-bo-xa-phong-thien-nhien-cua-SCENTA-an-lanh-cho-lan-da-diu-nhe-cho-tam-hon",
+        "title": "Khám phá bộ xà phòng thiên nhiên của SCENTA – an lành cho làn da, dịu nhẹ cho tâm hồn",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "SCENTA tin rằng việc chăm sóc bản thân không chỉ dừng ở mỹ phẩm – mà bắt đầu từ những thói quen nhỏ, chân thật."
+          },
+          {
+            "type": "paragraph",
+            "text": "Bộ sưu tập xà phòng thiên nhiên handmade được tạo nên từ nguyên liệu hữu cơ, tinh dầu nguyên chất và quy trình nấu lạnh truyền thống, để giữ trọn độ dưỡng và hương thơm tự nhiên nhất."
+          },
+          {
+            "type": "image",
+            "src": "/images/blog/blog-5.png",
+            "alt": "Bộ xà phòng thiên nhiên handmade từ Scenta",
+            "caption": "Bộ xà phòng thiên nhiên handmade từ Scenta"
+          },
+          {
+            "type": "paragraph",
+            "text": "Mỗi bánh xà phòng đều được đổ tay, phơi khô tự nhiên hơn 40 ngày – không chất bảo quản, không phẩm màu tổng hợp."
+          },
+          {
+            "type": "paragraph",
+            "text": "Chúng tôi không chỉ muốn bạn sạch da, mà còn muốn bạn sạch lòng, khi mỗi lần tắm đều là một lần lắng lại với chính mình."
+          }
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "xa-phong-thien-nhien-handmade"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "nen-thom-anh-sang-nho-giua-nhung-ngay-day-tieng-on",
+    "title": "Nến Thơm – Ánh Sáng Nhỏ Giữa Những Ngày Đầy Tiếng Ồn",
+    "excerpt": "Khám phá thế giới nến thơm handmade nhà SCENTA – nơi ánh sáng và hương thơm gặp nhau, mang lại cảm giác thư giãn, dễ chịu và chữa lành sau một ngày dài.",
+    "publishedAt": "2024-07-12",
+    "readingTime": "6 phút đọc",
+    "image": "/images/blog/blog-6.png",
+    "category": "Wellness",
+    "author": "Scenta Editors",
+    "heroImage": "/images/blog/blog-6.png",
+    "heroCaption": "Khám phá thế giới nến thơm handmade nhà SCENTA – nơi ánh sáng và hương thơm gặp nhau, mang lại cảm giác thư giãn, dễ chịu và chữa lành sau một ngày dài.",
+    "tableOfContents": [
+      {
+        "id": "khi-mot-ngon-nen-du-khien-the-gioi-diu-lai",
+        "label": "Khi một ngọn nến đủ khiến thế giới dịu lại",
+        "level": 2
+      },
+      {
+        "id": "vi-sao-nen-thom-handmade-duoc-yeu-thich-den-vay",
+        "label": "Vì sao nến thơm handmade được yêu thích đến vậy?",
+        "level": 2
+      },
+      {
+        "id": "bi-mat-dang-sau-mot-hu-nen-hoan-hao",
+        "label": "Bí mật đằng sau một hũ nến hoàn hảo",
+        "level": 2
+      },
+      {
+        "id": "huong-dan-dot-nen-dung-cach-de-huong-toa-va-khong-khoi",
+        "label": "Hướng dẫn đốt nến đúng cách – để hương tỏa và không khói",
+        "level": 2
+      },
+      {
+        "id": "kham-pha-bo-nen-thom-scenta",
+        "label": "Khám phá bộ nến thơm nhà SCENTA",
+        "level": 2
+      }
+    ],
+    "sections": [
+      {
+        "id": "khi-mot-ngon-nen-du-khien-the-gioi-diu-lai",
+        "title": "Khi một ngọn nến đủ khiến thế giới dịu lại",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Có những buổi tối, thành phố ồn ào đến mức chỉ muốn trốn vào một góc nhỏ. Mình tắt đèn, bật playlist yêu thích và đốt một hũ nến thơm hương hoa hồng. Ánh lửa vàng nhảy múa trên mặt sáp, hương thơm lan chậm rãi, ấm và dịu"
+          },
+          {
+            "type": "paragraph",
+            "text": "Chẳng biết từ khi nào, đốt nến trở thành nghi thức riêng – như một cách “chữa lành” tinh thần."
+          },
+          {
+            "type": "paragraph",
+            "text": "Mình không làm gì cả, chỉ ngồi im và nhìn ánh nến lung linh, nghe tiếng tim mình trở lại nhịp bình yên."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Một hũ nến nhỏ không làm sáng cả căn phòng, nhưng đủ để làm sáng tâm trạng.”"
+          },
+          {
+            "type": "image",
+            "src": "/images/blog/blog-6.png",
+            "alt": "Nến thơm handmade từ Scenta",
+            "caption": "Nến thơm handmade từ Scenta"
+          }
+        ]
+      },
+      {
+        "id": "vi-sao-nen-thom-handmade-duoc-yeu-thich-den-vay",
+        "title": "Vì sao nến thơm handmade được yêu thích đến vậy?",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Không chỉ vì đẹp hay thơm, mà vì mỗi hũ nến handmade là một tác phẩm nhỏ mang dấu vân tay của người làm."
+          },
+          {
+            "type": "paragraph",
+            "text": "Từ việc chọn sáp, tinh dầu, đến cách đổ – tất cả đều thủ công, cẩn thận và có tình cảm trong đó."
+          },
+          {
+            "type": "list",
+            "items": [
+              "Không chất hóa học độc hại, thân thiện môi trường.",
+              "Hương tinh dầu tự nhiên, an toàn cho da và không khí.",
+              "Đốt lâu, không khói đen, không gây ngột ngạt."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Và quan trọng nhất, nến thơm mang lại cảm giác “home” – cảm giác thuộc về.”"
+          }
+        ]
+      },
+      {
+        "id": "bi-mat-dang-sau-mot-hu-nen-hoan-hao",
+        "title": "Bí mật đằng sau một hũ nến hoàn hảo",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "quote",
+            "text": "3.1. Sáp tự nhiên"
+          },
+          {
+            "type": "paragraph",
+            "text": "Nến thơm cao cấp của SCENTA được làm từ sáp đậu nành nguyên chất, giúp cháy đều, giữ hương tinh dầu bền và thân thiện môi trường."
+          },
+          {
+            "type": "quote",
+            "text": "3.2. Tinh dầu nguyên chất"
+          },
+          {
+            "type": "paragraph",
+            "text": "Là linh hồn của nến. Mỗi mùi kể một câu chuyện:"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Lavender cho giấc ngủ êm.",
+              "Bạc hà cho tinh thần tỉnh táo.",
+              "Than tre hoạt tính: hút sạch bụi bẩn, làm sáng da tự nhiên.",
+              "Cam ngọt cho những ngày cần năng lượng."
+            ]
+          },
+          {
+            "type": "quote",
+            "text": "3.3. Bấc cotton tự nhiên"
+          },
+          {
+            "type": "paragraph",
+            "text": "Giúp nến cháy đều, không sinh khói đen và tỏa ánh sáng ấm áp."
+          }
+        ]
+      },
+      {
+        "id": "huong-dan-dot-nen-dung-cach-de-huong-toa-va-khong-khoi",
+        "title": "Hướng dẫn đốt nến đúng cách – để hương tỏa và không khói",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Một hũ nến đẹp chỉ thật sự “sống” khi được đốt đúng cách."
+          },
+          {
+            "type": "list",
+            "items": [
+              "Lần đầu đốt ít nhất 2 tiếng để sáp tan đều toàn bề mặt.",
+              "Cắt bấc còn 0.5 cm trước khi đốt để tránh khói đen.",
+              "Không đặt nến trước quạt hay luồng gió mạnh.",
+              "Sau khi tắt, đậy nắp lại để giữ hương và tránh bụi."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Nếu muốn tận dụng tối đa tinh dầu, có thể đốt nến 30 phút – rồi tắt, hương sẽ còn lưu lại cả tiếng sau đó."
+          }
+        ]
+      },
+      {
+        "id": "kham-pha-bo-nen-thom-scenta",
+        "title": "Khám phá bộ nến thơm nhà SCENTA",
+        "level": 2,
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Mỗi hũ nến của SCENTA được đổ thủ công từ sáp đậu nành thiên nhiên, hòa cùng tinh dầu nguyên chất – mang đến hương thơm nhẹ nhàng, thuần khiết và an toàn cho không gian sống."
+          },
+          {
+            "type": "paragraph",
+            "text": "Bộ sưu tập nến thơm nhà SCENTA là hành trình của cảm xúc:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Lavender – Êm dịu, giúp dễ ngủ và thư giãn.",
+              "Tuyết tùng – Trầm ấm, mang lại cảm giác tĩnh tại.",
+              "Cam thảo – Ngọt nhẹ, gợi hương ấm áp.",
+              "Quế – Nồng nàn, xua tan mệt mỏi.",
+              "Hoa hồng – Lãng mạn, ngọt ngào và đầy nữ tính."
+            ]
+          },
+          {
+            "type": "link",
+            "label": ">> XEM THÊM: Bộ sưu tập nến thơm SCENTA",
+            "href": "/san-pham"
+          },
+          {
+            "type": "link",
+            "label": ">> XEM THÊM: Tự tay làm nến thơm tại nhà với bộ kit làm nến từ SCENTA",
+            "href": "/tin-tuc/kit-lam-nen-handmade"
+          }
+        ]
+      }
+    ],
+    "relatedSlugs": [
+      "kit-lam-nen-handmade"
+    ]
+  }
+]

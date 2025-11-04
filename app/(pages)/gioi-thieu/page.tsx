@@ -43,7 +43,7 @@ const AboutPage = () => {
                             />
                         </div>
                     </div>
-                    <div className={styles.teamContent}>
+                    {/* <div className={styles.teamContent}>
                         <div className={styles.teamHeader}>
                             <h2>Gặp Gỡ Đội Ngũ Của Chúng Tôi</h2>
                             <p>
@@ -113,10 +113,10 @@ const AboutPage = () => {
                                 <span>Nhà Nhiếp Ảnh</span>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className={styles.storeSection}>
                         <div className={styles.storeHeader}>
-                            <h2>Cửa Hàng Trên Toàn Thế Giới</h2>
+                            <h2>Mua Sắm Dễ Dàng Ở Bất Kỳ Đâu</h2>
                             <p>
                                 Chúng tôi tự hào mang đến những sản phẩm nến thơm và vật dụng trang trí cao cấp,
                                 được phân phối tại nhiều quốc gia. Mỗi không gian trưng bày đều thể hiện tinh thần sáng tạo

@@ -70,7 +70,7 @@ export default function CustomerReview() {
                       </div>
                       <div className={styles.meta}>
                         <div className={styles.name}>{item.name}</div>
-                        <div className={styles.role}>Customer</div>
+                        <div className={styles.role}>{item.role}</div>
                       </div>
                     </div>
                   </div>
