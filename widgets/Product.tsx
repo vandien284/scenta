@@ -56,7 +56,7 @@ export default function Product({ data }: ProductProps) {
                     onClick={handleAddToCart}
                     disabled={isAdding || isUpdating}
                   >
-                    {isAdding ? "Adding..." : "Add to cart"}
+                    {isAdding ? "Thêm..." : "Thêm vào giỏ hàng"}
                   </button>
                 )}
               </div>

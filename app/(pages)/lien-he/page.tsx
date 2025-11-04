@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "@/styles/view/contact.module.scss";
 import { Fragment } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from "react-icons/fa";

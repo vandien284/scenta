@@ -1,0 +1,254 @@
+.checkoutPage {
+  padding: 80px 0;
+  background-color: #f7f5f2;
+  min-height: 100vh;
+  display: flex;
+
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+.layout {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 2fr 1fr;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(15, 15, 15, 0.08);
+  padding: 32px;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.formGrid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #333;
+    letter-spacing: 0.5px;
+  }
+
+  input,
+  textarea,
+  select {
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #faf9f7;
+    padding: 12px 16px;
+    font-size: 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    color: #000;
+
+    &:focus {
+      border-color: #111;
+      box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.08);
+      outline: none;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+
+.verificationRow {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+
+  .codeInput {
+    flex: 1;
+  }
+}
+
+.smallButton,
+.primaryButton {
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.smallButton {
+  background: #111;
+  color: #fff;
+  font-size: 13px;
+  padding: 10px 16px;
+
+  &:not(:disabled):hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 28px rgba(17, 17, 17, 0.15);
+  }
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #111, #373737);
+  color: #fff;
+  font-size: 15px;
+  padding: 14px 24px;
+  width: 100%;
+  margin-top: 24px;
+
+  &:not(:disabled):hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 36px rgba(17, 17, 17, 0.18);
+  }
+}
+
+.paymentOption {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #faf9f7;
+  margin-top: 12px;
+
+  input {
+    margin-top: 4px;
+  }
+
+  span {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+.statusMessage {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #0c7a43;
+
+  &.error {
+    color: #cc2b3f;
+  }
+}
+
+.summaryItems {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: #444;
+
+  &.total {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+}
+
+.itemsList {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: 12px;
+  padding-top: 12px;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #333;
+    padding: 8px 0;
+
+    span:last-child {
+      font-weight: 600;
+    }
+  }
+}
+
+.emptyState,
+.successState {
+  text-align: center;
+  background: #fff;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(15, 15, 15, 0.12);
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: #555;
+    margin-bottom: 24px;
+  }
+}
+
+.successDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+
+  span {
+    font-size: 15px;
+    color: #333;
+  }
+}

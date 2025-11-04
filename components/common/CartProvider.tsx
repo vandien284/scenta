@@ -19,13 +19,17 @@ async function requestCart(
   method: "GET" | "POST" | "PATCH" | "DELETE",
   body?: Record<string, unknown>
 ) {
-  const response = await fetch("/api/cart", {
+  const url =
+    method === "GET" ? `/api/cart?ts=${Date.now()}` : "/api/cart";
+  const response = await fetch(url, {
     method,
     headers: {
       "Content-Type": "application/json",
     },
     body: body ? JSON.stringify(body) : undefined,
     credentials: "include",
+    cache: "no-store",
+    next: { revalidate: 0 },
   });
 
   const data = await response.json();

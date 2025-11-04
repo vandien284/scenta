@@ -1,0 +1,14 @@
+{
+  "records": [
+    {
+      "id": "a4f13444-ebe6-4733-9933-597929895ca7",
+      "email": "lvdien28@gmail.com",
+      "codeHash": "11c27fcd9f21f637e9fd595c5f7505ea4c95b5c0646f17dd1bb996756bcfe58e",
+      "createdAt": "2025-11-04T07:58:38.697Z",
+      "expiresAt": "2025-11-04T08:08:38.697Z",
+      "attempts": 0,
+      "verifiedAt": "2025-11-04T07:58:49.082Z",
+      "consumedAt": "2025-11-04T07:58:52.034Z"
+    }
+  ]
+}

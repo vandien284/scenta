@@ -1,10 +1,13 @@
 import { head, put } from "@vercel/blob";
+import path from "path";
+import { readFile, writeFile } from "fs/promises";
 import { CartSnapshot, CartStoreSchema, CartItemSnapshot } from "@/types/CartType";
 import fallbackCartStore from "@/data/cartData.json";
 
 const CART_BLOB_SOURCE = process.env.CARTS_BLOB_URL ?? process.env.CARTS_BLOB_PATH;
 const CART_BLOB_PATH = process.env.CARTS_BLOB_PATH;
-const BLOB_TOKEN = process.env.VERCEL_BLOB_READ_WRITE_TOKEN;
+const BLOB_TOKEN =  process.env.BLOB_READ_WRITE_TOKEN;
+const LOCAL_CART_PATH = path.join(process.cwd(), "data", "cartData.json");
 
 let cachedStore: CartStoreSchema | null = null;
 let lastFetchTime = 0;
@@ -19,6 +22,24 @@ async function downloadBlobJson(url: string) {
   return (await response.json()) as CartStoreSchema;
 }
 
+async function readLocalStore(): Promise<CartStoreSchema> {
+  try {
+    const raw = await readFile(LOCAL_CART_PATH, "utf-8");
+    const parsed = JSON.parse(raw) as Partial<CartStoreSchema> | null;
+    if (!parsed || typeof parsed !== "object" || !parsed.carts) {
+      return JSON.parse(JSON.stringify(fallbackCartStore ?? { carts: {} })) as CartStoreSchema;
+    }
+    return { carts: parsed.carts };
+  } catch (error: unknown) {
+    const err = error as NodeJS.ErrnoException;
+    if (err.code === "ENOENT") {
+      return JSON.parse(JSON.stringify(fallbackCartStore ?? { carts: {} })) as CartStoreSchema;
+    }
+    console.error("[cartSource] Unable to read local cart store:", err);
+    return JSON.parse(JSON.stringify(fallbackCartStore ?? { carts: {} })) as CartStoreSchema;
+  }
+}
+
 async function loadStore(): Promise<CartStoreSchema> {
   const now = Date.now();
   if (cachedStore && now - lastFetchTime < CACHE_TTL) {
@@ -26,7 +47,8 @@ async function loadStore(): Promise<CartStoreSchema> {
   }
 
   if (!CART_BLOB_SOURCE) {
-    cachedStore = JSON.parse(JSON.stringify(fallbackCartStore ?? { carts: {} })) as CartStoreSchema;
+    const localStore = await readLocalStore();
+    cachedStore = JSON.parse(JSON.stringify(localStore ?? { carts: {} })) as CartStoreSchema;
     lastFetchTime = now;
     return cachedStore;
   }
@@ -49,27 +71,31 @@ async function loadStore(): Promise<CartStoreSchema> {
   return cachedStore;
 }
 
+async function writeLocal(store: CartStoreSchema) {
+  await writeFile(LOCAL_CART_PATH, JSON.stringify(store, null, 2), "utf-8");
+}
+
 async function persistStore(store: CartStoreSchema) {
-  if (!CART_BLOB_PATH) {
-    throw new Error(
-      "CARTS_BLOB_PATH is not configured. Unable to persist cart data to Vercel Blob."
-    );
-  }
+  await writeLocal(store);
 
-  await put(
-    CART_BLOB_PATH,
-    JSON.stringify(store, null, 2),
-    {
-      access: "public",
-      token: BLOB_TOKEN,
-      contentType: "application/json",
-      addRandomSuffix: false,
-      allowOverwrite: true,
-    }
-  );
-
-  cachedStore = store;
+  cachedStore = JSON.parse(JSON.stringify(store)) as CartStoreSchema;
   lastFetchTime = Date.now();
+
+  if (CART_BLOB_PATH) {
+    void put(
+      CART_BLOB_PATH,
+      JSON.stringify(store, null, 2),
+      {
+        access: "public",
+        token: BLOB_TOKEN,
+        contentType: "application/json",
+        addRandomSuffix: false,
+        allowOverwrite: true,
+      }
+    ).catch((error) => {
+      console.error("[cartSource] Unable to persist to blob:", error);
+    });
+  }
 }
 
 function createEmptyCart(identifier: string): CartSnapshot {
@@ -132,12 +158,12 @@ export async function removeCart(identifier: string) {
     return;
   }
 
-  const { [identifier]: _, ...rest } = store.carts;
-  const nextStore: CartStoreSchema = {
-    carts: rest,
-  };
+  const nextCarts = { ...store.carts };
+  delete nextCarts[identifier];
 
-  await persistStore(nextStore);
+  await persistStore({
+    carts: nextCarts,
+  });
 }
 
 export function findCartItem(

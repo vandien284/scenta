@@ -5,13 +5,15 @@
     "categoriesId": 1,
     "url": "lavender-dreams-1",
     "price": 29.99,
-    "images": ["/images/product/p-1.webp"],
+    "images": [
+      "/images/product/p-1.webp"
+    ],
     "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
     "bestSeller": true,
     "outstanding": false,
     "limited": true,
     "quantity": 120,
-    "sold": 42
+    "sold": 46
   },
   {
     "id": 2,
@@ -19,13 +21,15 @@
     "categoriesId": 1,
     "url": "lavender-dreams-2",
     "price": 29.99,
-    "images": ["/images/product/p-2.webp"],
+    "images": [
+      "/images/product/p-2.webp"
+    ],
     "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
     "bestSeller": false,
     "outstanding": true,
     "limited": true,
     "quantity": 115,
-    "sold": 38
+    "sold": 42
   },
   {
     "id": 3,
@@ -33,13 +37,15 @@
     "categoriesId": 2,
     "url": "lavender-dreams-3",
     "price": 29.99,
-    "images": ["/images/product/p-3.webp"],
+    "images": [
+      "/images/product/p-3.webp"
+    ],
     "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
     "bestSeller": true,
     "outstanding": false,
     "limited": false,
     "quantity": 110,
-    "sold": 55
+    "sold": 57
   },
   {
     "id": 4,
@@ -47,13 +53,15 @@
     "categoriesId": 2,
     "url": "lavender-dreams-4",
     "price": 29.99,
-    "images": ["/images/product/p-4.webp"],
+    "images": [
+      "/images/product/p-4.webp"
+    ],
     "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
     "bestSeller": false,
     "outstanding": true,
     "limited": false,
     "quantity": 98,
-    "sold": 34
+    "sold": 35
   },
   {
     "id": 5,
@@ -61,7 +69,9 @@
     "categoriesId": 3,
     "url": "lavender-dreams-5",
     "price": 29.99,
-    "images": ["/images/product/p-5.webp"],
+    "images": [
+      "/images/product/p-5.webp"
+    ],
     "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
     "bestSeller": true,
     "outstanding": true,
@@ -75,7 +85,9 @@
     "categoriesId": 3,
     "url": "lavender-dreams-6",
     "price": 29.99,
-    "images": ["/images/product/p-6.webp"],
+    "images": [
+      "/images/product/p-6.webp"
+    ],
     "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
     "bestSeller": true,
     "outstanding": true,
@@ -89,7 +101,9 @@
     "categoriesId": 4,
     "url": "lavender-dreams-7",
     "price": 29.99,
-    "images": ["/images/product/p-7.webp"],
+    "images": [
+      "/images/product/p-7.webp"
+    ],
     "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
     "bestSeller": true,
     "outstanding": true,
@@ -103,7 +117,9 @@
     "categoriesId": 4,
     "url": "lavender-dreams-8",
     "price": 29.99,
-    "images": ["/images/product/p-8.webp"],
+    "images": [
+      "/images/product/p-8.webp"
+    ],
     "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
     "bestSeller": true,
     "outstanding": true,
@@ -117,7 +133,9 @@
     "categoriesId": 5,
     "url": "lavender-dreams-9",
     "price": 29.99,
-    "images": ["/images/product/p-9.webp"],
+    "images": [
+      "/images/product/p-9.webp"
+    ],
     "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
     "bestSeller": true,
     "outstanding": true,
@@ -131,7 +149,9 @@
     "categoriesId": 5,
     "url": "lavender-dreams-10",
     "price": 29.99,
-    "images": ["/images/product/p-10.webp"],
+    "images": [
+      "/images/product/p-10.webp"
+    ],
     "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
     "bestSeller": true,
     "outstanding": true,
@@ -145,7 +165,9 @@
     "categoriesId": 6,
     "url": "lavender-dreams-11",
     "price": 29.99,
-    "images": ["/images/product/p-11.webp"],
+    "images": [
+      "/images/product/p-11.webp"
+    ],
     "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
     "bestSeller": true,
     "outstanding": true,
@@ -159,7 +181,9 @@
     "categoriesId": 6,
     "url": "lavender-dreams-12",
     "price": 29.99,
-    "images": ["/images/product/p-12.webp"],
+    "images": [
+      "/images/product/p-12.webp"
+    ],
     "description": "A soothing blend of lavender essential oils to help you relax and unwind.",
     "bestSeller": true,
     "outstanding": true,
