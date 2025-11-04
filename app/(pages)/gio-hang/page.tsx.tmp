@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -36,15 +36,7 @@ export default function CartPage() {
     if (typeof window === "undefined") return DEFAULT_COUNTRY;
     return window.localStorage.getItem("checkoutCountry") ?? DEFAULT_COUNTRY;
   });
-  const [selectionSource, setSelectionSource] = useState<number[] | null>(() => {
-    if (typeof window === "undefined") return null;
-    const stored = readStoredSelection();
-    return stored.length > 0 ? stored : null;
-  });
-  const [selectionTouched, setSelectionTouched] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return readStoredSelection().length > 0;
-  });
+  const [selectedIds, setSelectedIds] = useState<number[]>(() => readStoredSelection());
   const [selectionError, setSelectionError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -57,30 +49,34 @@ export default function CartPage() {
     [cart]
   );
 
-  const selectedIds = useMemo(() => {
-    if (!cart || cart.items.length === 0) {
+  const effectiveSelectedIds = useMemo(() => {
+    if (availableIds.length === 0) {
       return [];
     }
-    const availableSet = new Set(availableIds);
-    const base = selectionSource ?? availableIds;
-    const filtered = base.filter((id) => availableSet.has(id));
-    if (filtered.length > 0) {
-      return filtered;
+    if (selectedIds.length === 0) {
+      return availableIds;
     }
-    return selectionTouched ? [] : availableIds;
-  }, [availableIds, cart, selectionSource, selectionTouched]);
+    const filtered = selectedIds.filter((id) => availableIds.includes(id));
+    return filtered.length > 0 ? filtered : availableIds;
+  }, [availableIds, selectedIds]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (!selectionTouched) return;
-    window.localStorage.setItem(SELECTED_STORAGE_KEY, JSON.stringify(selectedIds));
-  }, [selectedIds, selectionTouched]);
+    window.localStorage.setItem(
+      SELECTED_STORAGE_KEY,
+      JSON.stringify(effectiveSelectedIds)
+    );
+  }, [effectiveSelectedIds]);
 
-  const selectedSet = useMemo(() => new Set(selectedIds), [selectedIds]);
+  const selectedSet = useMemo(
+    () => new Set(effectiveSelectedIds),
+    [effectiveSelectedIds]
+  );
   const selectedItems = useMemo(
     () => cart?.items.filter((item) => selectedSet.has(item.productId)) ?? [],
     [cart, selectedSet]
   );
+  const selectedProductCount = effectiveSelectedIds.length;
   const selectedSubtotal = useMemo(
     () => selectedItems.reduce((sum, item) => sum + item.subtotal, 0),
     [selectedItems]
@@ -123,28 +119,25 @@ export default function CartPage() {
 
   const toggleSelection = useCallback(
     (productId: number, checked: boolean) => {
-      setSelectionSource((prev) => {
-        const base = prev ?? selectedIds;
-        const nextSet = new Set(base);
+      setSelectedIds(() => {
+        const base = new Set(effectiveSelectedIds);
         if (checked) {
-          nextSet.add(productId);
+          base.add(productId);
         } else {
-          nextSet.delete(productId);
+          base.delete(productId);
         }
-        return Array.from(nextSet);
+        if (checked && selectionError) {
+          setSelectionError(null);
+        }
+        return Array.from(base);
       });
-      setSelectionTouched(true);
-      if (checked && selectionError) {
-        setSelectionError(null);
-      }
     },
-    [selectedIds, selectionError]
+    [effectiveSelectedIds, selectionError]
   );
 
   const toggleAllSelection = useCallback(
     (checked: boolean, allIds: number[]) => {
-      setSelectionSource(checked ? allIds : []);
-      setSelectionTouched(true);
+      setSelectedIds(checked ? allIds : []);
       if (checked && selectionError) {
         setSelectionError(null);
       }
@@ -159,18 +152,17 @@ export default function CartPage() {
   }, []);
 
   const handleCheckout = () => {
-    if (selectedIds.length === 0) {
+    if (effectiveSelectedIds.length === 0) {
       setSelectionError("Vui lòng chọn ít nhất một sản phẩm để tiếp tục.");
       return;
     }
-    ensureCheckoutDefaults(selectedIds);
+    ensureCheckoutDefaults(effectiveSelectedIds);
     router.push("/thanh-toan");
   };
 
   const handleBuyNow = (productId: number) => {
     ensureCheckoutDefaults([productId]);
-    setSelectionSource([productId]);
-    setSelectionTouched(true);
+    setSelectedIds([productId]);
     setSelectionError(null);
     router.push("/thanh-toan");
   };
@@ -206,13 +198,16 @@ export default function CartPage() {
               <label>
                 <input
                   type="checkbox"
-                  checked={selectedIds.length > 0 && selectedIds.length === cart.items.length}
+                  checked={
+                    availableIds.length > 0 &&
+                    effectiveSelectedIds.length === availableIds.length
+                  }
                   onChange={(event) => toggleAllSelection(event.target.checked, availableIds)}
                 />
                 <span>Chọn tất cả sản phẩm</span>
               </label>
               <span className={styles.selectionCount}>
-                Đã chọn {selectedIds.length} sản phẩm
+                Đã chọn {selectedProductCount} sản phẩm
               </span>
             </div>
 
@@ -329,8 +324,10 @@ export default function CartPage() {
                 {selectedSubtotal === 0
                   ? "Hãy chọn sản phẩm để tính khuyến mãi giao hàng."
                   : remainingForFreeShip > 0
-                    ? `Chi tiêu thêm ${formatCurrency(remainingForFreeShip)} để mở khóa giao hàng miễn phí`
-                    : "Bạn đã đạt mức giao hàng miễn phí!"}
+                  ? `Chi tiêu thêm ${formatCurrency(
+                      remainingForFreeShip
+                    )} để mở khóa giao hàng miễn phí`
+                  : "Bạn đã đạt mức giao hàng miễn phí!"}
               </span>
               <div className={styles.progress}>
                 <div
@@ -352,7 +349,9 @@ export default function CartPage() {
                 <option value="Khác">Quốc gia khác</option>
               </select>
               <p className={styles.shippingHint}>
-                Phí vận chuyển tạm tính: <strong>{formatCurrency(calculateShippingFee(country))}</strong> (Việt Nam: {formatCurrency(30_000)}, quốc tế: {formatCurrency(50_000)}).
+                Phí vận chuyển tạm tính:{" "}
+                <strong>{formatCurrency(calculateShippingFee(country))}</strong> (Việt Nam:{" "}
+                {formatCurrency(30_000)}, quốc tế: {formatCurrency(50_000)}).
               </p>
             </div>
 

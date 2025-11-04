@@ -1,13 +1,10 @@
 import { head, put } from "@vercel/blob";
-import path from "path";
-import { readFile, writeFile } from "fs/promises";
 import { CartSnapshot, CartStoreSchema, CartItemSnapshot } from "@/types/CartType";
-import fallbackCartStore from "@/data/cartData.json";
 
 const CART_BLOB_SOURCE = process.env.CARTS_BLOB_URL ?? process.env.CARTS_BLOB_PATH;
 const CART_BLOB_PATH = process.env.CARTS_BLOB_PATH;
-const BLOB_TOKEN =  process.env.BLOB_READ_WRITE_TOKEN;
-const LOCAL_CART_PATH = path.join(process.cwd(), "data", "cartData.json");
+const BLOB_TOKEN =
+  process.env.VERCEL_BLOB_READ_WRITE_TOKEN ?? process.env.BLOB_READ_WRITE_TOKEN ?? process.env.BLOB_RW_TOKEN;
 
 let cachedStore: CartStoreSchema | null = null;
 let lastFetchTime = 0;
@@ -22,24 +19,6 @@ async function downloadBlobJson(url: string) {
   return (await response.json()) as CartStoreSchema;
 }
 
-async function readLocalStore(): Promise<CartStoreSchema> {
-  try {
-    const raw = await readFile(LOCAL_CART_PATH, "utf-8");
-    const parsed = JSON.parse(raw) as Partial<CartStoreSchema> | null;
-    if (!parsed || typeof parsed !== "object" || !parsed.carts) {
-      return JSON.parse(JSON.stringify(fallbackCartStore ?? { carts: {} })) as CartStoreSchema;
-    }
-    return { carts: parsed.carts };
-  } catch (error: unknown) {
-    const err = error as NodeJS.ErrnoException;
-    if (err.code === "ENOENT") {
-      return JSON.parse(JSON.stringify(fallbackCartStore ?? { carts: {} })) as CartStoreSchema;
-    }
-    console.error("[cartSource] Unable to read local cart store:", err);
-    return JSON.parse(JSON.stringify(fallbackCartStore ?? { carts: {} })) as CartStoreSchema;
-  }
-}
-
 async function loadStore(): Promise<CartStoreSchema> {
   const now = Date.now();
   if (cachedStore && now - lastFetchTime < CACHE_TTL) {
@@ -47,55 +26,45 @@ async function loadStore(): Promise<CartStoreSchema> {
   }
 
   if (!CART_BLOB_SOURCE) {
-    const localStore = await readLocalStore();
-    cachedStore = JSON.parse(JSON.stringify(localStore ?? { carts: {} })) as CartStoreSchema;
-    lastFetchTime = now;
-    return cachedStore;
+    throw new Error("CARTS_BLOB_URL hoặc CARTS_BLOB_PATH chưa được cấu hình.");
   }
 
   try {
     if (CART_BLOB_SOURCE.startsWith("http")) {
-      cachedStore = await downloadBlobJson(CART_BLOB_SOURCE);
+      cachedStore = (await downloadBlobJson(CART_BLOB_SOURCE)) ?? { carts: {} };
     } else {
       const blob = await head(CART_BLOB_SOURCE, {
         token: BLOB_TOKEN,
       });
-      cachedStore = await downloadBlobJson(blob.downloadUrl);
+      cachedStore = (await downloadBlobJson(blob.downloadUrl)) ?? { carts: {} };
     }
   } catch (error) {
-    console.warn("[cartSource] Fallback to local cart store:", error);
-    cachedStore = JSON.parse(JSON.stringify(fallbackCartStore ?? { carts: {} })) as CartStoreSchema;
+    console.error("[cartSource] Unable to load cart store from blob:", error);
+    cachedStore = { carts: {} };
   }
 
   lastFetchTime = now;
   return cachedStore;
 }
 
-async function writeLocal(store: CartStoreSchema) {
-  await writeFile(LOCAL_CART_PATH, JSON.stringify(store, null, 2), "utf-8");
-}
-
 async function persistStore(store: CartStoreSchema) {
-  await writeLocal(store);
-
+  if (!CART_BLOB_PATH) {
+    throw new Error("CARTS_BLOB_PATH chưa được cấu hình để ghi dữ liệu.");
+  }
+  await put(
+    CART_BLOB_PATH,
+    JSON.stringify(store, null, 2),
+    {
+      access: "public",
+      token: BLOB_TOKEN,
+      contentType: "application/json",
+      addRandomSuffix: false,
+      allowOverwrite: true,
+    }
+  );
   cachedStore = JSON.parse(JSON.stringify(store)) as CartStoreSchema;
   lastFetchTime = Date.now();
-
-  if (CART_BLOB_PATH) {
-    void put(
-      CART_BLOB_PATH,
-      JSON.stringify(store, null, 2),
-      {
-        access: "public",
-        token: BLOB_TOKEN,
-        contentType: "application/json",
-        addRandomSuffix: false,
-        allowOverwrite: true,
-      }
-    ).catch((error) => {
-      console.error("[cartSource] Unable to persist to blob:", error);
-    });
-  }
+  return cachedStore;
 }
 
 function createEmptyCart(identifier: string): CartSnapshot {

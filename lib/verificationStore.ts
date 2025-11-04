@@ -1,21 +1,15 @@
 import { head, put } from "@vercel/blob";
-import path from "path";
-import { readFile, writeFile } from "fs/promises";
 import crypto from "crypto";
 import {
   VerificationRecord,
   VerificationStoreSchema,
 } from "@/types/OrderType";
 
-const VERIFICATION_BLOB_SOURCE = process.env.VERIFICATIONS_BLOB_URL;
+const VERIFICATION_BLOB_SOURCE =
+  process.env.VERIFICATIONS_BLOB_URL ?? process.env.VERIFICATIONS_BLOB_PATH;
 const VERIFICATION_BLOB_PATH = process.env.VERIFICATIONS_BLOB_PATH;
-const BLOB_TOKEN = process.env.BLOB_READ_WRITE_TOKEN;
-
-const LOCAL_VERIFICATION_PATH = path.join(
-  process.cwd(),
-  "data",
-  "verificationCodes.json"
-);
+const BLOB_TOKEN =
+  process.env.VERCEL_BLOB_READ_WRITE_TOKEN ?? process.env.BLOB_READ_WRITE_TOKEN ?? process.env.BLOB_RW_TOKEN;
 
 const CACHE_TTL = 10_000;
 const CODE_TTL = 10 * 60 * 1000; // 10 minutes
@@ -87,24 +81,6 @@ async function fetchFromBlob(): Promise<VerificationStoreSchema | null> {
   }
 }
 
-async function readLocalStore(): Promise<VerificationStoreSchema> {
-  try {
-    const raw = await readFile(LOCAL_VERIFICATION_PATH, "utf-8");
-    const parsed = JSON.parse(raw) as Partial<VerificationStoreSchema> | null;
-    if (!parsed || !Array.isArray(parsed.records)) {
-      return { records: [] };
-    }
-    return { records: parsed.records };
-  } catch (error: unknown) {
-    const err = error as NodeJS.ErrnoException;
-    if (err.code === "ENOENT") {
-      return { records: [] };
-    }
-    console.error("[verificationStore] Unable to read local store:", err);
-    return { records: [] };
-  }
-}
-
 async function loadStore(options?: { forceReload?: boolean }): Promise<VerificationStoreSchema> {
   const nowMs = Date.now();
   const forceReload = options?.forceReload ?? false;
@@ -112,8 +88,11 @@ async function loadStore(options?: { forceReload?: boolean }): Promise<Verificat
     return cachedStore;
   }
 
-  const blobStore = await fetchFromBlob();
-  const sourceStore = blobStore ?? (await readLocalStore());
+  if (!VERIFICATION_BLOB_SOURCE) {
+    throw new Error("VERIFICATIONS_BLOB_URL hoặc VERIFICATIONS_BLOB_PATH chưa được cấu hình.");
+  }
+
+  const sourceStore = (await fetchFromBlob()) ?? { records: [] };
   const filteredRecords = sourceStore.records.filter(
     (record) => !isExpired(record) && !record.consumedAt
   );
@@ -135,36 +114,24 @@ async function loadStore(options?: { forceReload?: boolean }): Promise<Verificat
   return store;
 }
 
-async function writeLocal(store: VerificationStoreSchema) {
-  await writeFile(
-    LOCAL_VERIFICATION_PATH,
-    JSON.stringify(store, null, 2),
-    "utf-8"
-  );
-}
-
 async function persistStore(store: VerificationStoreSchema) {
-  await writeLocal(store);
-
+  if (!VERIFICATION_BLOB_PATH) {
+    throw new Error("VERIFICATIONS_BLOB_PATH chưa được cấu hình để ghi dữ liệu.");
+  }
+  await put(
+    VERIFICATION_BLOB_PATH,
+    JSON.stringify(store, null, 2),
+    {
+      access: "public",
+      token: BLOB_TOKEN,
+      contentType: "application/json",
+      addRandomSuffix: false,
+      allowOverwrite: true,
+    }
+  );
   cachedStore = { records: [...store.records] };
   lastFetch = Date.now();
   syncMemory(cachedStore.records);
-
-  if (VERIFICATION_BLOB_PATH) {
-    void put(
-      VERIFICATION_BLOB_PATH,
-      JSON.stringify(store, null, 2),
-      {
-        access: "public",
-        token: BLOB_TOKEN,
-        contentType: "application/json",
-        addRandomSuffix: false,
-        allowOverwrite: true,
-      }
-    ).catch((error) => {
-      console.error("[verificationStore] Unable to persist to blob:", error);
-    });
-  }
 }
 
 function hashCode(code: string) {

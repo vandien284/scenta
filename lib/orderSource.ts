@@ -1,13 +1,10 @@
 import { head, put } from "@vercel/blob";
-import path from "path";
-import { readFile, writeFile } from "fs/promises";
 import { OrderSchema, OrderStoreSchema } from "@/types/OrderType";
 
-const ORDER_BLOB_SOURCE = process.env.ORDERS_BLOB_URL;
+const ORDER_BLOB_SOURCE = process.env.ORDERS_BLOB_URL ?? process.env.ORDERS_BLOB_PATH;
 const ORDER_BLOB_PATH = process.env.ORDERS_BLOB_PATH;
-const BLOB_TOKEN = process.env.BLOB_READ_WRITE_TOKEN;
-
-const LOCAL_ORDER_PATH = path.join(process.cwd(), "data", "orderData.json");
+const BLOB_TOKEN =
+  process.env.VERCEL_BLOB_READ_WRITE_TOKEN ?? process.env.BLOB_READ_WRITE_TOKEN ?? process.env.BLOB_RW_TOKEN;
 
 let cachedStore: OrderStoreSchema | null = null;
 let lastFetchTime = 0;
@@ -51,32 +48,17 @@ async function fetchFromBlob(): Promise<OrderStoreSchema | null> {
   }
 }
 
-async function readLocalStore(): Promise<OrderStoreSchema> {
-  try {
-    const raw = await readFile(LOCAL_ORDER_PATH, "utf-8");
-    const parsed = JSON.parse(raw) as Partial<OrderStoreSchema> | null;
-    if (!parsed || !Array.isArray(parsed.orders)) {
-      return { orders: [] };
-    }
-    return { orders: parsed.orders };
-  } catch (error: unknown) {
-    const err = error as NodeJS.ErrnoException;
-    if (err.code === "ENOENT") {
-      return { orders: [] };
-    }
-    console.error("[orderSource] Unable to read local order store:", err);
-    return { orders: [] };
-  }
-}
-
 async function loadStore(): Promise<OrderStoreSchema> {
   const now = Date.now();
   if (cachedStore && now - lastFetchTime < CACHE_TTL) {
     return cachedStore;
   }
 
-  const blobStore = await fetchFromBlob();
-  const store = blobStore ?? (await readLocalStore());
+  if (!ORDER_BLOB_SOURCE) {
+    throw new Error("ORDERS_BLOB_URL hoặc ORDERS_BLOB_PATH chưa được cấu hình.");
+  }
+
+  const store = (await fetchFromBlob()) ?? { orders: [] };
 
   cachedStore = {
     orders: Array.isArray(store.orders) ? [...store.orders] : [],
@@ -86,31 +68,24 @@ async function loadStore(): Promise<OrderStoreSchema> {
   return cachedStore;
 }
 
-async function writeLocal(store: OrderStoreSchema) {
-  await writeFile(LOCAL_ORDER_PATH, JSON.stringify(store, null, 2), "utf-8");
-}
-
 async function persistStore(store: OrderStoreSchema) {
-  await writeLocal(store);
-
+  if (!ORDER_BLOB_PATH) {
+    throw new Error("ORDERS_BLOB_PATH chưa được cấu hình để ghi dữ liệu.");
+  }
+  await put(
+    ORDER_BLOB_PATH,
+    JSON.stringify(store, null, 2),
+    {
+      access: "public",
+      token: BLOB_TOKEN,
+      contentType: "application/json",
+      addRandomSuffix: false,
+      allowOverwrite: true,
+    }
+  );
   cachedStore = { orders: [...store.orders] };
   lastFetchTime = Date.now();
-
-  if (ORDER_BLOB_PATH) {
-    void put(
-      ORDER_BLOB_PATH,
-      JSON.stringify(store, null, 2),
-      {
-        access: "public",
-        token: BLOB_TOKEN,
-        contentType: "application/json",
-        addRandomSuffix: false,
-        allowOverwrite: true,
-      }
-    ).catch((error) => {
-      console.error("[orderSource] Unable to persist to blob:", error);
-    });
-  }
+  return cachedStore;
 }
 
 function normalizeCode(code: string) {

@@ -1,18 +1,16 @@
 import { head, put } from "@vercel/blob";
-import path from "path";
-import { readFile, writeFile } from "fs/promises";
 import { ProductType } from "@/types/ProductType";
 import { clearProductCache } from "./productSource";
 
-const PRODUCT_BLOB_SOURCE =  process.env.PRODUCTS_BLOB_URL;
+const PRODUCT_BLOB_SOURCE =
+  process.env.PRODUCTS_BLOB_URL ?? process.env.PRODUCTS_BLOB_PATH;
 const PRODUCT_BLOB_PATH = process.env.PRODUCTS_BLOB_PATH;
-const BLOB_TOKEN = process.env.BLOB_READ_WRITE_TOKEN;
-
-const LOCAL_PRODUCT_PATH = path.join(process.cwd(), "data", "productData.json");
+const BLOB_TOKEN =
+  process.env.VERCEL_BLOB_READ_WRITE_TOKEN ?? process.env.BLOB_READ_WRITE_TOKEN ?? process.env.BLOB_RW_TOKEN;
 
 async function fetchProductsFromBlob(): Promise<ProductType[] | null> {
   if (!PRODUCT_BLOB_SOURCE) {
-    return null;
+    throw new Error("PRODUCTS_BLOB_URL hoặc PRODUCTS_BLOB_PATH chưa được cấu hình.");
   }
 
   try {
@@ -49,54 +47,26 @@ async function fetchProductsFromBlob(): Promise<ProductType[] | null> {
   }
 }
 
-async function readLocalProducts(): Promise<ProductType[]> {
-  try {
-    const raw = await readFile(LOCAL_PRODUCT_PATH, "utf-8");
-    const parsed = JSON.parse(raw) as ProductType[];
-    if (!Array.isArray(parsed)) {
-      return [];
-    }
-    return parsed;
-  } catch (error: unknown) {
-    const err = error as NodeJS.ErrnoException;
-    if (err.code === "ENOENT") {
-      return [];
-    }
-    console.error("[productInventory] Unable to read local product data:", err);
-    return [];
-  }
-}
-
 async function loadProductStore(): Promise<ProductType[]> {
   const blobProducts = await fetchProductsFromBlob();
-  if (blobProducts) {
-    return blobProducts;
-  }
-  return readLocalProducts();
-}
-
-async function writeLocalProducts(products: ProductType[]) {
-  await writeFile(LOCAL_PRODUCT_PATH, JSON.stringify(products, null, 2), "utf-8");
+  return blobProducts ?? [];
 }
 
 async function persistProducts(products: ProductType[]) {
-  await writeLocalProducts(products);
-
-  if (PRODUCT_BLOB_PATH) {
-    void put(
-      PRODUCT_BLOB_PATH,
-      JSON.stringify(products, null, 2),
-      {
-        access: "public",
-        token: BLOB_TOKEN,
-        contentType: "application/json",
-        addRandomSuffix: false,
-        allowOverwrite: true,
-      }
-    ).catch((error) => {
-      console.error("[productInventory] Unable to persist to blob:", error);
-    });
+  if (!PRODUCT_BLOB_PATH) {
+    throw new Error("PRODUCTS_BLOB_PATH chưa được cấu hình để ghi dữ liệu.");
   }
+  await put(
+    PRODUCT_BLOB_PATH,
+    JSON.stringify(products, null, 2),
+    {
+      access: "public",
+      token: BLOB_TOKEN,
+      contentType: "application/json",
+      addRandomSuffix: false,
+      allowOverwrite: true,
+    }
+  );
 
   clearProductCache();
 }

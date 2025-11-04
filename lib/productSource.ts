@@ -1,45 +1,44 @@
 import { head } from "@vercel/blob";
 import { ProductType } from "@/types/ProductType";
-import { productData as fallbackProductData } from "@/data/ProductData";
 
 let cachedProducts: ProductType[] | null = null;
 
-const BLOB_SOURCE = process.env.PRODUCTS_BLOB_URL || process.env.PRODUCTS_BLOB_PATH;
-const BLOB_TOKEN = process.env.VERCEL_BLOB_READ_WRITE_TOKEN;
+const BLOB_SOURCE = process.env.PRODUCTS_BLOB_URL ?? process.env.PRODUCTS_BLOB_PATH;
+const BLOB_TOKEN =
+  process.env.VERCEL_BLOB_READ_WRITE_TOKEN ?? process.env.BLOB_READ_WRITE_TOKEN ?? process.env.BLOB_RW_TOKEN;
 
-async function fetchFromBlob(): Promise<ProductType[] | null> {
+async function fetchFromBlob(): Promise<ProductType[]> {
   if (!BLOB_SOURCE) {
-    return null;
+    throw new Error("PRODUCTS_BLOB_URL hoặc PRODUCTS_BLOB_PATH chưa được cấu hình.");
   }
 
-  try {
-    if (BLOB_SOURCE.startsWith("http")) {
-      const response = await fetch(BLOB_SOURCE, {
-        headers: BLOB_TOKEN
-          ? {
-              Authorization: `Bearer ${BLOB_TOKEN}`,
-            }
-          : undefined,
-        next: { revalidate: 60 },
-      });
-      if (!response.ok) {
-        throw new Error(`Failed to fetch blob data: ${response.statusText}`);
-      }
-      return (await response.json()) as ProductType[];
-    }
-
-    const blob = await head(BLOB_SOURCE, {
-      token: BLOB_TOKEN,
+  if (BLOB_SOURCE.startsWith("http")) {
+    const response = await fetch(BLOB_SOURCE, {
+      headers: BLOB_TOKEN
+        ? {
+            Authorization: `Bearer ${BLOB_TOKEN}`,
+          }
+        : undefined,
+      cache: "no-store",
+      next: { revalidate: 0 },
     });
-    const response = await fetch(blob.downloadUrl, { next: { revalidate: 60 } });
     if (!response.ok) {
-      throw new Error(`Failed to download blob: ${response.statusText}`);
+      throw new Error(`Không thể tải dữ liệu sản phẩm: ${response.statusText}`);
     }
     return (await response.json()) as ProductType[];
-  } catch (error) {
-    console.warn("[productSource] Không thể đọc dữ liệu sản phẩm từ Vercel Blob:", error);
-    return null;
   }
+
+  const blob = await head(BLOB_SOURCE, {
+    token: BLOB_TOKEN,
+  });
+  const response = await fetch(blob.downloadUrl, {
+    cache: "no-store",
+    next: { revalidate: 0 },
+  });
+  if (!response.ok) {
+    throw new Error(`Không thể tải dữ liệu sản phẩm: ${response.statusText}`);
+  }
+  return (await response.json()) as ProductType[];
 }
 
 export async function getAllProducts(): Promise<ProductType[]> {
@@ -48,7 +47,7 @@ export async function getAllProducts(): Promise<ProductType[]> {
   }
 
   const blobProducts = await fetchFromBlob();
-  cachedProducts = blobProducts ?? fallbackProductData;
+  cachedProducts = blobProducts;
   return cachedProducts;
 }
 

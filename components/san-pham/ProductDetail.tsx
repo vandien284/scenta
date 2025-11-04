@@ -1,6 +1,6 @@
-"use client";
-
+﻿"use client";
 import { useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button, Image } from "react-bootstrap";
 import styles from "@/styles/components/san-pham/productDetail.module.scss";
 import { ProductType } from "@/types/ProductType";
@@ -10,8 +10,12 @@ export interface ProductDetailProps {
   product: ProductType;
 }
 
+const SELECTED_STORAGE_KEY = "checkoutSelectedProductIds";
+const DEFAULT_COUNTRY = "Việt Nam";
+
 export default function ProductDetail({ product }: ProductDetailProps) {
-  const { addItem, isUpdating } = useCart();
+  const { addItem, updateItem, isUpdating } = useCart();
+  const router = useRouter();
   const [selectedImage, setSelectedImage] = useState(product.images[0]);
 
   const available = useMemo(
@@ -22,6 +26,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 
   const [quantity, setQuantity] = useState(isOutOfStock ? 0 : 1);
   const [isAdding, setIsAdding] = useState(false);
+  const [isBuying, setIsBuying] = useState(false);
 
   const thumbnails = product.images;
 
@@ -50,6 +55,26 @@ export default function ProductDetail({ product }: ProductDetailProps) {
     }
   };
 
+  const handleBuyNow = async () => {
+    if (isOutOfStock || quantity <= 0 || isBuying) return;
+    setIsBuying(true);
+    try {
+      await updateItem(product.id, quantity);
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem("checkoutCountry", DEFAULT_COUNTRY);
+        window.localStorage.setItem(
+          SELECTED_STORAGE_KEY,
+          JSON.stringify([product.id])
+        );
+      }
+      router.push("/thanh-toan");
+    } catch (error) {
+      console.error("[ProductDetail] buy now error:", error);
+    } finally {
+      setIsBuying(false);
+    }
+  };
+
   return (
     <section className={styles.productDetail}>
       <div className={styles.container}>
@@ -58,13 +83,13 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             <Image src={selectedImage} alt={product.name} />
           </div>
           <div className={styles.thumbnailList}>
-            {thumbnails.map((img, i) => (
+            {thumbnails.map((img, index) => (
               <div
-                key={i}
+                key={index}
                 className={`${styles.thumb} ${selectedImage === img ? styles.active : ""}`}
                 onClick={() => setSelectedImage(img)}
               >
-                <Image src={img} alt={`thumb-${i}`} fluid />
+                <Image src={img} alt={`thumb-${index}`} fluid />
               </div>
             ))}
           </div>
@@ -85,8 +110,9 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           </div>
 
           <div className={styles.stockMeta}>
-            <span>Đã bán: <strong>{product.sold}</strong></span>
-            {/* <span>Tổng hàng tồn: <strong>{product.quantity}</strong></span> */}
+            <span>
+              Đã bán: <strong>{product.sold}</strong>
+            </span>
           </div>
 
           <p className={styles.desc}>
@@ -97,7 +123,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           <div className={styles.actionsWrapper}>
             <div className={styles.quantitySelector}>
               <button onClick={handleDecrease} disabled={isOutOfStock || quantity <= 1}>
-                −
+                -
               </button>
               <input
                 type="text"
@@ -122,14 +148,25 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                 onClick={handleAddToCart}
                 disabled={isOutOfStock || isAdding || isUpdating}
               >
-                <span className={styles.default}>{isOutOfStock ? "Hết hàng" : isAdding ? "Đang thêm..." : "Thêm vào giỏ hàng"}</span>
-                <span className={styles.hover}>{isOutOfStock ? "Hết hàng" : isAdding ? "Đang thêm..." : "Thêm vào giỏ hàng"}</span>
-
+                <span className={styles.default}>
+                  {isOutOfStock ? "Hết hàng" : isAdding ? "Đang thêm..." : "Thêm vào giỏ hàng"}
+                </span>
+                <span className={styles.hover}>
+                  {isOutOfStock ? "Hết hàng" : isAdding ? "Đang thêm..." : "Thêm vào giỏ hàng"}
+                </span>
               </Button>
 
-              <Button className={styles.buyNow}>
-                <span className={styles.default}>Mua ngay</span>
-                <span className={styles.hover}>Mua ngay</span>
+              <Button
+                className={styles.buyNow}
+                onClick={handleBuyNow}
+                disabled={isOutOfStock || isBuying || isUpdating}
+              >
+                <span className={styles.default}>
+                  {isOutOfStock ? "Hết hàng" : isBuying ? "Đang xử lý..." : "Mua ngay"}
+                </span>
+                <span className={styles.hover}>
+                  {isOutOfStock ? "Hết hàng" : isBuying ? "Đang xử lý..." : "Mua ngay"}
+                </span>
               </Button>
             </div>
           </div>
