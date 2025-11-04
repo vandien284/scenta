@@ -31,7 +31,7 @@ const NewsPage = () => {
         <div className="container-width">
           <div className={styles.sectionHeader}>
             <span className={styles.subtitle}>Stories & Inspiration</span>
-            <h1 className={styles.title}>Tin tức & Blog</h1>
+            <h1 className={styles.title}>Tin tức</h1>
             <p className={styles.description}>
               Khám phá những câu chuyện đằng sau các mùi hương, bí quyết chăm sóc nến và xu hướng
               trang trí mới nhất từ Scenta.
