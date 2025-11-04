@@ -70,6 +70,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
           priceMax: nextPriceMax,
           cateId: nextCateId,
           q: nextQ,
+          itemsPerPage: 20,
         });
 
         setData(res.products);

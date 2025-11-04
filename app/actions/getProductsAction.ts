@@ -8,6 +8,7 @@ export async function getProductsAction(params: {
   priceMax?: number;
   cateId?: number;
   q?: string;
+  itemsPerPage?: number;
 }) {
   return getProducts(params);
 }
