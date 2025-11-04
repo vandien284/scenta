@@ -190,5 +190,629 @@
     "limited": true,
     "quantity": 105,
     "sold": 49
+  },
+  {
+    "id": 13,
+    "name": "Honey Oat Bliss",
+    "categoriesId": 6,
+    "url": "honey-oat-bliss",
+    "price": 14.99,
+    "images": [
+      "/images/product/soap-honey-oat-bliss.webp"
+    ],
+    "description": "<strong>Hương:</strong> Yến mạch, mật ong rừng, vanilla<br /> <strong>Cảm giác:</strong> Dịu nhẹ, ấm áp, dưỡng ẩm tự nhiên.<br /> <strong>Mô tả:</strong> Từng lớp bọt mịn ôm lấy làn da, hương mật ong ngọt ngào hòa cùng yến mạch giúp da mềm mịn và thư giãn tuyệt đối.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 95,
+    "sold": 38
+  },
+  {
+    "id": 14,
+    "name": "Lavender Pure Calm",
+    "categoriesId": 6,
+    "url": "lavender-pure-calm",
+    "price": 14.99,
+    "images": [
+      "/images/product/soap-lavender-pure-calm.webp"
+    ],
+    "description": "<strong>Hương:</strong> Oải hương, sữa tươi, cam bergamot<br /> <strong>Cảm giác:</strong> Thanh tịnh, nhẹ nhàng, giúp thư giãn tinh thần.<br /> <strong>Mô tả:</strong> Bánh xà phòng lavender tinh khiết mang đến cảm giác như bước vào khu vườn châu Âu đầy nắng.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 110,
+    "sold": 64
+  },
+  {
+    "id": 15,
+    "name": "Chamomile Harmony",
+    "categoriesId": 6,
+    "url": "chamomile-harmony",
+    "price": 14.99,
+    "images": [
+      "/images/product/soap-chamomile-harmony.webp"
+    ],
+    "description": "<strong>Hương:</strong> Hoa cúc, yến mạch, mật ong<br /> <strong>Cảm giác:</strong> Dịu nhẹ, làm dịu làn da nhạy cảm.<br /> <strong>Mô tả:</strong> Tựa như một ly trà hoa cúc ấm, nuôi dưỡng làn da và đem lại sự an yên cho tâm trí.",
+    "bestSeller": false,
+    "outstanding": true,
+    "limited": true,
+    "quantity": 88,
+    "sold": 32
+  },
+  {
+    "id": 16,
+    "name": "Golden Honey Shea",
+    "categoriesId": 6,
+    "url": "golden-honey-shea",
+    "price": 14.99,
+    "images": [
+      "/images/product/soap-golden-honey-shea.webp"
+    ],
+    "description": "<strong>Hương:</strong> Mật ong, bơ shea, hạnh nhân<br /> <strong>Cảm giác:</strong> Dưỡng ẩm sâu, mềm mại, thơm ngọt.<br /> <strong>Mô tả:</strong> Hũ vàng nhỏ bé của thiên nhiên, phục hồi độ ẩm và để lại mùi hương dịu dàng trên da.",
+    "bestSeller": true,
+    "outstanding": false,
+    "limited": true,
+    "quantity": 102,
+    "sold": 54
+  },
+  {
+    "id": 17,
+    "name": "Citrus Rosemary Fresh",
+    "categoriesId": 6,
+    "url": "citrus-rosemary-fresh",
+    "price": 14.99,
+    "images": [
+      "/images/product/soap-citrus-rosemary-fresh.webp"
+    ],
+    "description": "<strong>Hương:</strong> Chanh tươi, hương thảo, cam ngọt<br /> <strong>Cảm giác:</strong> Mát lạnh, sảng khoái, làm mới tinh thần.<br /> <strong>Mô tả:</strong> Bọt xà thơm mùi chanh hòa cùng nhánh hương thảo tươi, đánh thức năng lượng cho buổi sáng.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 108,
+    "sold": 48
+  },
+  {
+    "id": 18,
+    "name": "Blueberry Lemon Dream",
+    "categoriesId": 6,
+    "url": "blueberry-lemon-dream",
+    "price": 14.99,
+    "images": [
+      "/images/product/soap-blueberry-lemon-dream.webp"
+    ],
+    "description": "<strong>Hương:</strong> Việt quất, chanh vàng, đường nâu<br /> <strong>Cảm giác:</strong> Trẻ trung, tươi mới, rạng rỡ.<br /> <strong>Mô tả:</strong> Hương ngọt dịu pha chút chua nhẹ mang lại nguồn năng lượng tích cực cho ngày mới.",
+    "bestSeller": false,
+    "outstanding": true,
+    "limited": true,
+    "quantity": 92,
+    "sold": 35
+  },
+  {
+    "id": 19,
+    "name": "Forest Pine Detox",
+    "categoriesId": 6,
+    "url": "forest-pine-detox",
+    "price": 14.99,
+    "images": [
+      "/images/product/soap-forest-pine-detox.webp"
+    ],
+    "description": "<strong>Hương:</strong> Lá thông, bạc hà, đất sét xanh<br /> <strong>Cảm giác:</strong> Sạch sâu, mát lạnh, khử mùi tự nhiên.<br /> <strong>Mô tả:</strong> Như tắm giữa rừng thông, mùi hương tươi mát giúp da sạch sâu và tinh thần được tái sinh.",
+    "bestSeller": true,
+    "outstanding": false,
+    "limited": false,
+    "quantity": 120,
+    "sold": 70
+  },
+  {
+    "id": 20,
+    "name": "Orange Sunrise",
+    "categoriesId": 6,
+    "url": "orange-sunrise",
+    "price": 14.99,
+    "images": [
+      "/images/product/soap-orange-sunrise.webp"
+    ],
+    "description": "<strong>Hương:</strong> Cam ngọt, vanilla, mật ong<br /> <strong>Cảm giác:</strong> Sảng khoái, ngọt ngào, tươi sáng.<br /> <strong>Mô tả:</strong> Mỗi bánh xà như một lát cam mọng nước, khởi đầu ngày mới bằng hương thơm tràn đầy sức sống.",
+    "bestSeller": false,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 104,
+    "sold": 44
+  },
+  {
+    "id": 21,
+    "name": "Charcoal Mint Detox",
+    "categoriesId": 6,
+    "url": "charcoal-mint-detox",
+    "price": 14.99,
+    "images": [
+      "/images/product/soap-charcoal-mint-detox.webp"
+    ],
+    "description": "<strong>Hương:</strong> Than hoạt tính, bạc hà, gỗ tuyết tùng<br /> <strong>Cảm giác:</strong> Làm sạch sâu, khử mùi, se khít lỗ chân lông.<br /> <strong>Mô tả:</strong> Sức mạnh thanh lọc từ than tre kết hợp bạc hà giúp làn da được làm mới hoàn toàn.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": true,
+    "quantity": 130,
+    "sold": 75
+  },
+  {
+    "id": 22,
+    "name": "Autumn Leaf Spice",
+    "categoriesId": 5,
+    "url": "autumn-leaf-spice",
+    "price": 12.99,
+    "images": [
+      "/images/product/sachet-autumn-leaf-spice.webp"
+    ],
+    "description": "<strong>Hương:</strong> Quế, hồi, lavender khô<br /> <strong>Cảm giác:</strong> Ấm áp, mộc mạc, mang hương thu dịu nhẹ.<br /> <strong>Mô tả:</strong> Túi thơm mang hơi thở mùa thu, hòa quyện giữa quế cay nồng và lavender thoang thoảng, lý tưởng cho phòng ngủ hoặc góc học tập.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 140,
+    "sold": 52
+  },
+  {
+    "id": 23,
+    "name": "Lavender Dream",
+    "categoriesId": 5,
+    "url": "lavender-dream",
+    "price": 12.99,
+    "images": [
+      "/images/product/sachet-lavender-dream.webp"
+    ],
+    "description": "<strong>Hương:</strong> Oải hương, cỏ khô, gỗ đàn hương<br /> <strong>Cảm giác:</strong> Thư giãn, giúp dễ ngủ.<br /> <strong>Mô tả:</strong> Hương oải hương cổ điển đem lại cảm giác bình yên, xoa dịu căng thẳng sau ngày dài.",
+    "bestSeller": true,
+    "outstanding": false,
+    "limited": true,
+    "quantity": 150,
+    "sold": 78
+  },
+  {
+    "id": 24,
+    "name": "Chamomile Meadow",
+    "categoriesId": 5,
+    "url": "chamomile-meadow",
+    "price": 12.99,
+    "images": [
+      "/images/product/sachet-chamomile-meadow.webp"
+    ],
+    "description": "<strong>Hương:</strong> Hoa cúc, cỏ ngọt, cam bergamot<br /> <strong>Cảm giác:</strong> Dịu nhẹ, tinh khiết, dễ chịu.<br /> <strong>Mô tả:</strong> Như dạo bước giữa cánh đồng hoa cúc, hương thơm tự nhiên giúp thanh lọc không khí và làm dịu tinh thần.",
+    "bestSeller": false,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 135,
+    "sold": 47
+  },
+  {
+    "id": 25,
+    "name": "Summer Bloom Mix",
+    "categoriesId": 5,
+    "url": "summer-bloom-mix",
+    "price": 12.99,
+    "images": [
+      "/images/product/sachet-summer-bloom-mix.webp"
+    ],
+    "description": "<strong>Hương:</strong> Hoa hồng khô, hoa cúc, lavender, cam khô<br /> <strong>Cảm giác:</strong> Năng động, rực rỡ, tươi mới.<br /> <strong>Mô tả:</strong> Sự kết hợp các loài hoa mùa hè tạo nên hương thơm ngọt dịu tràn đầy năng lượng cho không gian sống.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": true,
+    "quantity": 128,
+    "sold": 58
+  },
+  {
+    "id": 26,
+    "name": "Coffee Warm Soul",
+    "categoriesId": 5,
+    "url": "coffee-warm-soul",
+    "price": 12.99,
+    "images": [
+      "/images/product/sachet-coffee-warm-soul.webp"
+    ],
+    "description": "<strong>Hương:</strong> Cà phê rang, vanilla, quế<br /> <strong>Cảm giác:</strong> Ấm áp, nồng nàn, tỉnh táo.<br /> <strong>Mô tả:</strong> Hương cà phê đậm đà lan tỏa khắp không gian, mang lại cảm giác ấm cúng và sảng khoái.",
+    "bestSeller": true,
+    "outstanding": false,
+    "limited": false,
+    "quantity": 142,
+    "sold": 63
+  },
+  {
+    "id": 27,
+    "name": "Herbal Forest Calm",
+    "categoriesId": 5,
+    "url": "herbal-forest-calm",
+    "price": 12.99,
+    "images": [
+      "/images/product/sachet-herbal-forest-calm.webp"
+    ],
+    "description": "<strong>Hương:</strong> Hương thảo, bạc hà, lavender<br /> <strong>Cảm giác:</strong> Thanh mát, sạch sẽ, thư thái.<br /> <strong>Mô tả:</strong> Túi thơm như mang cả khu vườn xanh mướt vào nhà, lan tỏa cảm giác tươi mát và thư giãn nhẹ nhàng.",
+    "bestSeller": false,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 138,
+    "sold": 55
+  },
+  {
+    "id": 28,
+    "name": "Peppermint Fresh Breath",
+    "categoriesId": 4,
+    "url": "peppermint-fresh-breath",
+    "price": 19.99,
+    "images": [
+      "/images/product/oil-peppermint-fresh-breath.webp"
+    ],
+    "description": "<strong>Hương:</strong> Bạc hà, khuynh diệp, cam thảo<br /> <strong>Cảm giác:</strong> Tươi mát, tỉnh táo, sảng khoái.<br /> <strong>Mô tả:</strong> Hương bạc hà nguyên chất làm mát không khí, hỗ trợ thư giãn và tăng khả năng tập trung.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 150,
+    "sold": 90
+  },
+  {
+    "id": 29,
+    "name": "Rose Bloom Serenity",
+    "categoriesId": 4,
+    "url": "rose-bloom-serenity",
+    "price": 21.99,
+    "images": [
+      "/images/product/oil-rose-bloom-serenity.webp"
+    ],
+    "description": "<strong>Hương:</strong> Hoa hồng, gỗ tuyết tùng, vanilla<br /> <strong>Cảm giác:</strong> Nữ tính, lãng mạn, nhẹ nhàng.<br /> <strong>Mô tả:</strong> Tinh dầu hoa hồng lan tỏa sự dịu dàng và sang trọng, phù hợp cho không gian nghỉ ngơi.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": true,
+    "quantity": 125,
+    "sold": 68
+  },
+  {
+    "id": 30,
+    "name": "Cotton Cloud Softness",
+    "categoriesId": 4,
+    "url": "cotton-cloud-softness",
+    "price": 18.99,
+    "images": [
+      "/images/product/oil-cotton-cloud-softness.webp"
+    ],
+    "description": "<strong>Hương:</strong> Bông mềm, xạ hương trắng, sữa tươi<br /> <strong>Cảm giác:</strong> Sạch sẽ, nhẹ dịu, thuần khiết.<br /> <strong>Mô tả:</strong> Hương thơm tinh tế và trong trẻo mang lại cảm giác như vừa bước ra từ tiệm giặt là cao cấp.",
+    "bestSeller": false,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 140,
+    "sold": 74
+  },
+  {
+    "id": 31,
+    "name": "Citrus Summer Bliss",
+    "categoriesId": 4,
+    "url": "citrus-summer-bliss",
+    "price": 19.99,
+    "images": [
+      "/images/product/oil-citrus-summer-bliss.webp"
+    ],
+    "description": "<strong>Hương:</strong> Cam, chanh, hoa nhài, hổ phách<br /> <strong>Cảm giác:</strong> Năng lượng, tươi sáng, tràn đầy sức sống.<br /> <strong>Mô tả:</strong> Hương tinh dầu gợi nhớ ngày hè rực rỡ, xua tan mệt mỏi và mang lại tâm trạng hạnh phúc.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 132,
+    "sold": 71
+  },
+  {
+    "id": 32,
+    "name": "Cinnamon Cozy Wood",
+    "categoriesId": 4,
+    "url": "cinnamon-cozy-wood",
+    "price": 19.99,
+    "images": [
+      "/images/product/oil-cinnamon-cozy-wood.webp"
+    ],
+    "description": "<strong>Hương:</strong> Quế, đinh hương, gỗ đàn hương<br /> <strong>Cảm giác:</strong> Ấm áp, gần gũi, dễ chịu.<br /> <strong>Mô tả:</strong> Tinh dầu quế khơi gợi sự an yên và ấm cúng, lý tưởng cho phòng khách hoặc những ngày mưa lạnh.",
+    "bestSeller": true,
+    "outstanding": false,
+    "limited": true,
+    "quantity": 118,
+    "sold": 65
+  },
+  {
+    "id": 33,
+    "name": "Lavender Pure Calm Oil",
+    "categoriesId": 4,
+    "url": "lavender-pure-calm-oil",
+    "price": 18.99,
+    "images": [
+      "/images/product/oil-lavender-pure-calm.webp"
+    ],
+    "description": "<strong>Hương:</strong> Oải hương, vanilla, cỏ vetiver<br /> <strong>Cảm giác:</strong> Thư giãn, giúp ngủ ngon, giảm stress.<br /> <strong>Mô tả:</strong> Hương oải hương dịu nhẹ lan tỏa khắp căn phòng, xoa dịu tâm hồn và tạo cảm giác dễ chịu.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 160,
+    "sold": 102
+  },
+  {
+    "id": 34,
+    "name": "Eucalyptus Breath of Nature",
+    "categoriesId": 4,
+    "url": "eucalyptus-breath-of-nature",
+    "price": 18.99,
+    "images": [
+      "/images/product/oil-eucalyptus-breath-of-nature.webp"
+    ],
+    "description": "<strong>Hương:</strong> Khuynh diệp, bạc hà, gỗ tùng<br /> <strong>Cảm giác:</strong> Thanh sạch, dễ thở, tinh khiết.<br /> <strong>Mô tả:</strong> Hương khuynh diệp tự nhiên làm sạch không khí, hỗ trợ hô hấp và mang lại cảm giác tươi mới.",
+    "bestSeller": false,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 148,
+    "sold": 83
+  },
+  {
+    "id": 35,
+    "name": "Chamomile Golden Calm",
+    "categoriesId": 4,
+    "url": "chamomile-golden-calm",
+    "price": 19.99,
+    "images": [
+      "/images/product/oil-chamomile-golden-calm.webp"
+    ],
+    "description": "<strong>Hương:</strong> Hoa cúc, mật ong, vanilla<br /> <strong>Cảm giác:</strong> Dịu dàng, thư giãn, an yên.<br /> <strong>Mô tả:</strong> Tinh dầu hoa cúc nhẹ nhàng hỗ trợ giấc ngủ, giảm căng thẳng, hoàn hảo cho buổi tối ấm cúng.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": true,
+    "quantity": 126,
+    "sold": 77
+  },
+  {
+    "id": 36,
+    "name": "Sakura Dew Blossom",
+    "categoriesId": 4,
+    "url": "sakura-dew-blossom",
+    "price": 21.99,
+    "images": [
+      "/images/product/oil-sakura-dew-blossom.webp"
+    ],
+    "description": "<strong>Hương:</strong> Hoa anh đào, nhài trắng, xạ hương<br /> <strong>Cảm giác:</strong> Nữ tính, thanh khiết, tươi tắn.<br /> <strong>Mô tả:</strong> Lấy cảm hứng từ mùa xuân Nhật Bản, hương hoa anh đào tinh tế lan tỏa sự nhẹ nhàng và tươi mới.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 122,
+    "sold": 69
+  },
+  {
+    "id": 37,
+    "name": "Citrus Zest Awakening",
+    "categoriesId": 4,
+    "url": "citrus-zest-awakening",
+    "price": 19.99,
+    "images": [
+      "/images/product/oil-citrus-zest-awakening.webp"
+    ],
+    "description": "<strong>Hương:</strong> Cam, chanh, bưởi hồng, hổ phách<br /> <strong>Cảm giác:</strong> Sảng khoái, đầy năng lượng, phấn chấn tinh thần.<br /> <strong>Mô tả:</strong> Hương cam chanh tươi sáng khơi nguồn năng lượng tích cực, thích hợp cho buổi sáng hoặc không gian làm việc.",
+    "bestSeller": true,
+    "outstanding": false,
+    "limited": false,
+    "quantity": 158,
+    "sold": 88
+  },
+  {
+    "id": 38,
+    "name": "Lavender Dream Wax",
+    "categoriesId": 3,
+    "url": "lavender-dream-wax",
+    "price": 16.99,
+    "images": [
+      "/images/product/wax-lavender-dream.webp"
+    ],
+    "description": "<strong>Hương:</strong> Oải hương, vanilla, gỗ đàn hương<br /> <strong>Cảm giác:</strong> Thư giãn, giúp ngủ ngon, nhẹ nhàng.<br /> <strong>Gợi ý:</strong> Treo tủ quần áo, góc làm việc hoặc phòng ngủ để giữ hương thơm dịu êm.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 125,
+    "sold": 64
+  },
+  {
+    "id": 39,
+    "name": "Rose Garden Wax",
+    "categoriesId": 3,
+    "url": "rose-garden-wax",
+    "price": 16.99,
+    "images": [
+      "/images/product/wax-rose-garden.webp"
+    ],
+    "description": "<strong>Hương:</strong> Hoa hồng, cam bergamot, xạ hương trắng<br /> <strong>Cảm giác:</strong> Ngọt ngào, nữ tính, lãng mạn.<br /> <strong>Gợi ý:</strong> Phù hợp làm quà tặng, đặt tại phòng ngủ hoặc bàn trang điểm.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": true,
+    "quantity": 118,
+    "sold": 57
+  },
+  {
+    "id": 40,
+    "name": "Sakura Whisper Wax",
+    "categoriesId": 3,
+    "url": "sakura-whisper-wax",
+    "price": 16.99,
+    "images": [
+      "/images/product/wax-sakura-whisper.webp"
+    ],
+    "description": "<strong>Hương:</strong> Hoa anh đào, nhài trắng, hổ phách<br /> <strong>Cảm giác:</strong> Thanh thoát, tinh khôi, trẻ trung.<br /> <strong>Gợi ý:</strong> Dạng sáp pastel nhẹ, lý tưởng treo tủ quần áo sáng màu hoặc góc decor mùa xuân.",
+    "bestSeller": false,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 134,
+    "sold": 52
+  },
+  {
+    "id": 41,
+    "name": "Citrus Bloom Wax",
+    "categoriesId": 3,
+    "url": "citrus-bloom-wax",
+    "price": 16.99,
+    "images": [
+      "/images/product/wax-citrus-bloom.webp"
+    ],
+    "description": "<strong>Hương:</strong> Cam ngọt, quế, đinh hương, gỗ đàn hương<br /> <strong>Cảm giác:</strong> Ấm áp, tươi mát, tràn năng lượng.<br /> <strong>Gợi ý:</strong> Thích hợp vào mùa mưa hoặc không gian kín cần thêm sinh khí.",
+    "bestSeller": true,
+    "outstanding": false,
+    "limited": false,
+    "quantity": 140,
+    "sold": 68
+  },
+  {
+    "id": 42,
+    "name": "Chamomile Soft Day Wax",
+    "categoriesId": 3,
+    "url": "chamomile-soft-day-wax",
+    "price": 16.99,
+    "images": [
+      "/images/product/wax-chamomile-soft-day.webp"
+    ],
+    "description": "<strong>Hương:</strong> Hoa cúc, mật ong, vanilla<br /> <strong>Cảm giác:</strong> Êm dịu, thư thái, nhẹ nhàng.<br /> <strong>Gợi ý:</strong> Lý tưởng cho phòng em bé, góc nghỉ ngơi hoặc spa tại nhà.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": true,
+    "quantity": 112,
+    "sold": 50
+  },
+  {
+    "id": 43,
+    "name": "Eucalyptus & Sage Wax",
+    "categoriesId": 3,
+    "url": "eucalyptus-sage-wax",
+    "price": 16.99,
+    "images": [
+      "/images/product/wax-eucalyptus-sage.webp"
+    ],
+    "description": "<strong>Hương:</strong> Khuynh diệp, xô thơm, bạc hà<br /> <strong>Cảm giác:</strong> Sạch, tinh khiết, mát lành.<br /> <strong>Gợi ý:</strong> Dạng sáp trắng lá xanh mang vibe “fresh & clean” cho phòng tắm và tủ đồ.",
+    "bestSeller": false,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 138,
+    "sold": 61
+  },
+  {
+    "id": 44,
+    "name": "Morning Linen Wax",
+    "categoriesId": 3,
+    "url": "morning-linen-wax",
+    "price": 16.99,
+    "images": [
+      "/images/product/wax-morning-linen.webp"
+    ],
+    "description": "<strong>Hương:</strong> Bông mềm, sữa, xạ hương<br /> <strong>Cảm giác:</strong> Sạch sẽ, mát dịu, tựa mùi quần áo vừa giặt.<br /> <strong>Gợi ý:</strong> Treo trong tủ quần áo, phòng tắm hoặc xe hơi để giữ hương thơm thơ trẻ.",
+    "bestSeller": true,
+    "outstanding": false,
+    "limited": false,
+    "quantity": 146,
+    "sold": 72
+  },
+  {
+    "id": 45,
+    "name": "Vanilla Wood Wax",
+    "categoriesId": 3,
+    "url": "vanilla-wood-wax",
+    "price": 16.99,
+    "images": [
+      "/images/product/wax-vanilla-wood.webp"
+    ],
+    "description": "<strong>Hương:</strong> Vanilla, gỗ tuyết tùng, hổ phách<br /> <strong>Cảm giác:</strong> Trầm ấm, thư giãn, dễ chịu.<br /> <strong>Gợi ý:</strong> Hợp với không gian phòng đọc, phòng khách hoặc những ngày thời tiết se lạnh.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 120,
+    "sold": 58
+  },
+  {
+    "id": 46,
+    "name": "White Blossom Wax",
+    "categoriesId": 3,
+    "url": "white-blossom-wax",
+    "price": 16.99,
+    "images": [
+      "/images/product/wax-white-blossom.webp"
+    ],
+    "description": "<strong>Hương:</strong> Hoa nhài, linh lan, hoa trắng tổng hợp<br /> <strong>Cảm giác:</strong> Sang trọng, thanh thoát, trong trẻo.<br /> <strong>Gợi ý:</strong> Phù hợp trang trí hoặc treo xe để tạo điểm nhấn tinh tế.",
+    "bestSeller": false,
+    "outstanding": true,
+    "limited": true,
+    "quantity": 110,
+    "sold": 46
+  },
+  {
+    "id": 47,
+    "name": "Forest Memory Wax",
+    "categoriesId": 3,
+    "url": "forest-memory-wax",
+    "price": 16.99,
+    "images": [
+      "/images/product/wax-forest-memory.webp"
+    ],
+    "description": "<strong>Hương:</strong> Gỗ thông, đàn hương, cỏ hương bài<br /> <strong>Cảm giác:</strong> Bình yên, tự nhiên, mùi rừng non.<br /> <strong>Gợi ý:</strong> Tone rustic hợp decor tối giản hoặc vintage, mang thiên nhiên vào không gian sống.",
+    "bestSeller": true,
+    "outstanding": false,
+    "limited": false,
+    "quantity": 136,
+    "sold": 63
+  },
+  {
+    "id": 48,
+    "name": "Dried Meadow Wax",
+    "categoriesId": 3,
+    "url": "dried-meadow-wax",
+    "price": 17.99,
+    "images": [
+      "/images/product/wax-dried-meadow.webp"
+    ],
+    "description": "<strong>Hương:</strong> Gỗ đàn hương, thảo mộc khô, oải hương<br /> <strong>Cảm giác:</strong> Mộc mạc, ấm áp, tinh tế.<br /> <strong>Mô tả:</strong> Mẫu sáp mang hơi thở đồng cỏ, gợi sự thư thái sang trọng và thích hợp treo tủ áo hoặc văn phòng tone trầm.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": true,
+    "quantity": 108,
+    "sold": 55
+  },
+  {
+    "id": 49,
+    "name": "Citrus & Herb Harmony Wax",
+    "categoriesId": 3,
+    "url": "citrus-herb-harmony-wax",
+    "price": 17.99,
+    "images": [
+      "/images/product/wax-citrus-herb-harmony.webp"
+    ],
+    "description": "<strong>Hương:</strong> Cam, khuynh diệp, hương thảo<br /> <strong>Cảm giác:</strong> Sảng khoái, cân bằng, thanh lọc không khí.<br /> <strong>Mô tả:</strong> Sự kết hợp tinh dầu cam và thảo mộc tạo không gian tươi mới, lý tưởng cho ngày dài làm việc hoặc phòng khách.",
+    "bestSeller": false,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 114,
+    "sold": 53
+  },
+  {
+    "id": 50,
+    "name": "Candle Making Kit – Classic",
+    "categoriesId": 1,
+    "url": "candle-making-kit-classic",
+    "price": 39.99,
+    "images": [
+      "/images/product/kit-candle-classic.webp"
+    ],
+    "description": "<strong>Dung lượng:</strong> Tự làm 2 hũ nến thơm 150g<br /> <strong>Trong hộp:</strong> Sáp đậu nành, tinh dầu, tim nến, hũ thủy tinh, thanh cố định, hướng dẫn chi tiết.<br /> <strong>Phong cách:</strong> Dành cho người muốn trải nghiệm làm nến thực thụ, tự pha trộn hương và tạo không gian mang dấu ấn riêng.<br /> <strong>Gợi ý hương:</strong> Lavender Dream, Rose Bloom, Citrus Harmony.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": false,
+    "quantity": 80,
+    "sold": 42
+  },
+  {
+    "id": 51,
+    "name": "Candle Making Kit – Mini",
+    "categoriesId": 1,
+    "url": "candle-making-kit-mini",
+    "price": 29.99,
+    "images": [
+      "/images/product/kit-candle-mini.webp"
+    ],
+    "description": "<strong>Dung lượng:</strong> Tự làm 2 hũ nến thơm 50g<br /> <strong>Trong hộp:</strong> Sáp, tinh dầu, tim nến, hũ mini, hoa khô trang trí, hướng dẫn.<br /> <strong>Phong cách:</strong> Phù hợp làm quà tặng, workshop nhỏ hoặc lần đầu bước vào thế giới nến thủ công.<br /> <strong>Gợi ý hương:</strong> Lavender, Rose, Vanilla.",
+    "bestSeller": true,
+    "outstanding": true,
+    "limited": true,
+    "quantity": 96,
+    "sold": 54
   }
 ]
