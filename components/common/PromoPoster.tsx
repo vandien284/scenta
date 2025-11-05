@@ -53,13 +53,13 @@ export default function PromoPoster() {
           ×
         </button>
         <div className={styles.posterImage}>
-          <Image
-            src="/images/promo/poster.png"
+          {/* <Image
+            src="/images/promo/poster.jpg"
             alt="Poster khuyến mãi Scenta - giảm 25% trên toàn bộ sản phẩm"
             fill
             sizes="(max-width: 768px) 90vw, 620px"
             priority
-          />
+          /> */}
         </div>
       </div>
     </div>
