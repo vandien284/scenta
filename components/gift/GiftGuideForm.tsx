@@ -1,9 +1,10 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import styles from "@/styles/components/gift/giftGuideForm.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { formatCurrencyVND } from "@/utils/formatCurrency";
 
 interface Suggestion {
   productName: string;
@@ -40,11 +41,6 @@ export default function GiftGuideForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [result, setResult] = useState<GiftResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
-
-  const currencyFormatter = useMemo(
-    () => new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }),
-    []
-  );
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -226,7 +222,7 @@ export default function GiftGuideForm() {
                             />
                           )}
                           <div className={styles.metaInfo}>
-                            <span>Giá: {currencyFormatter.format(item.product.price)}</span>
+                            <span>Giá: {formatCurrencyVND(item.product.price)}</span>
                             {item.product.description && <span>{item.product.description}</span>}
                             <Link href={`/san-pham/${item.product.url}`} rel="noreferrer">
                               Xem chi tiết sản phẩm

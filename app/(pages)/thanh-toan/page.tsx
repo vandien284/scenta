@@ -6,6 +6,7 @@ import styles from "@/styles/view/checkout.module.scss";
 import { useCart } from "@/components/common/CartProvider";
 import { calculateShippingFee } from "@/shared/shipping";
 import { OrderSchema } from "@/types/OrderType";
+import { formatCurrencyVND } from "@/utils/formatCurrency";
 
 type CheckoutFormFields = {
   fullName: string;
@@ -35,13 +36,8 @@ const initialForm: CheckoutFormFields = {
   notes: "",
 };
 
-const currencyFormatter = new Intl.NumberFormat("vi-VN", {
-  style: "currency",
-  currency: "VND",
-});
-
 function formatCurrency(value: number) {
-  return currencyFormatter.format(Math.round(value));
+  return `${formatCurrencyVND(Math.round(value))} ₫`;
 }
 
 export default function CheckoutPage() {

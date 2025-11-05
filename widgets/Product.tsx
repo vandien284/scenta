@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useCart } from "@/components/common/CartProvider";
 import { useFavorites } from "@/components/common/FavoritesProvider";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { formatCurrencyVND } from "@/utils/formatCurrency";
 
 interface ProductProps {
   data: ProductType;
@@ -22,7 +23,9 @@ export default function Product({ data }: ProductProps) {
   const isOutOfStock = available <= 0;
   const salePercent = Math.max(0, Math.min(100, data.sale ?? 0));
   const hasSale = salePercent > 0;
-  const discountedPrice = hasSale ? Number((data.price * (1 - salePercent / 100)).toFixed(2)) : data.price;
+  const discountedValue = hasSale ? data.price * (1 - salePercent / 100) : data.price;
+  const formattedDiscounted = formatCurrencyVND(discountedValue);
+  const formattedOriginal = formatCurrencyVND(data.price);
 
   const handleAddToCart = async (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -95,11 +98,11 @@ export default function Product({ data }: ProductProps) {
               <Card.Text className={styles.priceWrapper}>
                 {hasSale ? (
                   <>
-                    <span className={styles.salePrice}>${discountedPrice.toFixed(2)}</span>
-                    <span className={styles.originalPrice}>${data.price.toFixed(2)}</span>
+                    <span className={styles.salePrice}>{formattedDiscounted}</span>
+                    <span className={styles.originalPrice}>{formattedOriginal}</span>
                   </>
                 ) : (
-                  <span className={styles.regularPrice}>${data.price.toFixed(2)}</span>
+                  <span className={styles.regularPrice}>{formattedDiscounted}</span>
                 )}
               </Card.Text>
             </Card.Body>

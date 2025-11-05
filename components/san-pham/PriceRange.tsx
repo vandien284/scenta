@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "@/styles/components/san-pham/priceRange.module.scss";
+import { formatCurrencyVND } from "@/utils/formatCurrency";
 
 interface PriceRangeProps {
     min?: number;
@@ -12,8 +13,8 @@ interface PriceRangeProps {
 
 export default function PriceRange({
     min = 0,
-    max = 1000,
-    step = 1,
+    max = 1000000,
+    step = 1000,
     onChange,
 }: PriceRangeProps) {
     const trackRef = useRef<HTMLDivElement>(null);
@@ -111,7 +112,7 @@ export default function PriceRange({
             </div>
 
             <p className={styles.priceText}>
-                Giá: <span>{minValue} VND</span> - <span>{maxValue} VND</span>
+                Giá: <span>{formatCurrencyVND(minValue)} VND</span> - <span>{formatCurrencyVND(maxValue)} VND</span>
             </p>
         </div>
     );

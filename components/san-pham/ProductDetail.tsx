@@ -7,6 +7,7 @@ import { ProductType } from "@/types/ProductType";
 import { useCart } from "@/components/common/CartProvider";
 import { useFavorites } from "@/components/common/FavoritesProvider";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { formatCurrencyVND } from "@/utils/formatCurrency";
 
 export interface ProductDetailProps {
   product: ProductType;
@@ -24,7 +25,9 @@ export default function ProductDetail({ product }: ProductDetailProps) {
   const salePercent = Math.max(0, Math.min(100, product.sale ?? 0));
   const hasSale = salePercent > 0;
   const originalPrice = product.price;
-  const discountedPrice = hasSale ? Number((originalPrice * (1 - salePercent / 100)).toFixed(2)) : originalPrice;
+  const discountedPrice = hasSale ? originalPrice * (1 - salePercent / 100) : originalPrice;
+  const formattedDiscountedPrice = formatCurrencyVND(discountedPrice);
+  const formattedOriginalPrice = formatCurrencyVND(originalPrice);
 
   const available = useMemo(
     () => Math.max(product.quantity - product.sold, 0),
@@ -143,10 +146,10 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           </div>
 
           <div className={styles.priceRow}>
-            <span className={styles.salePrice}>${discountedPrice.toFixed(2)}</span>
+            <span className={styles.salePrice}>{formattedDiscountedPrice}</span>
             {hasSale ? (
               <>
-                <span className={styles.originalPrice}>${originalPrice.toFixed(2)}</span>
+                <span className={styles.originalPrice}>{formattedOriginalPrice}</span>
                 <span className={styles.saleTag}>-{salePercent}%</span>
               </>
             ) : null}

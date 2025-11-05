@@ -4,6 +4,7 @@ import { FormEvent, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "@/styles/view/order-lookup.module.scss";
 import { OrderSchema } from "@/types/OrderType";
+import { formatCurrencyVND } from "@/utils/formatCurrency";
 
 type OrderResult = Omit<OrderSchema, "cartIdentifier" | "verificationId">;
 
@@ -12,18 +13,13 @@ const initialForm = {
   email: "",
 };
 
-const currencyFormatter = new Intl.NumberFormat("vi-VN", {
-  style: "currency",
-  currency: "VND",
-});
-
 const dateFormatter = new Intl.DateTimeFormat("vi-VN", {
   dateStyle: "medium",
   timeStyle: "short",
 });
 
 function formatCurrency(value: number) {
-  return currencyFormatter.format(Math.round(value));
+  return `${formatCurrencyVND(Math.round(value))} ₫`;
 }
 
 function normalize(value: string) {

@@ -30,7 +30,7 @@ const ProductSideBar = () => {
     <Fragment>
       <UISideBar>
         <CategoryList categories={categoriesData} onChange={handleCategoriesChange} />
-        <PriceRange min={0} max={1000} step={10} onChange={handlePriceChange} />
+        <PriceRange min={0} max={1000000} step={1000} onChange={handlePriceChange} />
       </UISideBar>
     </Fragment>
   );

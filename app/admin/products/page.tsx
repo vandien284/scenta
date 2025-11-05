@@ -2,14 +2,7 @@ import styles from "@/styles/components/admin/list.module.scss";
 import { loadProducts } from "@/lib/productInventory";
 import Link from "next/link";
 import ProductDeleteButton from "@/components/admin/ProductDeleteButton";
-
-function formatCurrency(value: number) {
-  return new Intl.NumberFormat("vi-VN", {
-    style: "currency",
-    currency: "VND",
-    maximumFractionDigits: 0,
-  }).format(Math.round(value));
-}
+import { formatCurrencyVND } from "@/utils/formatCurrency";
 
 export const revalidate = 120;
 
@@ -43,13 +36,15 @@ export default async function AdminProductsPage() {
             <tbody>
               {products
                 .slice()
-                .sort((a, b) => a.name.localeCompare(b.name, "vi"))
+                .sort((a, b) => Number(a.id) - Number(b.id))
                 .map((product) => {
                   const salePercent = Math.max(0, Math.min(100, product.sale ?? 0));
                   const discounted = salePercent
-                    ? Math.round(product.price * (1 - salePercent / 100))
-                    : Math.round(product.price);
+                    ? product.price * (1 - salePercent / 100)
+                    : product.price;
                   const remaining = Math.max(product.quantity - product.sold, 0);
+                  const formattedDiscounted = formatCurrencyVND(discounted);
+                  const formattedOriginal = formatCurrencyVND(product.price);
 
                   return (
                     <tr key={product.id}>
@@ -63,9 +58,9 @@ export default async function AdminProductsPage() {
                       <td>{product.categoriesId}</td>
                       <td>
                         <div className={styles.priceGroup}>
-                          <span className={styles.salePrice}>{formatCurrency(discounted)}</span>
+                          <span className={styles.salePrice}>{formattedDiscounted}</span>
                           {salePercent > 0 ? (
-                            <span className={styles.originalPrice}>{formatCurrency(product.price)}</span>
+                            <span className={styles.originalPrice}>{formattedOriginal}</span>
                           ) : null}
                         </div>
                       </td>

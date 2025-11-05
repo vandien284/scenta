@@ -2,14 +2,9 @@ import styles from "@/styles/components/admin/dashboard.module.scss";
 import { fetchAdminDashboardData, ChartDatum, TopProductSummary } from "@/lib/adminDashboard";
 import OrderStatusUpdater from "@/components/admin/OrderStatusUpdater";
 import type { OrderSchema } from "@/types/OrderType";
+import { formatCurrencyVND } from "@/utils/formatCurrency";
 
 export const revalidate = 120;
-
-const currencyFormatter = new Intl.NumberFormat("vi-VN", {
-  style: "currency",
-  currency: "VND",
-  maximumFractionDigits: 0,
-});
 
 const numberFormatter = new Intl.NumberFormat("vi-VN");
 
@@ -21,7 +16,7 @@ const STATUS_OPTIONS: { value: OrderSchema["status"]; label: string }[] = [
 
 function formatCurrency(value: number) {
   if (!Number.isFinite(value)) return "0";
-  return currencyFormatter.format(Math.round(value));
+  return `${formatCurrencyVND(Math.round(value))} ₫`;
 }
 
 function formatNumber(value: number) {

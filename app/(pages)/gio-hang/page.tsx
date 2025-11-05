@@ -7,6 +7,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import styles from "@/styles/view/cart.module.scss";
 import { useCart } from "@/components/common/CartProvider";
 import { calculateShippingFee } from "@/shared/shipping";
+import { formatCurrencyVND } from "@/utils/formatCurrency";
 
 const FREE_SHIP_THRESHOLD = 520_000;
 const SELECTED_STORAGE_KEY = "checkoutSelectedProductIds";
@@ -99,14 +100,9 @@ export default function CartPage() {
   const progress =
     selectedSubtotal > 0 ? Math.min(100, (selectedSubtotal / FREE_SHIP_THRESHOLD) * 100) : 0;
 
-  const currencyFormatter = useMemo(
-    () => new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }),
-    []
-  );
-
   const formatCurrency = useCallback(
-    (value: number) => currencyFormatter.format(Math.round(value)),
-    [currencyFormatter]
+    (value: number) => `${formatCurrencyVND(Math.round(value))} ₫`,
+    []
   );
 
   const handleQuantityChange = (productId: number, quantity: number) => {

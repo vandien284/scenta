@@ -26,7 +26,7 @@ interface ProductGridWrapperProps {
 
 const DEFAULT_PAGE = 1;
 const DEFAULT_PRICE_MIN = 0;
-const DEFAULT_PRICE_MAX = 1000;
+const DEFAULT_PRICE_MAX = 1000000;
 const DEFAULT_CATE_ID = 0;
 const DEFAULT_SORT = "" as const;
 
