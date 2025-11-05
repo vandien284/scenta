@@ -3,11 +3,14 @@ import Image from "next/image";
 import styles from "@/styles/components/home/customerReview.module.scss";
 import ParallaxBackground from "@/ui/ParallaxBackground";
 import Slider from "@/ui/Slider";
-import { customers } from "@/data/CustomerData";
 import { useState, useEffect, useMemo } from "react";
 import sliderStyles from "@/styles/ui/slider.module.scss";
+import { ReviewType } from "@/types/ReviewType";
+
 export default function CustomerReview() {
   const [isMobile, setIsMobile] = useState(false);
+  const [reviews, setReviews] = useState<ReviewType[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const checkScreen = () => setIsMobile(window.innerWidth <= 992);
@@ -16,12 +19,48 @@ export default function CustomerReview() {
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
 
+  useEffect(() => {
+    let isMounted = true;
+
+    const fetchReviews = async () => {
+      setIsLoading(true);
+      try {
+        const response = await fetch("/api/reviews?limit=12", { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error(`Failed to fetch reviews: ${response.statusText}`);
+        }
+        const data = (await response.json()) as { reviews?: ReviewType[] };
+        if (isMounted) {
+          setReviews(data.reviews ?? []);
+        }
+      } catch (error) {
+        console.error("[CustomerReview] Unable to load reviews:", error);
+        if (isMounted) {
+          setReviews([]);
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    fetchReviews();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   const slides = useMemo(() => {
+    if (!reviews.length) {
+      return [];
+    }
     const chunkSize = isMobile ? 1 : 2;
-    return Array.from({ length: Math.ceil(customers.length / chunkSize) }, (_, i) =>
-      customers.slice(i * chunkSize, i * chunkSize + chunkSize)
+    return Array.from({ length: Math.ceil(reviews.length / chunkSize) }, (_, i) =>
+      reviews.slice(i * chunkSize, i * chunkSize + chunkSize)
     );
-  }, [isMobile]);
+  }, [isMobile, reviews]);
 
   return (
     <ParallaxBackground image="/images/parallax/customer.webp" height="100vh">
@@ -44,6 +83,17 @@ export default function CustomerReview() {
           showDots={false}
           showNav={false}
           >
+          {!isLoading && slides.length === 0 ? (
+            <div className={sliderStyles.embla__slide}>
+              <div className={styles.cards}>
+                <div className={styles.item}>
+                  <div className={styles.card}>
+                    <p className={styles.text}>Hiện chưa có đánh giá nào. Hãy là người đầu tiên chia sẻ trải nghiệm của bạn!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : null}
           {slides.map((group, idx) => (
             <div key={idx} className={sliderStyles.embla__slide}>
               <div className={styles.cards}>
@@ -61,16 +111,25 @@ export default function CustomerReview() {
                           </defs>
                         </svg>
                       </div>
-                      <p className={styles.text}>{item.text}</p>
+                      <p className={styles.text}>{item.content}</p>
                     </div>
 
                     <div className={styles.user}>
                       <div className={styles.avatar}>
-                        <Image src={item.avatar} alt={item.name} width={60} height={60} className={styles.image} />
+                        <Image
+                          src={item.avatar ?? "/images/customer/avatar-1.webp"}
+                          alt={item.reviewerName}
+                          width={60}
+                          height={60}
+                          className={styles.image}
+                        />
                       </div>
                       <div className={styles.meta}>
-                        <div className={styles.name}>{item.name}</div>
-                        <div className={styles.role}>{item.role}</div>
+                        <div className={styles.name}>
+                          {item.reviewerName} – {item.productName}
+                        </div>
+                        <div className={styles.rating}>Đánh giá: {item.rating}/5</div>
+                        {item.role ? <div className={styles.role}>{item.role}</div> : null}
                       </div>
                     </div>
                   </div>

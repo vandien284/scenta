@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
 }
+
 .productDetail {
   padding: 80px 0;
   width: 100%;
@@ -84,10 +85,52 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    .headingTitle {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
     .title {
       font-size: clamp(1.8rem, 3vw, 2.4rem);
       font-weight: 600;
       margin: 0;
+    }
+
+    .favoriteButton {
+      border: none;
+      background: rgba(230, 57, 70, 0.12);
+      color: #e63946;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      &:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(230, 57, 70, 0.26);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: wait;
+        box-shadow: none;
+      }
+    }
+
+    .favoriteActive {
+      background: #e63946;
+      color: #fff;
     }
 
     .outOfStockBadge,
@@ -121,6 +164,21 @@
       color: #d39834;
       font-size: 30px;
       font-weight: 600;
+    }
+
+    .originalPrice {
+      font-size: 1.1rem;
+      color: rgba(17, 17, 17, 0.45);
+      text-decoration: line-through;
+    }
+
+    .saleTag {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #e63946;
+      background: rgba(230, 57, 70, 0.12);
+      padding: 6px 10px;
+      border-radius: 999px;
     }
   }
 

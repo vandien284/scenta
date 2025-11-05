@@ -192,6 +192,38 @@
   }
 }
 
+.favoriteButton {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.favoriteCount {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #e63946;
+  color: #fff;
+  font-size: 0.7rem;
+  line-height: 1;
+  padding: 3px 6px;
+  border-radius: 999px;
+  font-weight: 600;
+  min-width: 18px;
+  text-align: center;
+}
+
 .cartIconButton {
   position: relative;
   background: none;
@@ -233,6 +265,29 @@
     font-size: 1.7rem;
     cursor: pointer;
   }
+}
+
+.favoriteIconButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e63946 !important;
+}
+
+.favoriteBadge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #e63946;
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 3px 6px;
+  border-radius: 999px;
+  font-weight: 600;
+  min-width: 16px;
+  text-align: center;
+  line-height: 1;
 }
 
 .menu-button,

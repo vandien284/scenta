@@ -9,6 +9,7 @@ export async function getProductsAction(params: {
   cateId?: number;
   q?: string;
   itemsPerPage?: number;
+  sort?: "name-asc" | "name-desc" | "price-asc" | "price-desc";
 }) {
   return getProducts(params);
 }

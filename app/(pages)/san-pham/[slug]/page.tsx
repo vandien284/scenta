@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import styles from "@/styles/components/san-pham/productDetail.module.scss";
 import InfoTabs from "@/components/san-pham/InfoTabs";
 import ProductSlider from "@/widgets/ProductSlider";
+import ProductReviews from "@/components/san-pham/ProductReviews";
 import { TabProductSlider } from "@/data/TabsData";
 import { getProductByUrlAction } from "@/app/actions/getProductsAction";
 import { notFound } from "next/navigation";
@@ -53,13 +54,11 @@ const DetailProductPage = async (props: { params: Params }) => {
 
     return (
         <div className={styles.pageWrapper}>
-            <div className={`container-width`}>
-                <div className={styles.pageContainer}> 
-                    <ProductDetail product={product} />
+            <div className="container-width" style={{overflow: "hidden"}}>
+                <ProductDetail product={product} />
                     <InfoTabs />
+                    <ProductReviews product={product} />
                     <ProductSlider tabs={TabProductSlider} data={allProducts} />
-                </div>
-
             </div>
         </div>
     );

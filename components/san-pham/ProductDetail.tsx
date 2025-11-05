@@ -5,6 +5,8 @@ import { Button, Image } from "react-bootstrap";
 import styles from "@/styles/components/san-pham/productDetail.module.scss";
 import { ProductType } from "@/types/ProductType";
 import { useCart } from "@/components/common/CartProvider";
+import { useFavorites } from "@/components/common/FavoritesProvider";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 export interface ProductDetailProps {
   product: ProductType;
@@ -15,8 +17,14 @@ const DEFAULT_COUNTRY = "Việt Nam";
 
 export default function ProductDetail({ product }: ProductDetailProps) {
   const { addItem, updateItem, isUpdating } = useCart();
+  const { toggleFavorite, isFavorite, isUpdating: favoriteUpdating } = useFavorites();
   const router = useRouter();
   const [selectedImage, setSelectedImage] = useState(product.images[0]);
+
+  const salePercent = Math.max(0, Math.min(100, product.sale ?? 0));
+  const hasSale = salePercent > 0;
+  const originalPrice = product.price;
+  const discountedPrice = hasSale ? Number((originalPrice * (1 - salePercent / 100)).toFixed(2)) : originalPrice;
 
   const available = useMemo(
     () => Math.max(product.quantity - product.sold, 0),
@@ -29,6 +37,17 @@ export default function ProductDetail({ product }: ProductDetailProps) {
   const [isBuying, setIsBuying] = useState(false);
 
   const thumbnails = product.images;
+
+  const favoriteActive = isFavorite(product.id);
+
+  const handleToggleFavorite = async () => {
+    if (favoriteUpdating) return;
+    try {
+      await toggleFavorite(product.id);
+    } catch (error) {
+      console.error("[ProductDetail] toggle favorite error:", error);
+    }
+  };
 
   const clampQuantity = (value: number) => {
     if (isOutOfStock) return 0;
@@ -104,7 +123,18 @@ export default function ProductDetail({ product }: ProductDetailProps) {
 
         <div className={styles.infoSection}>
           <div className={styles.headingRow}>
-            <h1 className={styles.title}>{product.name}</h1>
+            <div className={styles.headingTitle}>
+              <h1 className={styles.title}>{product.name}</h1>
+              <button
+                type="button"
+                className={`${styles.favoriteButton} ${favoriteActive ? styles.favoriteActive : ""}`}
+                onClick={handleToggleFavorite}
+                aria-label={favoriteActive ? "Bỏ khỏi yêu thích" : "Thêm vào yêu thích"}
+                disabled={favoriteUpdating}
+              >
+                {favoriteActive ? <FaHeart /> : <FaRegHeart />}
+              </button>
+            </div>
             {isOutOfStock ? (
               <span className={styles.outOfStockBadge}>Hết hàng</span>
             ) : (
@@ -113,7 +143,13 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           </div>
 
           <div className={styles.priceRow}>
-            <span className={styles.salePrice}>${product.price.toFixed(2)}</span>
+            <span className={styles.salePrice}>${discountedPrice.toFixed(2)}</span>
+            {hasSale ? (
+              <>
+                <span className={styles.originalPrice}>${originalPrice.toFixed(2)}</span>
+                <span className={styles.saleTag}>-{salePercent}%</span>
+              </>
+            ) : null}
           </div>
 
           <div className={styles.stockMeta}>

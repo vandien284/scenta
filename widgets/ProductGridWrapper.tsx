@@ -14,6 +14,7 @@ import Pagination from "@/ui/Pagination";
 import { getProductsAction } from "@/app/actions/getProductsAction";
 import { ProductType } from "@/types/ProductType";
 import styles from "@/styles/widgets/productGridWrapper.module.scss";
+import { FiChevronDown } from "react-icons/fi";
 
 export interface ProductGridWrapperHandle {
   triggerSearch: (q: string) => void;
@@ -27,6 +28,22 @@ const DEFAULT_PAGE = 1;
 const DEFAULT_PRICE_MIN = 0;
 const DEFAULT_PRICE_MAX = 1000;
 const DEFAULT_CATE_ID = 0;
+const DEFAULT_SORT = "" as const;
+
+type SortOption = "name-asc" | "name-desc" | "price-asc" | "price-desc" | "";
+
+const SORT_OPTIONS: { value: SortOption; label: string }[] = [
+  { value: "", label: "Mặc định" },
+  { value: "name-asc", label: "Tên A → Z" },
+  { value: "name-desc", label: "Tên Z → A" },
+  { value: "price-asc", label: "Giá thấp đến cao" },
+  { value: "price-desc", label: "Giá cao đến thấp" },
+];
+
+interface SortDropdownProps {
+  sort: SortOption;
+  onChange: (value: SortOption) => void;
+}
 
 const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapperProps>(
   ({ onResultCount }, ref) => {
@@ -37,6 +54,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
     const [priceMax, setPriceMax] = useState(DEFAULT_PRICE_MAX);
     const [cateId, setCateId] = useState(DEFAULT_CATE_ID);
     const [q, setQ] = useState("");
+    const [sort, setSort] = useState<SortOption>(DEFAULT_SORT);
     const [data, setData] = useState<ProductType[]>([]);
     const [totalPages, setTotalPages] = useState(1);
 
@@ -56,6 +74,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
           priceMax: number;
           cateId: number;
           q: string;
+          sort: SortOption;
         }>
       ) => {
         const nextPage = overrides?.page ?? page;
@@ -63,6 +82,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
         const nextPriceMax = overrides?.priceMax ?? priceMax;
         const nextCateId = overrides?.cateId ?? cateId;
         const nextQ = overrides?.q ?? q;
+        const nextSort = overrides?.sort ?? sort;
 
         const res = await getProductsAction({
           page: nextPage,
@@ -70,6 +90,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
           priceMax: nextPriceMax,
           cateId: nextCateId,
           q: nextQ,
+          sort: nextSort || undefined,
           itemsPerPage: 20,
         });
 
@@ -89,7 +110,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
         isInternalChange.current = false;
         isInitialLoad.current = false;
       },
-      [q, page, priceMin, priceMax, cateId]
+      [q, page, priceMin, priceMax, cateId, sort]
     );
 
 
@@ -104,12 +125,17 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
         const urlCateParam = params.get("cateId");
         const urlCate = urlCateParam ? Number(urlCateParam) || DEFAULT_CATE_ID : DEFAULT_CATE_ID;
         const urlQ = params.get("q") || "";
+        const urlSortParam = (params.get("sort") as SortOption | null) ?? DEFAULT_SORT;
+        const urlSort = (urlSortParam && ["name-asc", "name-desc", "price-asc", "price-desc"].includes(urlSortParam))
+          ? urlSortParam
+          : DEFAULT_SORT;
 
         setQ(urlQ);
         setPage(urlPage);
         setPriceMin(urlMin);
         setPriceMax(urlMax);
         setCateId(urlCate);
+        setSort(urlSort);
 
         window.dispatchEvent(
           new CustomEvent("initFilter", {
@@ -128,6 +154,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
             priceMax: urlMax,
             cateId: urlCate,
             q: urlQ,
+            sort: urlSort,
           })
         );
 
@@ -148,6 +175,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
           fetchData({
             q: query,
             page: 1,
+            sort,
           })
         );
       },
@@ -156,7 +184,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
     useEffect(() => {
       if (isInitialLoad.current) return;
       startTransition(() => fetchData());
-    }, [page, priceMin, priceMax, cateId]);
+    }, [page, priceMin, priceMax, cateId, sort]);
 
     useEffect(() => {
       const handlePriceChange = (e: CustomEvent<{ min: number; max: number }>) => {
@@ -194,6 +222,30 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
       );
     };
 
+    const handleChangeSort = (value: SortOption) => {
+      if (sort === value) return;
+      isInternalChange.current = true;
+      const params = new URLSearchParams(window.location.search);
+      if (value) {
+        params.set("sort", value);
+      } else {
+        params.delete("sort");
+      }
+      params.set("page", "1");
+      const queryString = params.toString();
+      const newUrl = queryString ? `${window.location.pathname}?${queryString}` : window.location.pathname;
+      window.history.pushState({}, "", newUrl);
+
+      setSort(value);
+      setPage(1);
+      startTransition(() =>
+        fetchData({
+          sort: value,
+          page: 1,
+        })
+      );
+    };
+
     const handleClearFilters = () => {
       if (typeof window === "undefined") return;
       isInternalChange.current = true;
@@ -202,6 +254,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
       params.delete("priceMax");
       params.delete("cateId");
       params.delete("page");
+      params.delete("sort");
       const queryString = params.toString();
       const newUrl = queryString ? `${window.location.pathname}?${queryString}` : window.location.pathname;
       window.history.pushState({}, "", newUrl);
@@ -210,6 +263,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
       setPriceMax(DEFAULT_PRICE_MAX);
       setCateId(DEFAULT_CATE_ID);
       setPage(DEFAULT_PAGE);
+      setSort(DEFAULT_SORT);
 
       window.dispatchEvent(
         new CustomEvent("initFilter", {
@@ -227,6 +281,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
           priceMin: DEFAULT_PRICE_MIN,
           priceMax: DEFAULT_PRICE_MAX,
           cateId: DEFAULT_CATE_ID,
+          sort: DEFAULT_SORT,
         })
       );
     };
@@ -234,6 +289,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
     return (
       <Fragment>
         <div ref={gridRef}>
+          <SortDropdown sort={sort} onChange={handleChangeSort} />
           {data.length > 0 ? (
             <ProductGrid data={data} />
           ) : (
@@ -263,3 +319,70 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
 
 ProductGridWrapper.displayName = "ProductGridWrapper";
 export default ProductGridWrapper;
+
+function SortDropdown({ sort, onChange }: SortDropdownProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
+  const activeOption = SORT_OPTIONS.find((option) => option.value === sort) ?? SORT_OPTIONS[0];
+
+  return (
+    <div className={styles.toolbar}>
+      <div className={styles.sortContainer} ref={containerRef}>
+        <button
+          type="button"
+          className={`${styles.sortTrigger} ${isOpen ? styles.sortTriggerOpen : ""}`}
+          onClick={() => setIsOpen((prev) => !prev)}
+          aria-haspopup="listbox"
+          aria-expanded={isOpen}
+        >
+          <span className={styles.sortLabel}>{activeOption.label}</span>
+          <FiChevronDown className={styles.sortChevron} />
+        </button>
+        {isOpen && (
+          <div className={styles.dropdown} role="listbox" aria-label="Sắp xếp theo">
+            <div className={styles.dropdownTitle}>Sắp xếp theo</div>
+            {SORT_OPTIONS.map((option) => (
+              <button
+                type="button"
+                key={option.value || "default"}
+                className={`${styles.dropdownButton} ${
+                  option.value === sort ? styles.dropdownButtonActive : ""
+                }`}
+                onClick={() => {
+                  onChange(option.value);
+                  setIsOpen(false);
+                }}
+                role="option"
+                aria-selected={option.value === sort}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

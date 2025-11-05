@@ -5,6 +5,7 @@ export interface ProductType {
     url: string;
     categoriesId: number;
     price: number;
+    sale?: number;
     images: string[];
     description?: string;
     bestSeller?: boolean;

@@ -20,6 +20,60 @@
       will-change: transform;
     }
 
+    .favoriteButton {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.85);
+      color: #222;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      z-index: 3;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 28px rgba(0, 0, 0, 0.18);
+      }
+
+      &:disabled {
+        cursor: wait;
+        opacity: 0.7;
+      }
+    }
+
+    .favoriteActive {
+      background: #e63946;
+      color: #fff;
+    }
+
+    .saleBadge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #e63946;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      z-index: 3;
+      box-shadow: 0 10px 20px rgba(230, 57, 70, 0.3);
+    }
+
     .actionsOverlay {
       position: absolute;
       inset: 0;
@@ -78,11 +132,30 @@
     text-transform: capitalize;
   }
 
-  .price {
-    font-size: 18px;
+  .priceWrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 6px;
+  }
+
+  .salePrice {
+    font-size: 19px;
+    font-weight: 700;
     color: #d39834;
-    font-weight: 500;
-    margin-right: 8px;
+  }
+
+  .originalPrice {
+    font-size: 16px;
+    color: rgba(17, 17, 17, 0.4);
+    text-decoration: line-through;
+  }
+
+  .regularPrice {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
   }
 
   &:hover .imageWrapper .productImage {

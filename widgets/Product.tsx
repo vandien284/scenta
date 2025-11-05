@@ -7,6 +7,8 @@ import styles from "@/styles/widgets/product.module.scss";
 import { ProductType } from "@/types/ProductType";
 import Link from "next/link";
 import { useCart } from "@/components/common/CartProvider";
+import { useFavorites } from "@/components/common/FavoritesProvider";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 interface ProductProps {
   data: ProductType;
@@ -14,9 +16,13 @@ interface ProductProps {
 
 export default function Product({ data }: ProductProps) {
   const { addItem, isUpdating } = useCart();
+  const { toggleFavorite, isFavorite, isUpdating: favoriteUpdating } = useFavorites();
   const [isAdding, setIsAdding] = useState(false);
   const available = Math.max(data.quantity - data.sold, 0);
   const isOutOfStock = available <= 0;
+  const salePercent = Math.max(0, Math.min(100, data.sale ?? 0));
+  const hasSale = salePercent > 0;
+  const discountedPrice = hasSale ? Number((data.price * (1 - salePercent / 100)).toFixed(2)) : data.price;
 
   const handleAddToCart = async (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -32,6 +38,18 @@ export default function Product({ data }: ProductProps) {
     }
   };
 
+  const handleToggleFavorite = async (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+    try {
+      await toggleFavorite(data.id);
+    } catch (error) {
+      console.error("[Product] toggle favorite error:", error);
+    }
+  };
+
+  const favoriteActive = isFavorite(data.id);
+
   return (
     <Fragment>
       <Col md={3} sm={6} xs={12} key={data.id} className="mb-4 opacity-0 visibility-hidden">
@@ -45,6 +63,17 @@ export default function Product({ data }: ProductProps) {
                 height={300}
                 className={styles.productImage}
               />
+              {hasSale ? (
+                <span className={styles.saleBadge}>-{salePercent}%</span>
+              ) : null}
+              <button
+                className={`${styles.favoriteButton} ${favoriteActive ? styles.favoriteActive : ""}`}
+                onClick={handleToggleFavorite}
+                aria-label={favoriteActive ? "Bỏ khỏi yêu thích" : "Thêm vào yêu thích"}
+                disabled={favoriteUpdating}
+              >
+                {favoriteActive ? <FaHeart /> : <FaRegHeart />}
+              </button>
               <div
                 className={`${styles.actionsOverlay} ${isOutOfStock ? styles.overlayVisible : ""}`}
               >
@@ -63,8 +92,15 @@ export default function Product({ data }: ProductProps) {
             </div>
             <Card.Body className="text-center">
               <Card.Title className={styles.name}>{data.name}</Card.Title>
-              <Card.Text>
-                <span className={styles.price}>${data.price.toFixed(2)}</span>
+              <Card.Text className={styles.priceWrapper}>
+                {hasSale ? (
+                  <>
+                    <span className={styles.salePrice}>${discountedPrice.toFixed(2)}</span>
+                    <span className={styles.originalPrice}>${data.price.toFixed(2)}</span>
+                  </>
+                ) : (
+                  <span className={styles.regularPrice}>${data.price.toFixed(2)}</span>
+                )}
               </Card.Text>
             </Card.Body>
           </Card>

@@ -7,6 +7,7 @@ export interface ProductFilter {
   itemsPerPage?: number;
   cateId?: number;
   q?: string;
+  sort?: "name-asc" | "name-desc" | "price-asc" | "price-desc";
 }
 
 export async function getProducts({
@@ -16,6 +17,7 @@ export async function getProducts({
   itemsPerPage = 8,
   cateId = 0,
   q = "",
+  sort,
 }: ProductFilter) {
   const products = await getAllProducts();
 
@@ -29,15 +31,43 @@ export async function getProducts({
     return matchPrice && matchCate && matchQuery;
   });
 
-  const totalPages = Math.ceil(filtered.length / itemsPerPage);
+  const sorted = sortProducts(filtered, sort);
+
+  const totalPages = Math.ceil(sorted.length / itemsPerPage);
   const start = (page - 1) * itemsPerPage;
   const end = start + itemsPerPage;
 
   return {
-    products: filtered.slice(start, end),
+    products: sorted.slice(start, end),
     totalPages,
-    totalProducts: filtered.length,
+    totalProducts: sorted.length,
   };
+}
+
+function sortProducts(
+  products: Awaited<ReturnType<typeof getAllProducts>>,
+  sort?: ProductFilter["sort"]
+) {
+  if (!sort) return products;
+
+  const copied = [...products];
+  switch (sort) {
+    case "name-asc":
+      copied.sort((a, b) => a.name.localeCompare(b.name, "vi", { sensitivity: "base" }));
+      break;
+    case "name-desc":
+      copied.sort((a, b) => b.name.localeCompare(a.name, "vi", { sensitivity: "base" }));
+      break;
+    case "price-asc":
+      copied.sort((a, b) => a.price - b.price);
+      break;
+    case "price-desc":
+      copied.sort((a, b) => b.price - a.price);
+      break;
+    default:
+      break;
+  }
+  return copied;
 }
 
 

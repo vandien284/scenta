@@ -9,7 +9,9 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FiShoppingBag } from "react-icons/fi";
+import { FaHeart } from "react-icons/fa";
 import { useCart } from "@/components/common/CartProvider";
+import { useFavorites } from "@/components/common/FavoritesProvider";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,6 +22,8 @@ export default function Header() {
   const router = useRouter();
   const { cart } = useCart();
   const cartCount = cart?.totalQuantity ?? 0;
+  const { favorites } = useFavorites();
+  const favoritesCount = favorites?.productIds.length ?? 0;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,6 +63,12 @@ export default function Header() {
 
   const handleCartNavigate = () => {
     router.push("/gio-hang");
+    setMenuOpen(false);
+    setSearchOpen(false);
+  };
+
+  const handleFavoritesNavigate = () => {
+    router.push("/san-pham/yeu-thich");
     setMenuOpen(false);
     setSearchOpen(false);
   };
@@ -104,6 +114,12 @@ export default function Header() {
           </Nav>
 
           <div className={styles["mobile-icons"]}>
+            <button className={styles.favoriteIconButton} onClick={handleFavoritesNavigate}>
+              <FaHeart />
+              {favoritesCount > 0 && (
+                <span className={styles.favoriteBadge}>{favoritesCount}</span>
+              )}
+            </button>
             <Button
               className={styles["search-icon"]}
               onClick={() => {
@@ -129,6 +145,12 @@ export default function Header() {
               </div>
             </Form>
 
+            <button className={styles.favoriteButton} onClick={handleFavoritesNavigate}>
+              <FaHeart />
+              {favoritesCount > 0 && (
+                <span className={styles.favoriteCount}>{favoritesCount}</span>
+              )}
+            </button>
             <button className={styles.cartButton} onClick={handleCartNavigate}>
               <FiShoppingBag />
               {cartCount > 0 && <span className={styles.cartCount}>{cartCount}</span>}

@@ -1,0 +1,64 @@
+{
+  "reviews": [
+    {
+      "id": "seed-1",
+      "productId": 1,
+      "productSlug": "rose-quartz-glow",
+      "productName": "Rose Quartz Glow",
+      "reviewerName": "Sinh viên LÊ VĂN TÈO",
+      "rating": 5,
+      "content": "Mình ở trọ nên phòng nhỏ, sợ đốt nến bị bí mùi, ai dè thơm vừa phải, không nồng tí nào. Đốt lúc học bài chill lắm, kiểu giảm stress liền. Có hôm mất điện ngồi học bằng ánh nến, lãng mạn vãi 😆.",
+      "avatar": "/images/customer/avatar-1.webp",
+      "role": "Khách hàng",
+      "createdAt": "2024-01-05T08:00:00.000Z"
+    },
+    {
+      "id": "seed-2",
+      "productId": 31,
+      "productSlug": "peppermint-fresh-breath",
+      "productName": "Peppermint Fresh Breath",
+      "reviewerName": "Mẹ bỉm BÙI THỊ NGA",
+      "rating": 5,
+      "content": "Có con nhỏ nên mình kỹ mùi hương lắm, sợ hóa chất. Dùng thử tinh dầu bạc hà này thì yên tâm, mùi tự nhiên mà dễ chịu. Mình hay nhỏ vài giọt vào máy xông khi con ngủ trưa, cả nhà thơm nhẹ và dễ thở hẳn.",
+      "avatar": "/images/customer/avatar-1.webp",
+      "role": "Khách hàng",
+      "createdAt": "2024-02-12T10:30:00.000Z"
+    },
+    {
+      "id": "seed-3",
+      "productId": 26,
+      "productSlug": "lavender-dream",
+      "productName": "Lavender Dream",
+      "reviewerName": "Dân văn phòng PIKACHU DẤU TÊN",
+      "rating": 5,
+      "content": "Đi làm cả ngày mệt, mở tủ ra nghe mùi lavender là thấy nhẹ đầu liền. Quần áo thơm dịu, giữ mùi lâu, đặc biệt là mấy áo sơ mi treo cả tuần vẫn còn mùi. Bonus: tủ nhìn gọn gàng xinh hơn hẳn.",
+      "avatar": "/images/customer/avatar-1.webp",
+      "role": "Khách hàng",
+      "createdAt": "2024-03-08T14:20:00.000Z"
+    },
+    {
+      "id": "seed-4",
+      "productId": 21,
+      "productSlug": "charcoal-mint-detox",
+      "productName": "Charcoal Mint Detox",
+      "reviewerName": "Nam giới SIÊU NHÂN HỒNG",
+      "rating": 4,
+      "content": "Mình không hay xài mấy đồ thủ công nhưng xà phòng này dùng thích thật. Da sạch kiểu ‘mát – nhẹ – không nhờn’. Mùi thơm vừa đủ nam tính. Tắm xong thấy người dễ chịu, kiểu sạch sâu mà không khô.",
+      "avatar": "/images/customer/avatar-1.webp",
+      "role": "Khách hàng",
+      "createdAt": "2024-03-21T09:15:00.000Z"
+    },
+    {
+      "id": "seed-5",
+      "productId": 54,
+      "productSlug": "candle-making-kit-mini",
+      "productName": "Candle Making Kit – Mini Size",
+      "reviewerName": "Người mê decor KẺ KIẾN TẠO",
+      "rating": 5,
+      "content": "Bộ kit xinh cực, kiểu vừa làm vừa chill. Làm xong để lên bàn nhìn đẹp như đồ decor luôn. Mình còn chụp ảnh up story, ai cũng tưởng nến mua ở shop cao cấp 😂. Sẽ đặt thêm mấy bộ để làm quà tặng Noel.",
+      "avatar": "/images/customer/avatar-1.webp",
+      "role": "Khách hàng",
+      "createdAt": "2024-04-02T16:45:00.000Z"
+    }
+  ]
+}
