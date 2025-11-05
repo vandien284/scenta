@@ -4,972 +4,901 @@
     "name": "Rose Quartz Glow",
     "categoriesId": 2,
     "url": "rose-quartz-glow",
-    "price": 29.99,
+    "price": 219000,
     "images": [
       "/images/product/p-1.webp"
     ],
-    "description": "<strong>Hương:</strong> Hoa hồng & gỗ tuyết tùng<br /> <strong>Cảm giác:</strong> Nồng nàn và ấm áp như ánh hoàng hôn.<br /> <strong>Mô tả:</strong> Từng tia sáng hồng lan tỏa hương yêu thương, xoa dịu trái tim sau ngày dài.",
+    "description": "Nến thơm SCENTA Rose Quartz Glow hương Hoa hồng & Thạch anh hũ 150g sáp đậu nành<br /> <strong>Hương:</strong> Hoa hồng & gỗ tuyết tùng<br /> <strong>Cảm giác:</strong> Nồng nàn và ấm áp như ánh hoàng hôn.<br /> <strong>Mô tả:</strong> Từng tia sáng hồng lan tỏa hương yêu thương, xoa dịu trái tim sau ngày dài.",
     "bestSeller": true,
     "outstanding": false,
     "limited": true,
     "quantity": 120,
     "sold": 46,
-    "sale": 25,
-    "productCode": "SC-02-4444"
+    "sale": 25
   },
   {
     "id": 2,
     "name": "Autumn Ember",
     "categoriesId": 2,
     "url": "autumn-ember",
-    "price": 29.99,
+    "price": 219000,
     "images": [
       "/images/product/p-2.webp"
     ],
-    "description": "<strong>Hương:</strong> Quế, cam ngọt, vani<br /> <strong>Cảm giác:</strong> Ngọt ấm như tách trà buổi chiều thu.<br /> <strong>Mô tả:</strong> Một ngọn nến mang hương quế cay nhẹ, gói trọn không gian ấm áp.",
+    "description": "Nến thơm SCENTA Autumn Ember hương Gỗ tuyết tùng & Hổ phách hũ 150g sáp đậu nành<br /><strong>Hương:</strong> Quế, cam ngọt, vani<br /> <strong>Cảm giác:</strong> Ngọt ấm như tách trà buổi chiều thu.<br /> <strong>Mô tả:</strong> Một ngọn nến mang hương quế cay nhẹ, gói trọn không gian ấm áp.",
     "bestSeller": false,
     "outstanding": true,
     "limited": true,
     "quantity": 115,
     "sold": 42,
-    "sale": 25,
-    "productCode": "SC-02-5209"
+    "sale": 25
   },
   {
     "id": 3,
     "name": "Midnight Balance",
     "categoriesId": 2,
     "url": "midnight-balance",
-    "price": 29.99,
+    "price": 219000,
     "images": [
       "/images/product/p-3.webp"
     ],
-    "description": "<strong>Hương:</strong> Oải hương, xô thơm, hổ phách<br /> <strong>Cảm giác:</strong> Cân bằng, thư giãn, xoa dịu tâm trí.<br /> <strong>Mô tả:</strong> Mỗi hơi thở là một nhịp lắng lại giữa thế giới vội vàng.",
+    "description": "Nến thơm SCENTA Midnight Balance hương Gỗ thông Đà Lạt & Xạ hương hũ 150g sáp đậu nành<br /> <strong>Hương:</strong> Oải hương, xô thơm, hổ phách<br /> <strong>Cảm giác:</strong> Cân bằng, thư giãn, xoa dịu tâm trí.<br /> <strong>Mô tả:</strong> Mỗi hơi thở là một nhịp lắng lại giữa thế giới vội vàng.",
     "bestSeller": true,
     "outstanding": false,
     "limited": false,
     "quantity": 110,
     "sold": 57,
-    "sale": 25,
-    "productCode": "SC-02-5577"
+    "sale": 25
   },
   {
     "id": 4,
     "name": "Ocean Whisper",
     "categoriesId": 2,
     "url": "ocean-whisper",
-    "price": 29.99,
+    "price": 219000,
     "images": [
       "/images/product/p-4.webp"
     ],
-    "description": "<strong>Hương:</strong> Bạc hà, muối biển, lavender<br /> <strong>Cảm giác:</strong> Mát lạnh và tự do như gió đại dương.<br /> <strong>Mô tả:</strong> Thắp lên, và gió biển như ùa về từ ký ức xa xăm.",
+    "description": "Nến thơm SCENTA Ocean Whisper hương Biển Vũng Tàu hũ 150g sáp đậu nành<br /> <strong>Hương:</strong> Bạc hà, muối biển, lavender<br /> <strong>Cảm giác:</strong> Mát lạnh và tự do như gió đại dương.<br /> <strong>Mô tả:</strong> Thắp lên, và gió biển như ùa về từ ký ức xa xăm.",
     "bestSeller": false,
     "outstanding": true,
     "limited": false,
     "quantity": 98,
     "sold": 35,
-    "sale": 25,
-    "productCode": "SC-02-2414"
+    "sale": 25
   },
   {
     "id": 5,
     "name": "Blooming Meadow",
     "categoriesId": 2,
     "url": "blooming-meadow",
-    "price": 29.99,
+    "price": 219000,
     "images": [
       "/images/product/p-5.webp"
     ],
-    "description": "<strong>Hương:</strong> Hoa nhài, oải hương, hổ phách trắng<br /> <strong>Cảm giác:</strong> Tươi mới, ngọt ngào và nữ tính.<br /> <strong>Mô tả:</strong> Hương đồng nội dịu nhẹ len lỏi giữa căn phòng nhỏ.",
+    "description": "Nến thơm SCENTA Blooming Meadow hương Hoa hồng sáp đậu nành<br /> <strong>Hương:</strong> Hoa nhài, oải hương, hổ phách trắng<br /> <strong>Cảm giác:</strong> Tươi mới, ngọt ngào và nữ tính.<br /> <strong>Mô tả:</strong> Hương đồng nội dịu nhẹ len lỏi giữa căn phòng nhỏ.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
     "quantity": 140,
     "sold": 67,
-    "sale": 25,
-    "productCode": "SC-02-8423"
+    "sale": 25
   },
   {
     "id": 6,
     "name": "Marble Serenity",
     "categoriesId": 2,
     "url": "marble-serenity",
-    "price": 29.99,
+    "price": 219000,
     "images": [
       "/images/product/p-6.webp"
     ],
-    "description": "<strong>Hương:</strong> Lavender, white musk, vanilla<br /> <strong>Cảm giác:</strong> Tối giản, tinh tế, yên bình.<br /> <strong>Mô tả:</strong> Như làn khói mỏng tan giữa không gian thiền tĩnh.",
+    "description": "Nến thơm SCENTA Marble Serenity hương Gỗ trắng & Hổ phách hũ đá cẩm thạch<br /> <strong>Hương:</strong> Lavender, white musk, vanilla<br /> <strong>Cảm giác:</strong> Tối giản, tinh tế, yên bình.<br /> <strong>Mô tả:</strong> Như làn khói mỏng tan giữa không gian thiền tĩnh.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 133,
     "sold": 59,
-    "sale": 25,
-    "productCode": "SC-02-6837"
+    "sale": 25
   },
   {
     "id": 7,
     "name": "Forest Soul",
     "categoriesId": 2,
     "url": "forest-soul",
-    "price": 29.99,
+    "price": 219000,
     "images": [
       "/images/product/p-7.webp"
     ],
-    "description": "<strong>Hương:</strong> Gỗ đàn hương, cam bergamot, hoắc hương<br /> <strong>Cảm giác:</strong> Trầm ấm, thiên nhiên và cổ điển.<br /> <strong>Mô tả:</strong> Thắp lên để tìm lại hơi thở của rừng sâu.",
+    "description": "Nến thơm SCENTA Forest Soul hương Rêu sồi & Gỗ thông hũ 150g sáp đậu nành<br /> <strong>Hương:</strong> Gỗ đàn hương, cam bergamot, hoắc hương<br /> <strong>Cảm giác:</strong> Trầm ấm, thiên nhiên và cổ điển.<br /> <strong>Mô tả:</strong> Thắp lên để tìm lại hơi thở của rừng sâu.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
     "quantity": 150,
     "sold": 81,
-    "sale": 25,
-    "productCode": "SC-02-1539"
+    "sale": 25
   },
   {
     "id": 8,
     "name": "Golden Hour",
     "categoriesId": 2,
     "url": "golden-hour",
-    "price": 29.99,
+    "price": 219000,
     "images": [
       "/images/product/p-8.webp"
     ],
-    "description": "<strong>Hương:</strong> Mật ong, oải hương, hổ phách<br /> <strong>Cảm giác:</strong> Ấm áp và lãng mạn.<br /> <strong>Mô tả:</strong> Khoảnh khắc cuối ngày – ánh nến vàng như mặt trời sắp tắt.",
+    "description": "Nến thơm SCENTA Golden Hour hương Vanille & Cam mật ong hũ 150g sáp đậu nành<br /> <strong>Hương:</strong> Mật ong, oải hương, hổ phách<br /> <strong>Cảm giác:</strong> Ấm áp và lãng mạn.<br /> <strong>Mô tả:</strong> Khoảnh khắc cuối ngày – ánh nến vàng như mặt trời sắp tắt.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 124,
     "sold": 46,
-    "sale": 25,
-    "productCode": "SC-02-8035"
+    "sale": 25
   },
   {
     "id": 9,
     "name": "Misty Calm",
     "categoriesId": 5,
     "url": "misty-calm",
-    "price": 29.99,
+    "price": 219000,
     "images": [
       "/images/product/p-9.webp"
     ],
-    "description": "<strong>Hương:</strong> Trà xanh & lá bạc hà<br /> <strong>Cảm giác:</strong> Mát lạnh, sạch sẽ và an nhiên.<br /> <strong>Mô tả:</strong> Mùi trà ấm vương trên da, mang bình yên đến từng hơi thở.",
+    "description": "Nến thơm SCENTA Misty Calm hương Biển sớm & Gió nhẹ hũ 150g sáp đậu nành<br /> <strong>Hương:</strong> Trà xanh & lá bạc hà<br /> <strong>Cảm giác:</strong> Mát lạnh, sạch sẽ và an nhiên.<br /> <strong>Mô tả:</strong> Mùi trà ấm vương trên da, mang bình yên đến từng hơi thở.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
     "quantity": 160,
     "sold": 92,
-    "sale": 25,
-    "productCode": "SC-05-7092"
+    "sale": 25
   },
   {
     "id": 10,
     "name": "Purple Haven",
     "categoriesId": 5,
     "url": "purple-haven",
-    "price": 29.99,
+    "price": 219000,
     "images": [
       "/images/product/p-10.webp"
     ],
-    "description": "<strong>Hương:</strong> Lavender nguyên bản & cam bergamot<br /> <strong>Cảm giác:</strong> Trị liệu, giúp ngủ ngon và giải tỏa căng thẳng.<br /> <strong>Mô tả:</strong> Chỉ cần thắp một ngọn, căn phòng hóa thành spa thư giãn.",
+    "description": "Nến thơm SCENTA Purple Haven hương Oải hương thư giãn 150g sáp đậu nành<br /> <strong>Hương:</strong> Lavender nguyên bản & cam bergamot<br /> <strong>Cảm giác:</strong> Trị liệu, giúp ngủ ngon và giải tỏa căng thẳng.<br /> <strong>Mô tả:</strong> Chỉ cần thắp một ngọn, căn phòng hóa thành spa thư giãn.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
     "quantity": 118,
     "sold": 41,
-    "sale": 25,
-    "productCode": "SC-05-3557"
+    "sale": 25
   },
   {
     "id": 11,
     "name": "Noir Essence",
     "categoriesId": 2,
     "url": "noir-essence",
-    "price": 29.99,
+    "price": 219000,
     "images": [
       "/images/product/p-11.webp"
     ],
-    "description": "<strong>Hương:</strong> Gỗ tuyết tùng, xạ hương & hổ phách đen<br /> <strong>Cảm giác:</strong> Sang trọng, tinh tế, đậm chất minimal.<br /> <strong>Mô tả:</strong> Dành cho những tâm hồn yêu sự tĩnh lặng và phong cách.",
+    "description": "Nến thơm SCENTA Noir Essence hương Gỗ đen & Hổ phách hũ 150g sáp đậu nành<br /> <strong>Hương:</strong> Gỗ tuyết tùng, xạ hương & hổ phách đen<br /> <strong>Cảm giác:</strong> Sang trọng, tinh tế, đậm chất minimal.<br /> <strong>Mô tả:</strong> Dành cho những tâm hồn yêu sự tĩnh lặng và phong cách.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
     "quantity": 112,
     "sold": 57,
-    "sale": 25,
-    "productCode": "SC-02-1349"
+    "sale": 25
   },
   {
     "id": 12,
     "name": "Rustic Woodlight",
     "categoriesId": 2,
     "url": "rustic-woodlight",
-    "price": 29.99,
+    "price": 219000,
     "images": [
       "/images/product/p-12.webp"
     ],
-    "description": "<strong>Hương:</strong> Hương gỗ sồi, vanilla & khói nhè nhẹ<br /> <strong>Cảm giác:</strong> Vintage, mộc mạc và ấm áp.<br /> <strong>Mô tả:</strong> Ngọn nến nhỏ mang theo hơi thở của núi rừng.",
+    "description": "Nến thơm SCENTA Rustic Woodlight hương Gỗ thông & Quế hũ 150g sáp đậu nành<br /> <strong>Hương:</strong> Hương gỗ sồi, vanilla & khói nhè nhẹ<br /> <strong>Cảm giác:</strong> Vintage, mộc mạc và ấm áp.<br /> <strong>Mô tả:</strong> Ngọn nến nhỏ mang theo hơi thở của núi rừng.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
     "quantity": 105,
     "sold": 49,
-    "sale": 25,
-    "productCode": "SC-02-2115"
+    "sale": 25
   },
   {
     "id": 13,
     "name": "Honey Oat Bliss",
     "categoriesId": 6,
     "url": "honey-oat-bliss",
-    "price": 9.99,
+    "price": 79000,
     "images": [
       "/images/product/p-13.jpg"
     ],
-    "description": "<strong>Hương:</strong> Yến mạch - mật ong rừng - vanilla<br /> <strong>Cảm giác:</strong> Dịu nhẹ, ấm áp, dưỡng ẩm tự nhiên.<br /> <strong>Mô tả:</strong> Từng lớp bọt mịn như ôm lấy làn da, hương mật ong hòa quyện cùng yến mạch giúp da mềm mịn và thư giãn tuyệt đối.",
+    "description": "Xà phòng thiên nhiên SCENTA Honey Oat Bliss yến mạch & mật ong dưỡng ẩm<br /> <strong>Hương:</strong> Yến mạch - mật ong rừng - vanilla<br /> <strong>Cảm giác:</strong> Dịu nhẹ, ấm áp, dưỡng ẩm tự nhiên.<br /> <strong>Mô tả:</strong> Từng lớp bọt mịn như ôm lấy làn da, hương mật ong hòa quyện cùng yến mạch giúp da mềm mịn và thư giãn tuyệt đối.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 140,
     "sold": 73,
-    "sale": 25,
-    "productCode": "SC-06-3139"
+    "sale": 25
   },
   {
     "id": 14,
     "name": "Lavender Pure Calm",
     "categoriesId": 6,
     "url": "lavender-pure-calm",
-    "price": 9.99,
+    "price": 79000,
     "images": [
       "/images/product/p-14.jpg"
     ],
-    "description": "<strong>Hương:</strong> Oải hương - sữa tươi - cam bergamot<br /> <strong>Cảm giác:</strong> Thanh tịnh, nhẹ nhàng, giúp thư giãn tinh thần.<br /> <strong>Mô tả:</strong> Chiếc bánh xà phòng thơm hương lavender tinh khiết, đưa bạn lạc vào khu vườn châu Âu đầy nắng.",
+    "description": "Xà phòng thiên nhiên SCENTA Lavender Pure Calm oải hương thư giãn<br /> <strong>Hương:</strong> Oải hương - sữa tươi - cam bergamot<br /> <strong>Cảm giác:</strong> Thanh tịnh, nhẹ nhàng, giúp thư giãn tinh thần.<br /> <strong>Mô tả:</strong> Chiếc bánh xà phòng thơm hương lavender tinh khiết, đưa bạn lạc vào khu vườn châu Âu đầy nắng.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 135,
     "sold": 66,
-    "sale": 25,
-    "productCode": "SC-06-1273"
+    "sale": 25
   },
   {
     "id": 15,
     "name": "Chamomile Harmony",
     "categoriesId": 6,
     "url": "chamomile-harmony",
-    "price": 9.99,
+    "price": 79000,
     "images": [
       "/images/product/p-15.jpg"
     ],
-    "description": "<strong>Hương:</strong> Hoa cúc - yến mạch - mật ong<br /> <strong>Cảm giác:</strong> Dịu nhẹ, làm dịu làn da nhạy cảm.<br /> <strong>Mô tả:</strong> Như một tách trà hoa cúc ấm áp, nuôi dưỡng làn da và mang lại cảm giác an yên.",
+    "description": "Xà phòng thiên nhiên SCENTA Chamomile Harmony hoa cúc dịu nhẹ<br /> <strong>Hương:</strong> Hoa cúc - yến mạch - mật ong<br /> <strong>Cảm giác:</strong> Dịu nhẹ, làm dịu làn da nhạy cảm.<br /> <strong>Mô tả:</strong> Như một tách trà hoa cúc ấm áp, nuôi dưỡng làn da và mang lại cảm giác an yên.",
     "bestSeller": false,
     "outstanding": true,
     "limited": false,
     "quantity": 125,
     "sold": 48,
-    "sale": 25,
-    "productCode": "SC-06-2694"
+    "sale": 25
   },
   {
     "id": 16,
     "name": "Golden Honey Shea",
     "categoriesId": 6,
     "url": "golden-honey-shea",
-    "price": 9.99,
+    "price": 79000,
     "images": [
       "/images/product/p-16.jpg"
     ],
-    "description": "<strong>Hương:</strong> Mật ong - bơ shea - hạnh nhân<br /> <strong>Cảm giác:</strong> Dưỡng ẩm sâu, mềm mại, thơm ngọt.<br /> <strong>Mô tả:</strong> Hũ vàng nhỏ bé của thiên nhiên giúp phục hồi độ ẩm và để lại mùi hương dễ chịu trên da.",
+    "description": "Xà phòng thiên nhiên SCENTA Golden Honey Shea mật ong & bơ hạt mỡ<br /> <strong>Hương:</strong> Mật ong - bơ shea - hạnh nhân<br /> <strong>Cảm giác:</strong> Dưỡng ẩm sâu, mềm mại, thơm ngọt.<br /> <strong>Mô tả:</strong> Hũ vàng nhỏ bé của thiên nhiên giúp phục hồi độ ẩm và để lại mùi hương dễ chịu trên da.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
     "quantity": 150,
     "sold": 82,
-    "sale": 25,
-    "productCode": "SC-06-3089"
+    "sale": 25
   },
   {
     "id": 17,
     "name": "Citrus Rosemary Fresh",
     "categoriesId": 6,
     "url": "citrus-rosemary-fresh",
-    "price": 9.99,
+    "price": 79000,
     "images": [
       "/images/product/p-17.jpg"
     ],
-    "description": "<strong>Hương:</strong> Chanh tươi - hương thảo - cam ngọt<br /> <strong>Cảm giác:</strong> Mát lạnh, sảng khoái, làm mới tinh thần.<br /> <strong>Mô tả:</strong> Lớp bọt thơm mùi chanh hòa cùng nhánh hương thảo tươi cho một khởi đầu buổi sáng đầy năng lượng.",
+    "description": "Xà phòng thiên nhiên SCENTA Citrus Rosemary Fresh chanh & hương thảo tươi mát<br /> <strong>Hương:</strong> Chanh tươi - hương thảo - cam ngọt<br /> <strong>Cảm giác:</strong> Mát lạnh, sảng khoái, làm mới tinh thần.<br /> <strong>Mô tả:</strong> Lớp bọt thơm mùi chanh hòa cùng nhánh hương thảo tươi cho một khởi đầu buổi sáng đầy năng lượng.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 130,
     "sold": 52,
-    "sale": 25,
-    "productCode": "SC-06-3995"
+    "sale": 25
   },
   {
     "id": 18,
     "name": "Blueberry Lemon Dream",
     "categoriesId": 6,
     "url": "blueberry-lemon-dream",
-    "price": 9.99,
+    "price": 79000,
     "images": [
       "/images/product/p-18.jpg"
     ],
-    "description": "<strong>Hương:</strong> Việt quất - chanh vàng - đường nâu<br /> <strong>Cảm giác:</strong> Trẻ trung, tươi mới, rạng rỡ.<br /> <strong>Mô tả:</strong> Hương ngọt dịu pha chút chua nhẹ mang lại nguồn năng lượng tích cực cho ngày mới.",
+    "description": "Xà phòng thiên nhiên SCENTA Blueberry Lemon Dream việt quất & chanh sáng da<br /> <strong>Hương:</strong> Việt quất - chanh vàng - đường nâu<br /> <strong>Cảm giác:</strong> Trẻ trung, tươi mới, rạng rỡ.<br /> <strong>Mô tả:</strong> Hương ngọt dịu pha chút chua nhẹ mang lại nguồn năng lượng tích cực cho ngày mới.",
     "bestSeller": false,
     "outstanding": true,
     "limited": true,
     "quantity": 120,
     "sold": 44,
-    "sale": 25,
-    "productCode": "SC-06-6261"
+    "sale": 25
   },
   {
     "id": 19,
     "name": "Forest Pine Detox",
     "categoriesId": 6,
     "url": "forest-pine-detox",
-    "price": 9.99,
+    "price": 79000,
     "images": [
       "/images/product/p-19.jpg"
     ],
-    "description": "<strong>Hương:</strong> Lá thông - bạc hà - đất sét xanh<br /> <strong>Cảm giác:</strong> Sạch sâu, mát lạnh, khử mùi tự nhiên.<br /> <strong>Mô tả:</strong> Cảm giác như tắm giữa rừng thông với làn hương mát lành giúp thanh lọc da và tinh thần.",
+    "description": "Xà phòng thiên nhiên SCENTA Forest Pine Detox than tre & gỗ thông làm sạch sâu<br /> <strong>Hương:</strong> Lá thông - bạc hà - đất sét xanh<br /> <strong>Cảm giác:</strong> Sạch sâu, mát lạnh, khử mùi tự nhiên.<br /> <strong>Mô tả:</strong> Cảm giác như tắm giữa rừng thông với làn hương mát lành giúp thanh lọc da và tinh thần.",
     "bestSeller": true,
     "outstanding": false,
     "limited": false,
     "quantity": 110,
     "sold": 51,
-    "sale": 25,
-    "productCode": "SC-06-8529"
+    "sale": 25
   },
   {
     "id": 20,
     "name": "Orange Sunrise",
     "categoriesId": 6,
     "url": "orange-sunrise",
-    "price": 9.99,
+    "price": 79000,
     "images": [
       "/images/product/p-20.jpg"
     ],
-    "description": "<strong>Hương:</strong> Cam ngọt - vani - mật ong<br /> <strong>Cảm giác:</strong> Sảng khoái, ngọt ngào, tươi sáng.<br /> <strong>Mô tả:</strong> Mỗi bánh xà phòng như một lát cam mọng nước, đánh thức buổi sáng bằng hương thơm tràn đầy sức sống.",
+    "description": "Xà phòng thiên nhiên SCENTA Orange Sunrise cam ngọt & glycerin trong suốt<br /> <strong>Hương:</strong> Cam ngọt - vani - mật ong<br /> <strong>Cảm giác:</strong> Sảng khoái, ngọt ngào, tươi sáng.<br /> <strong>Mô tả:</strong> Mỗi bánh xà phòng như một lát cam mọng nước, đánh thức buổi sáng bằng hương thơm tràn đầy sức sống.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 145,
     "sold": 77,
-    "sale": 25,
-    "productCode": "SC-06-3648"
+    "sale": 25
   },
   {
     "id": 21,
     "name": "Charcoal Mint Detox",
     "categoriesId": 6,
     "url": "charcoal-mint-detox",
-    "price": 9.99,
+    "price": 79000,
     "images": [
       "/images/product/p-21.jpg"
     ],
-    "description": "<strong>Hương:</strong> Than hoạt tính - bạc hà - gỗ tuyết tùng<br /> <strong>Cảm giác:</strong> Làm sạch sâu, khử mùi, se khít lỗ chân lông.<br /> <strong>Mô tả:</strong> Sức mạnh thanh lọc tự nhiên từ than tre kết hợp cùng bạc hà giúp làn da được làm mới hoàn toàn.",
+    "description": "Xà phòng thiên nhiên SCENTA Charcoal Mint Detox than hoạt tính & bạc hà<br /> <strong>Hương:</strong> Than hoạt tính - bạc hà - gỗ tuyết tùng<br /> <strong>Cảm giác:</strong> Làm sạch sâu, khử mùi, se khít lỗ chân lông.<br /> <strong>Mô tả:</strong> Sức mạnh thanh lọc tự nhiên từ than tre kết hợp cùng bạc hà giúp làn da được làm mới hoàn toàn.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
     "quantity": 118,
     "sold": 64,
-    "sale": 25,
-    "productCode": "SC-06-3976"
+    "sale": 25
   },
   {
     "id": 22,
     "name": "Jasmine Whisper",
     "categoriesId": 6,
     "url": "jasmine-whisper",
-    "price": 9.99,
+    "price": 79000,
     "images": [
       "/images/product/p-22.jpg"
     ],
-    "description": "<strong>Hương:</strong> Hoa nhài - gạo sữa - xạ hương trắng<br /> <strong>Cảm giác:</strong> Nữ tính, nhẹ nhàng, lưu hương lâu.<br /> <strong>Mô tả:</strong> Làn gió thoảng hương nhài mang lại cảm giác quyến rũ, tinh tế và mềm mại.",
+    "description": "Xà phòng thiên nhiên SCENTA Jasmine Whisper hoa nhài trắng dịu nhẹ<br /> <strong>Hương:</strong> Hoa nhài - gạo sữa - xạ hương trắng<br /> <strong>Cảm giác:</strong> Nữ tính, nhẹ nhàng, lưu hương lâu.<br /> <strong>Mô tả:</strong> Làn gió thoảng hương nhài mang lại cảm giác quyến rũ, tinh tế và mềm mại.",
     "bestSeller": false,
     "outstanding": true,
     "limited": false,
     "quantity": 126,
     "sold": 43,
-    "sale": 25,
-    "productCode": "SC-06-1644"
+    "sale": 25
   },
   {
     "id": 23,
     "name": "Mint Leaf Glow",
     "categoriesId": 6,
     "url": "mint-leaf-glow",
-    "price": 9.99,
+    "price": 79000,
     "images": [
       "/images/product/p-23.jpg"
     ],
-    "description": "<strong>Hương:</strong> Bạc hà - lá tươi - cam thảo<br /> <strong>Cảm giác:</strong> Mát lạnh, sảng khoái, tỉnh táo.<br /> <strong>Mô tả:</strong> Hương bạc hà lan tỏa đánh thức làn da và giúp tâm trí thêm minh mẫn, tràn đầy sức sống.",
+    "description": "Xà phòng thiên nhiên SCENTA Mint Leaf Glow bạc hà tươi mát sảng khoái<br /> <strong>Hương:</strong> Bạc hà - lá tươi - cam thảo<br /> <strong>Cảm giác:</strong> Mát lạnh, sảng khoái, tỉnh táo.<br /> <strong>Mô tả:</strong> Hương bạc hà lan tỏa đánh thức làn da và giúp tâm trí thêm minh mẫn, tràn đầy sức sống.",
     "bestSeller": true,
     "outstanding": false,
     "limited": false,
     "quantity": 132,
     "sold": 59,
-    "sale": 25,
-    "productCode": "SC-06-7003"
+    "sale": 25
   },
   {
     "id": 24,
     "name": "Matcha Purity",
     "categoriesId": 6,
     "url": "matcha-purity",
-    "price": 9.99,
+    "price": 79000,
     "images": [
       "/images/product/p-24.jpg"
     ],
-    "description": "<strong>Hương:</strong> Trà xanh - lô hội - gỗ đàn hương<br /> <strong>Cảm giác:</strong> Thanh lọc, dịu mát, dưỡng sáng da.<br /> <strong>Mô tả:</strong> Sự kết hợp giữa matcha và lô hội giúp thanh lọc và hồi sinh làn da một cách tự nhiên.",
+    "description": "Xà phòng thiên nhiên SCENTA Matcha Purity trà xanh & nha đam thanh lọc da<br /> <strong>Hương:</strong> Trà xanh - lô hội - gỗ đàn hương<br /> <strong>Cảm giác:</strong> Thanh lọc, dịu mát, dưỡng sáng da.<br /> <strong>Mô tả:</strong> Sự kết hợp giữa matcha và lô hội giúp thanh lọc và hồi sinh làn da một cách tự nhiên.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
     "quantity": 138,
     "sold": 71,
-    "sale": 25,
-    "productCode": "SC-06-4186"
+    "sale": 25
   },
   {
     "id": 25,
     "name": "Autumn Leaf Spice",
     "categoriesId": 5,
     "url": "autumn-leaf-spice",
-    "price": 8.99,
+    "price": 39000,
     "images": [
       "/images/product/p-25.jpg"
     ],
-    "description": "<strong>Hương:</strong> Quế - hồi - lavender khô<br /> <strong>Cảm giác:</strong> Ấm áp, mộc mạc, mang hương thu dịu nhẹ.<br /> <strong>Mô tả:</strong> Túi thơm mang hơi thở mùa thu, hòa quyện giữa mùi quế cay nồng và lavender thoang thoảng, lý tưởng cho phòng ngủ hoặc góc học tập.",
+    "description": "Túi thơm SCENTA Autumn Leaf Spice hương Quế & Lá phong khô<br /> <strong>Hương:</strong> Quế - hồi - lavender khô<br /> <strong>Cảm giác:</strong> Ấm áp, mộc mạc, mang hương thu dịu nhẹ.<br /> <strong>Mô tả:</strong> Túi thơm mang hơi thở mùa thu, hòa quyện giữa mùi quế cay nồng và lavender thoang thoảng, lý tưởng cho phòng ngủ hoặc góc học tập.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 160,
     "sold": 84,
-    "sale": 25,
-    "productCode": "SC-05-6072"
+    "sale": 25
   },
   {
     "id": 26,
     "name": "Lavender Dream",
     "categoriesId": 5,
     "url": "lavender-dream",
-    "price": 8.99,
+    "price": 39000,
     "images": [
       "/images/product/p-26.jpg"
     ],
-    "description": "<strong>Hương:</strong> Oải hương - cỏ khô - gỗ đàn hương<br /> <strong>Cảm giác:</strong> Thư giãn, giúp dễ ngủ.<br /> <strong>Mô tả:</strong> Hương oải hương cổ điển mang lại cảm giác bình yên, xua tan căng thẳng và đưa bạn vào giấc ngủ sâu.",
+    "description": "Túi thơm SCENTA Lavender Dream hương Oải hương khô thư giãn<br /> <strong>Hương:</strong> Oải hương - cỏ khô - gỗ đàn hương<br /> <strong>Cảm giác:</strong> Thư giãn, giúp dễ ngủ.<br /> <strong>Mô tả:</strong> Hương oải hương cổ điển mang lại cảm giác bình yên, xua tan căng thẳng và đưa bạn vào giấc ngủ sâu.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 150,
     "sold": 79,
-    "sale": 25,
-    "productCode": "SC-05-5471"
+    "sale": 25
   },
   {
     "id": 27,
     "name": "Chamomile Meadow",
     "categoriesId": 5,
     "url": "chamomile-meadow",
-    "price": 8.99,
+    "price": 39000,
     "images": [
       "/images/product/p-27.jpg"
     ],
-    "description": "<strong>Hương:</strong> Hoa cúc - cỏ ngọt - cam bergamot<br /> <strong>Cảm giác:</strong> Dịu nhẹ, tinh khiết, dễ chịu.<br /> <strong>Mô tả:</strong> Tựa như dạo bước giữa cánh đồng hoa cúc, hương thơm tự nhiên giúp thanh lọc không khí và làm dịu tinh thần.",
+    "description": "Túi thơm SCENTA Chamomile Meadow hương Hoa cúc khô nhẹ dịu<br /> <strong>Hương:</strong> Hoa cúc - cỏ ngọt - cam bergamot<br /> <strong>Cảm giác:</strong> Dịu nhẹ, tinh khiết, dễ chịu.<br /> <strong>Mô tả:</strong> Tựa như dạo bước giữa cánh đồng hoa cúc, hương thơm tự nhiên giúp thanh lọc không khí và làm dịu tinh thần.",
     "bestSeller": false,
     "outstanding": true,
     "limited": false,
     "quantity": 140,
     "sold": 58,
-    "sale": 25,
-    "productCode": "SC-05-6829"
+    "sale": 25
   },
   {
     "id": 28,
     "name": "Summer Bloom Mix",
     "categoriesId": 5,
     "url": "summer-bloom-mix",
-    "price": 8.99,
+    "price": 39000,
     "images": [
       "/images/product/p-28.jpg"
     ],
-    "description": "<strong>Hương:</strong> Hoa hồng khô - cúc - lavender - cam khô<br /> <strong>Cảm giác:</strong> Năng động, rực rỡ, tươi mới.<br /> <strong>Mô tả:</strong> Sự kết hợp giữa các loài hoa khô mùa hè tạo nên hương thơm ngọt dịu, tràn đầy năng lượng cho không gian.",
+    "description": "Túi thơm SCENTA Summer Bloom Mix hương Hoa mùa hè<br /> <strong>Hương:</strong> Hoa hồng khô - cúc - lavender - cam khô<br /> <strong>Cảm giác:</strong> Năng động, rực rỡ, tươi mới.<br /> <strong>Mô tả:</strong> Sự kết hợp giữa các loài hoa khô mùa hè tạo nên hương thơm ngọt dịu, tràn đầy năng lượng cho không gian.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
     "quantity": 132,
     "sold": 63,
-    "sale": 25,
-    "productCode": "SC-05-7408"
+    "sale": 25
   },
   {
     "id": 29,
     "name": "Coffee Warm Soul",
     "categoriesId": 5,
     "url": "coffee-warm-soul",
-    "price": 8.99,
+    "price": 39000,
     "images": [
       "/images/product/p-29.jpg"
     ],
-    "description": "<strong>Hương:</strong> Cà phê rang - vanilla - quế<br /> <strong>Cảm giác:</strong> Ấm áp, nồng nàn, tỉnh táo.<br /> <strong>Mô tả:</strong> Hương cà phê đậm đà lan tỏa khắp không gian, tạo cảm giác ấm cúng và đánh thức tinh thần sảng khoái.",
+    "description": "Túi thơm SCENTA Coffee Warm Soul hương Cà phê rang ấm áp<br /> <strong>Hương:</strong> Cà phê rang - vanilla - quế<br /> <strong>Cảm giác:</strong> Ấm áp, nồng nàn, tỉnh táo.<br /> <strong>Mô tả:</strong> Hương cà phê đậm đà lan tỏa khắp không gian, tạo cảm giác ấm cúng và đánh thức tinh thần sảng khoái.",
     "bestSeller": true,
     "outstanding": false,
     "limited": false,
     "quantity": 148,
     "sold": 92,
-    "sale": 25,
-    "productCode": "SC-05-1620"
+    "sale": 25
   },
   {
     "id": 30,
     "name": "Herbal Forest Calm",
     "categoriesId": 5,
     "url": "herbal-forest-calm",
-    "price": 8.99,
+    "price": 39000,
     "images": [
       "/images/product/p-30.jpg"
     ],
-    "description": "<strong>Hương:</strong> Hương thảo - bạc hà - lavender<br /> <strong>Cảm giác:</strong> Thanh mát, sạch sẽ, thư thái.<br /> <strong>Mô tả:</strong> Túi thơm như mang cả khu vườn xanh mướt vào nhà, lan tỏa cảm giác tươi mát và thư giãn nhẹ nhàng.",
+    "description": "Túi thơm SCENTA Herbal Forest Calm thảo mộc thư giãn<br /> <strong>Hương:</strong> Hương thảo - bạc hà - lavender<br /> <strong>Cảm giác:</strong> Thanh mát, sạch sẽ, thư thái.<br /> <strong>Mô tả:</strong> Túi thơm như mang cả khu vườn xanh mướt vào nhà, lan tỏa cảm giác tươi mát và thư giãn nhẹ nhàng.",
     "bestSeller": false,
     "outstanding": true,
     "limited": false,
     "quantity": 142,
     "sold": 55,
-    "sale": 25,
-    "productCode": "SC-05-2423"
+    "sale": 25
   },
   {
     "id": 31,
     "name": "Peppermint Fresh Breath",
     "categoriesId": 4,
     "url": "peppermint-fresh-breath",
-    "price": 12.99,
+    "price": 99000,
     "images": [
       "/images/product/p-31.jpg"
     ],
-    "description": "<strong>Hương:</strong> Bạc hà - khuynh diệp - cam thảo<br /> <strong>Cảm giác:</strong> Tươi mát, tỉnh táo, sảng khoái.<br /> <strong>Mô tả:</strong> Hương bạc hà nguyên chất làm mát không khí, hỗ trợ thư giãn đầu óc và tăng khả năng tập trung.",
+    "description": "Tinh dầu thiên nhiên SCENTA Peppermint Fresh Breath bạc hà sảng khoái 10ml<br /> <strong>Hương:</strong> Bạc hà - khuynh diệp - cam thảo<br /> <strong>Cảm giác:</strong> Tươi mát, tỉnh táo, sảng khoái.<br /> <strong>Mô tả:</strong> Hương bạc hà nguyên chất làm mát không khí, hỗ trợ thư giãn đầu óc và tăng khả năng tập trung.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 165,
     "sold": 93,
-    "sale": 25,
-    "productCode": "SC-04-8586"
+    "sale": 25
   },
   {
     "id": 32,
     "name": "Rose Bloom Serenity",
     "categoriesId": 4,
     "url": "rose-bloom-serenity",
-    "price": 12.99,
+    "price": 99000,
     "images": [
       "/images/product/p-32.jpg"
     ],
-    "description": "<strong>Hương:</strong> Hoa hồng - gỗ tuyết tùng - vanilla<br /> <strong>Cảm giác:</strong> Nữ tính, lãng mạn, nhẹ nhàng.<br /> <strong>Mô tả:</strong> Tinh dầu hoa hồng lan tỏa sự dịu dàng và sang trọng, hoàn hảo cho không gian nghỉ ngơi và thư giãn.",
+    "description": "Tinh dầu thiên nhiên SCENTA Rose Bloom Serenity hoa hồng thư giãn 10ml<br /> <strong>Hương:</strong> Hoa hồng - gỗ tuyết tùng - vanilla<br /> <strong>Cảm giác:</strong> Nữ tính, lãng mạn, nhẹ nhàng.<br /> <strong>Mô tả:</strong> Tinh dầu hoa hồng lan tỏa sự dịu dàng và sang trọng, hoàn hảo cho không gian nghỉ ngơi và thư giãn.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
     "quantity": 142,
     "sold": 78,
-    "sale": 25,
-    "productCode": "SC-04-4235"
+    "sale": 25
   },
   {
     "id": 33,
     "name": "Cotton Cloud Softness",
     "categoriesId": 4,
     "url": "cotton-cloud-softness",
-    "price": 12.99,
+    "price": 99000,
     "images": [
       "/images/product/p-33.jpg"
     ],
-    "description": "<strong>Hương:</strong> Bông mềm - xạ hương trắng - sữa tươi<br /> <strong>Cảm giác:</strong> Sạch sẽ, nhẹ dịu, thuần khiết.<br /> <strong>Mô tả:</strong> Mùi hương tinh tế và trong trẻo, đem lại cảm giác như vừa bước ra từ tiệm giặt là cao cấp.",
+    "description": "Tinh dầu thiên nhiên SCENTA Cotton Cloud Softness hương bông mềm thư giãn 10ml<br /><strong>Hương:</strong> Bông mềm - xạ hương trắng - sữa tươi<br /> <strong>Cảm giác:</strong> Sạch sẽ, nhẹ dịu, thuần khiết.<br /> <strong>Mô tả:</strong> Mùi hương tinh tế và trong trẻo, đem lại cảm giác như vừa bước ra từ tiệm giặt là cao cấp.",
     "bestSeller": false,
     "outstanding": true,
     "limited": false,
     "quantity": 138,
     "sold": 61,
-    "sale": 25,
-    "productCode": "SC-04-6943"
+    "sale": 25
   },
   {
     "id": 34,
     "name": "Citrus Summer Bliss",
     "categoriesId": 4,
     "url": "citrus-summer-bliss",
-    "price": 12.99,
+    "price": 99000,
     "images": [
       "/images/product/p-34.jpg"
     ],
-    "description": "<strong>Hương:</strong> Cam - chanh - hoa nhài - hổ phách<br /> <strong>Cảm giác:</strong> Năng lượng, tươi sáng, tràn đầy sức sống.<br /> <strong>Mô tả:</strong> Hương tinh dầu gợi nhớ những ngày hè rực rỡ, xua tan mệt mỏi và mang lại tâm trạng hạnh phúc.",
+    "description": "Tinh dầu thiên nhiên SCENTA Citrus Summer Bliss cam chanh tươi mát 10ml<br /><strong>Hương:</strong> Cam - chanh - hoa nhài - hổ phách<br /> <strong>Cảm giác:</strong> Năng lượng, tươi sáng, tràn đầy sức sống.<br /> <strong>Mô tả:</strong> Hương tinh dầu gợi nhớ những ngày hè rực rỡ, xua tan mệt mỏi và mang lại tâm trạng hạnh phúc.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 150,
     "sold": 85,
-    "sale": 25,
-    "productCode": "SC-04-4837"
+    "sale": 25
   },
   {
     "id": 35,
     "name": "Cinnamon Cozy Wood",
     "categoriesId": 4,
     "url": "cinnamon-cozy-wood",
-    "price": 12.99,
+    "price": 99000,
     "images": [
       "/images/product/p-35.jpg"
     ],
-    "description": "<strong>Hương:</strong> Quế - đinh hương - gỗ đàn hương<br /> <strong>Cảm giác:</strong> Ấm áp, gần gũi, dễ chịu.<br /> <strong>Mô tả:</strong> Tinh dầu quế khơi gợi cảm giác an yên và ấm cúng, lý tưởng cho không gian phòng khách những ngày mưa lạnh.",
+    "description": "Tinh dầu thiên nhiên SCENTA Cinnamon Cozy Wood quế ấm áp 10ml<br /><strong>Hương:</strong> Quế - đinh hương - gỗ đàn hương<br /> <strong>Cảm giác:</strong> Ấm áp, gần gũi, dễ chịu.<br /> <strong>Mô tả:</strong> Tinh dầu quế khơi gợi cảm giác an yên và ấm cúng, lý tưởng cho không gian phòng khách những ngày mưa lạnh.",
     "bestSeller": true,
     "outstanding": false,
     "limited": false,
     "quantity": 148,
     "sold": 90,
-    "sale": 25,
-    "productCode": "SC-04-4262"
+    "sale": 25
   },
   {
     "id": 36,
     "name": "Lavender Pure Calm",
     "categoriesId": 4,
     "url": "lavender-pure-calm-oil",
-    "price": 12.99,
+    "price": 99000,
     "images": [
       "/images/product/p-36.jpg",
       "/images/product/p-36-2.jpg"
     ],
-    "description": "<strong>Hương:</strong> Oải hương - vani - cỏ vetiver<br /> <strong>Cảm giác:</strong> Thư giãn, giúp ngủ ngon, giảm stress.<br /> <strong>Mô tả:</strong> Hương oải hương dịu nhẹ lan tỏa khắp căn phòng, xoa dịu tâm hồn và mang lại giấc ngủ êm.",
+    "description": "Tinh dầu thiên nhiên SCENTA Lavender Pure Calm oải hương thuần khiết 10ml<br /><strong>Hương:</strong> Oải hương - vani - cỏ vetiver<br /> <strong>Cảm giác:</strong> Thư giãn, giúp ngủ ngon, giảm stress.<br /> <strong>Mô tả:</strong> Hương oải hương dịu nhẹ lan tỏa khắp căn phòng, xoa dịu tâm hồn và mang lại giấc ngủ êm.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 155,
     "sold": 88,
-    "sale": 25,
-    "productCode": "SC-04-8128"
+    "sale": 25
   },
   {
     "id": 37,
     "name": "Eucalyptus Breath of Nature",
     "categoriesId": 4,
     "url": "eucalyptus-breath-of-nature",
-    "price": 12.99,
+    "price": 99000,
     "images": [
       "/images/product/p-37.jpg"
     ],
-    "description": "<strong>Hương:</strong> Khuynh diệp - bạc hà - gỗ tùng<br /> <strong>Cảm giác:</strong> Thanh sạch, dễ thở, tinh khiết.<br /> <strong>Mô tả:</strong> Hương khuynh diệp tự nhiên giúp làm sạch không khí, hỗ trợ hô hấp và mang lại cảm giác tươi mới như buổi sớm trong rừng xanh.",
+    "description": "Tinh dầu thiên nhiên SCENTA Eucalyptus Breath Of Nature khuynh diệp thanh lọc 10ml<br /><strong>Hương:</strong> Khuynh diệp - bạc hà - gỗ tùng<br /> <strong>Cảm giác:</strong> Thanh sạch, dễ thở, tinh khiết.<br /> <strong>Mô tả:</strong> Hương khuynh diệp tự nhiên giúp làm sạch không khí, hỗ trợ hô hấp và mang lại cảm giác tươi mới như buổi sớm trong rừng xanh.",
     "bestSeller": false,
     "outstanding": true,
     "limited": false,
     "quantity": 140,
     "sold": 69,
-    "sale": 25,
-    "productCode": "SC-04-3668"
+    "sale": 25
   },
   {
     "id": 38,
     "name": "Chamomile Golden Calm",
     "categoriesId": 4,
     "url": "chamomile-golden-calm",
-    "price": 12.99,
+    "price": 99000,
     "images": [
       "/images/product/p-38.jpg"
     ],
-    "description": "<strong>Hương:</strong> Hoa cúc - mật ong - vanilla<br /> <strong>Cảm giác:</strong> Dịu dàng, thư giãn, an yên.<br /> <strong>Mô tả:</strong> Tinh dầu hoa cúc nhẹ nhàng hỗ trợ giấc ngủ, giảm căng thẳng và tạo nên buổi tối ấm cúng.",
+    "description": "Tinh dầu thiên nhiên SCENTA Chamomile Golden Calm hoa cúc vàng dịu nhẹ 10ml<br /><strong>Hương:</strong> Hoa cúc - mật ong - vanilla<br /> <strong>Cảm giác:</strong> Dịu dàng, thư giãn, an yên.<br /> <strong>Mô tả:</strong> Tinh dầu hoa cúc nhẹ nhàng hỗ trợ giấc ngủ, giảm căng thẳng và tạo nên buổi tối ấm cúng.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
     "quantity": 136,
     "sold": 74,
-    "sale": 25,
-    "productCode": "SC-04-9298"
+    "sale": 25
   },
   {
     "id": 39,
     "name": "Sakura Dew Blossom",
     "categoriesId": 4,
     "url": "sakura-dew-blossom",
-    "price": 12.99,
+    "price": 99000,
     "images": [
       "/images/product/p-39.jpg"
     ],
-    "description": "<strong>Hương:</strong> Hoa anh đào - nhài trắng - xạ hương<br /> <strong>Cảm giác:</strong> Nữ tính, thanh khiết, tươi tắn.<br /> <strong>Mô tả:</strong> Lấy cảm hứng từ mùa xuân Nhật Bản, hương hoa anh đào tinh tế lan tỏa sự nhẹ nhàng và tươi mới.",
+    "description": "Tinh dầu thiên nhiên SCENTA Sakura Dew Blossom hoa anh đào tươi mới 10ml<br /><strong>Hương:</strong> Hoa anh đào - nhài trắng - xạ hương<br /> <strong>Cảm giác:</strong> Nữ tính, thanh khiết, tươi tắn.<br /> <strong>Mô tả:</strong> Lấy cảm hứng từ mùa xuân Nhật Bản, hương hoa anh đào tinh tế lan tỏa sự nhẹ nhàng và tươi mới.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 144,
     "sold": 81,
-    "sale": 25,
-    "productCode": "SC-04-9531"
+    "sale": 25
   },
   {
     "id": 40,
     "name": "Citrus Zest Awakening",
     "categoriesId": 4,
     "url": "citrus-zest-awakening",
-    "price": 12.99,
+    "price": 99000,
     "images": [
       "/images/product/p-40.jpg"
     ],
-    "description": "<strong>Hương:</strong> Cam - chanh - bưởi hồng - hổ phách<br /> <strong>Cảm giác:</strong> Sảng khoái, đầy năng lượng, phấn chấn tinh thần.<br /> <strong>Mô tả:</strong> Tinh dầu cam chanh rực rỡ giúp đánh thức giác quan và mang đến nguồn năng lượng tích cực cho cả ngày dài.",
+    "description": "Tinh dầu thiên nhiên SCENTA Citrus Zest Awakening cam chanh tươi mát 10ml<br /><strong>Hương:</strong> Cam - chanh - bưởi hồng - hổ phách<br /> <strong>Cảm giác:</strong> Sảng khoái, đầy năng lượng, phấn chấn tinh thần.<br /> <strong>Mô tả:</strong> Tinh dầu cam chanh rực rỡ giúp đánh thức giác quan và mang đến nguồn năng lượng tích cực cho cả ngày dài.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 158,
     "sold": 94,
-    "sale": 25,
-    "productCode": "SC-04-1864"
+    "sale": 25
   },
   {
     "id": 41,
     "name": "Lavender Dream",
     "categoriesId": 3,
     "url": "lavender-dream-wax",
-    "price": 8.99,
+    "price": 99000,
     "images": [
       "/images/product/p-41.jpg"
     ],
-    "description": "<strong>Hương:</strong> Oải hương - vanilla - gỗ đàn hương<br /> <strong>Cảm giác:</strong> Thư giãn, giúp ngủ ngon, nhẹ nhàng.<br /> <strong>Mô tả:</strong> Thanh treo sáp dịu êm, lan tỏa hương lavender gợi ý treo trong tủ quần áo, góc làm việc hay phòng ngủ để giữ không gian yên bình.",
+    "description": "Sáp thơm SCENTA Lavender Dream hương Oải hương khô thư giãn<br /> <strong>Hương:</strong> Oải hương - vanilla - gỗ đàn hương<br /> <strong>Cảm giác:</strong> Thư giãn, giúp ngủ ngon, nhẹ nhàng.<br /> <strong>Mô tả:</strong> Thanh treo sáp dịu êm, lan tỏa hương lavender gợi ý treo trong tủ quần áo, góc làm việc hay phòng ngủ để giữ không gian yên bình.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 140,
     "sold": 76,
-    "sale": 25,
-    "productCode": "SC-03-3223"
+    "sale": 25
   },
   {
     "id": 42,
     "name": "Rose Garden",
     "categoriesId": 3,
     "url": "rose-garden-wax",
-    "price": 8.99,
+    "price": 99000,
     "images": [
       "/images/product/p-42.jpg"
     ],
-    "description": "<strong>Hương:</strong> Hoa hồng - cam bergamot - xạ hương trắng<br /> <strong>Cảm giác:</strong> Ngọt ngào, nữ tính, lãng mạn.<br /> <strong>Mô tả:</strong> Sáp thơm đượm hương hoa hồng dành cho quà tặng, phòng ngủ và bàn trang điểm, giúp không gian thêm mềm mại và sang trọng.",
+    "description": "Sáp thơm SCENTA Rose Garden hương Hoa hồng khô dịu ngọt<br /> <strong>Hương:</strong> Hoa hồng - cam bergamot - xạ hương trắng<br /> <strong>Cảm giác:</strong> Ngọt ngào, nữ tính, lãng mạn.<br /> <strong>Mô tả:</strong> Sáp thơm đượm hương hoa hồng dành cho quà tặng, phòng ngủ và bàn trang điểm, giúp không gian thêm mềm mại và sang trọng.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
     "quantity": 132,
     "sold": 68,
-    "sale": 25,
-    "productCode": "SC-03-3498"
+    "sale": 25
   },
   {
     "id": 43,
     "name": "Sakura Whisper",
     "categoriesId": 3,
     "url": "sakura-whisper-wax",
-    "price": 8.99,
+    "price": 99000,
     "images": [
       "/images/product/p-43.jpg"
     ],
-    "description": "<strong>Hương:</strong> Hoa anh đào - nhài trắng - hổ phách<br /> <strong>Cảm giác:</strong> Thanh thoát, tinh khôi, trẻ trung.<br /> <strong>Mô tả:</strong> Bảng sáp pastel nhẹ nhàng, rất hợp treo trong tủ quần áo sáng màu để mang lại cảm giác mùa xuân tươi mới.",
+    "description": "Sáp thơm SCENTA Sakura Whisper hương Anh đào nhẹ nhàng<br /> <strong>Hương:</strong> Hoa anh đào - nhài trắng - hổ phách<br /> <strong>Cảm giác:</strong> Thanh thoát, tinh khôi, trẻ trung.<br /> <strong>Mô tả:</strong> Bảng sáp pastel nhẹ nhàng, rất hợp treo trong tủ quần áo sáng màu để mang lại cảm giác mùa xuân tươi mới.",
     "bestSeller": false,
     "outstanding": true,
     "limited": false,
     "quantity": 138,
     "sold": 59,
-    "sale": 25,
-    "productCode": "SC-03-7431"
+    "sale": 25
   },
   {
     "id": 44,
     "name": "Citrus Bloom",
     "categoriesId": 3,
     "url": "citrus-bloom-wax",
-    "price": 8.99,
+    "price": 99000,
     "images": [
       "/images/product/p-44.jpg"
     ],
-    "description": "<strong>Hương:</strong> Cam ngọt - quế - đinh hương - gỗ đàn hương<br /> <strong>Cảm giác:</strong> Ấm áp, tươi mát, tràn năng lượng.<br /> <strong>Mô tả:</strong> Thanh sáp mang hương gia vị ngọt ấm, lý tưởng cho những ngày mưa hoặc không gian kín cần thêm sinh khí.",
+    "description": "Sáp thơm SCENTA Citrus Bloom hương Cam & Hoa trắng tinh tế<br /> <strong>Hương:</strong> Cam ngọt - quế - đinh hương - gỗ đàn hương<br /> <strong>Cảm giác:</strong> Ấm áp, tươi mát, tràn năng lượng.<br /> <strong>Mô tả:</strong> Thanh sáp mang hương gia vị ngọt ấm, lý tưởng cho những ngày mưa hoặc không gian kín cần thêm sinh khí.",
     "bestSeller": true,
     "outstanding": false,
     "limited": false,
     "quantity": 146,
     "sold": 81,
-    "sale": 25,
-    "productCode": "SC-03-3050"
+    "sale": 25
   },
   {
     "id": 45,
     "name": "Chamomile Soft Day",
     "categoriesId": 3,
     "url": "chamomile-soft-day",
-    "price": 8.99,
+    "price": 99000,
     "images": [
       "/images/product/p-45.jpg"
     ],
-    "description": "<strong>Hương:</strong> Hoa cúc - mật ong - vanilla<br /> <strong>Cảm giác:</strong> Êm dịu, thư thái, nhẹ nhàng.<br /> <strong>Mô tả:</strong> Dòng sáp mềm mại gợi ý cho phòng em bé, góc nghỉ ngơi hay spa tại nhà, giúp xoa dịu cảm xúc.",
+    "description": "Sáp thơm SCENTA Chamomile Soft Day hương Hoa cúc trắng mềm mại<br /> <strong>Hương:</strong> Hoa cúc - mật ong - vanilla<br /> <strong>Cảm giác:</strong> Êm dịu, thư thái, nhẹ nhàng.<br /> <strong>Mô tả:</strong> Dòng sáp mềm mại gợi ý cho phòng em bé, góc nghỉ ngơi hay spa tại nhà, giúp xoa dịu cảm xúc.",
     "bestSeller": false,
     "outstanding": true,
     "limited": false,
     "quantity": 134,
     "sold": 57,
-    "sale": 25,
-    "productCode": "SC-03-7358"
+    "sale": 25
   },
   {
     "id": 46,
     "name": "Eucalyptus & Sage",
     "categoriesId": 3,
     "url": "eucalyptus-and-sage",
-    "price": 8.99,
+    "price": 99000,
     "images": [
       "/images/product/p-46.jpg"
     ],
-    "description": "<strong>Hương:</strong> Khuynh diệp - xô thơm - bạc hà<br /> <strong>Cảm giác:</strong> Sạch, tinh khiết, mát lành.<br /> <strong>Mô tả:</strong> Sáp trắng điểm lá xanh mang vibe fresh & clean, thích hợp treo ở phòng tắm hay cửa ra vào để đón làn gió mới.",
+    "description": "Sáp thơm SCENTA Eucalyptus & Sage hương Khuynh diệp & Xô thơm<br /> <strong>Hương:</strong> Khuynh diệp - xô thơm - bạc hà<br /> <strong>Cảm giác:</strong> Sạch, tinh khiết, mát lành.<br /> <strong>Mô tả:</strong> Sáp trắng điểm lá xanh mang vibe fresh & clean, thích hợp treo ở phòng tắm hay cửa ra vào để đón làn gió mới.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 152,
     "sold": 83,
-    "sale": 25,
-    "productCode": "SC-03-2855"
+    "sale": 25
   },
   {
     "id": 47,
     "name": "Morning Linen",
     "categoriesId": 3,
     "url": "morning-linen-wax",
-    "price": 8.99,
+    "price": 99000,
     "images": [
       "/images/product/p-47.jpg"
     ],
-    "description": "<strong>Hương:</strong> Bông mềm - sữa - xạ hương<br /> <strong>Cảm giác:</strong> Sạch sẽ, mát dịu, như đồ giặt mới.<br /> <strong>Mô tả:</strong> Thẻ sáp mang lại cảm giác fresh laundry, gợi ý dùng cho tủ quần áo, phòng tắm hoặc treo trong xe hơi.",
+    "description": "Sáp thơm SCENTA Morning Linen hương Vải mới & Quế cam khô<br /><strong>Hương:</strong> Bông mềm - sữa - xạ hương<br /> <strong>Cảm giác:</strong> Sạch sẽ, mát dịu, như đồ giặt mới.<br /> <strong>Mô tả:</strong> Thẻ sáp mang lại cảm giác fresh laundry, gợi ý dùng cho tủ quần áo, phòng tắm hoặc treo trong xe hơi.",
     "bestSeller": true,
     "outstanding": false,
     "limited": false,
     "quantity": 148,
     "sold": 71,
-    "sale": 25,
-    "productCode": "SC-03-3466"
+    "sale": 25
   },
   {
     "id": 48,
     "name": "Vanilla Wood",
     "categoriesId": 3,
     "url": "vanilla-wood-wax",
-    "price": 8.99,
+    "price": 99000,
     "images": [
       "/images/product/p-48.jpg"
     ],
-    "description": "<strong>Hương:</strong> Vanilla - gỗ tuyết tùng - hổ phách<br /> <strong>Cảm giác:</strong> Trầm ấm, thư giãn, dễ chịu.<br /> <strong>Mô tả:</strong> Mùi hương gỗ ngọt ấm, hợp với phòng đọc, phòng khách hay những chiều lạnh cần chút an yên.",
+    "description": "Sáp thơm SCENTA Vanilla Wood hương Gỗ vani dịu ấm<br /> <strong>Hương:</strong> Vanilla - gỗ tuyết tùng - hổ phách<br /> <strong>Cảm giác:</strong> Trầm ấm, thư giãn, dễ chịu.<br /> <strong>Mô tả:</strong> Mùi hương gỗ ngọt ấm, hợp với phòng đọc, phòng khách hay những chiều lạnh cần chút an yên.",
     "bestSeller": true,
     "outstanding": true,
     "limited": true,
     "quantity": 136,
     "sold": 64,
-    "sale": 25,
-    "productCode": "SC-03-3517"
+    "sale": 25
   },
   {
     "id": 49,
     "name": "White Blossom",
     "categoriesId": 3,
     "url": "white-blossom-wax",
-    "price": 8.99,
+    "price": 99000,
     "images": [
       "/images/product/p-49.jpg"
     ],
-    "description": "<strong>Hương:</strong> Hoa nhài - linh lan - hoa trắng tổng hợp<br /> <strong>Cảm giác:</strong> Sang trọng, thanh thoát, trong trẻo.<br /> <strong>Mô tả:</strong> Sáp tone trắng tinh khôi, phù hợp trang trí bàn làm việc hoặc treo trong xe cho cảm giác nhẹ nhàng.",
+    "description": "Sáp thơm SCENTA White Blossom hương Hoa trắng tự nhiên<br /> <strong>Hương:</strong> Hoa nhài - linh lan - hoa trắng tổng hợp<br /> <strong>Cảm giác:</strong> Sang trọng, thanh thoát, trong trẻo.<br /> <strong>Mô tả:</strong> Sáp tone trắng tinh khôi, phù hợp trang trí bàn làm việc hoặc treo trong xe cho cảm giác nhẹ nhàng.",
     "bestSeller": false,
     "outstanding": true,
     "limited": false,
     "quantity": 130,
     "sold": 53,
-    "sale": 25,
-    "productCode": "SC-03-3521"
+    "sale": 25
   },
   {
     "id": 50,
     "name": "Forest Memory",
     "categoriesId": 3,
     "url": "forest-memory-wax",
-    "price": 8.99,
+    "price": 99000,
     "images": [
       "/images/product/p-50.jpg"
     ],
-    "description": "<strong>Hương:</strong> Gỗ thông - đàn hương - cỏ hương bài<br /> <strong>Cảm giác:</strong> Bình yên, tự nhiên, đậm mùi rừng non.<br /> <strong>Mô tả:</strong> Thiết kế rustic phù hợp decor tối giản hoặc vintage, mang hơi thở rừng sâu vào không gian sống.",
+    "description": "Sáp thơm SCENTA Forest Memory hương Rừng thông Đà Lạt & Hoa dại<br /> <strong>Hương:</strong> Gỗ thông - đàn hương - cỏ hương bài<br /> <strong>Cảm giác:</strong> Bình yên, tự nhiên, đậm mùi rừng non.<br /> <strong>Mô tả:</strong> Thiết kế rustic phù hợp decor tối giản hoặc vintage, mang hơi thở rừng sâu vào không gian sống.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 142,
     "sold": 79,
-    "sale": 25,
-    "productCode": "SC-03-9789"
+    "sale": 25
   },
   {
     "id": 51,
     "name": "Dried Meadow",
     "categoriesId": 3,
     "url": "dried-meadow-wax",
-    "price": 8.99,
+    "price": 99000,
     "images": [
       "/images/product/p-51.jpg"
     ],
-    "description": "<strong>Hương:</strong> Gỗ đàn hương - thảo mộc khô - oải hương<br /> <strong>Cảm giác:</strong> Mộc mạc, ấm áp, tinh tế.<br /> <strong>Mô tả:</strong> Sáp treo mang hơi thở đồng cỏ, lý tưởng cho tủ áo hoặc văn phòng tone trầm nhờ hương thơm thư thái và sang trọng.",
+    "description": "Sáp thơm SCENTA Dried Meadow hương Hoa khô thiên nhiên<br /> <strong>Hương:</strong> Gỗ đàn hương - thảo mộc khô - oải hương<br /> <strong>Cảm giác:</strong> Mộc mạc, ấm áp, tinh tế.<br /> <strong>Mô tả:</strong> Sáp treo mang hơi thở đồng cỏ, lý tưởng cho tủ áo hoặc văn phòng tone trầm nhờ hương thơm thư thái và sang trọng.",
     "bestSeller": false,
     "outstanding": true,
     "limited": true,
     "quantity": 128,
     "sold": 48,
-    "sale": 25,
-    "productCode": "SC-03-4619"
+    "sale": 25
   },
   {
     "id": 52,
     "name": "Citrus & Herb Harmony",
     "categoriesId": 3,
     "url": "citrus-and-herb-harmony",
-    "price": 8.99,
+    "price": 99000,
     "images": [
       "/images/product/p-52.png"
     ],
-    "description": "<strong>Hương:</strong> Cam - khuynh diệp - hương thảo<br /> <strong>Cảm giác:</strong> Sảng khoái, cân bằng, thanh lọc không khí.<br /> <strong>Mô tả:</strong> Sáp tròn phối cam khô và lá bạc hà tạo nên không gian tươi mới, thích hợp cho ngày làm việc dài hoặc phòng khách.",
+    "description": "Sáp thơm SCENTA Citrus & Herb Harmony hương Thảo mộc & Cam khô<br /> <strong>Hương:</strong> Cam - khuynh diệp - hương thảo<br /> <strong>Cảm giác:</strong> Sảng khoái, cân bằng, thanh lọc không khí.<br /> <strong>Mô tả:</strong> Sáp tròn phối cam khô và lá bạc hà tạo nên không gian tươi mới, thích hợp cho ngày làm việc dài hoặc phòng khách.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 150,
     "sold": 90,
-    "sale": 25,
-    "productCode": "SC-03-2732"
+    "sale": 25
   },
   {
     "id": 53,
     "name": "Candle Making Kit – Classic Size",
     "categoriesId": 1,
     "url": "candle-making-kit-classic",
-    "price": 44.99,
+    "price": 289000,
     "images": [
       "/images/product/p-53.jpg"
     ],
-    "description": "<strong>Dung lượng:</strong> Làm được 2 hũ nến thơm 150g<br /> <strong>Bao gồm:</strong> Sáp đậu nành, tinh dầu, tim nến, hũ thủy tinh, thanh cố định, hướng dẫn chi tiết.<br /> <strong>Phong cách:</strong> Dành cho những ai muốn trải nghiệm làm nến thực thụ, tự tay pha trộn hương và tạo nên không gian mang dấu ấn riêng.<br /> <strong>Gợi ý hương:</strong> Lavender Dream / Rose Bloom / Citrus Harmony.",
+    "description": "Bộ kit làm nến SCENTA Classic Size đủ nguyên liệu hũ thủy tinh 150g<br /><strong>Dung lượng:</strong> Làm được 2 hũ nến thơm 150g<br /> <strong>Bao gồm:</strong> Sáp đậu nành, tinh dầu, tim nến, hũ thủy tinh, thanh cố định, hướng dẫn chi tiết.<br /> <strong>Phong cách:</strong> Dành cho những ai muốn trải nghiệm làm nến thực thụ, tự tay pha trộn hương và tạo nên không gian mang dấu ấn riêng.<br /> <strong>Gợi ý hương:</strong> Lavender Dream / Rose Bloom / Citrus Harmony.",
     "bestSeller": true,
     "outstanding": true,
     "limited": false,
     "quantity": 120,
     "sold": 58,
-    "sale": 25,
-    "productCode": "SC-01-3078"
-  },
-  {
-    "id": 54,
-    "name": "Candle Making Kit – Mini Size",
-    "categoriesId": 1,
-    "url": "candle-making-kit-mini",
-    "price": 29.99,
-    "images": [
-      "/images/product/p-54.jpg"
-    ],
-    "description": "<strong>Dung lượng:</strong> Làm được 2 hũ nến thơm 50g<br /> <strong>Bao gồm:</strong> Sáp, tinh dầu, tim nến, hũ mini, hoa khô trang trí, hướng dẫn.<br /> <strong>Phong cách:</strong> Phù hợp làm quà tặng, workshop nhỏ hoặc trải nghiệm đầu tiên với thế giới hương thơm thủ công.<br /> <strong>Gợi ý hương:</strong> Lavender / Rose / Vanilla.",
-    "bestSeller": true,
-    "outstanding": true,
-    "limited": false,
-    "quantity": 140,
-    "sold": 74,
-    "sale": 25,
-    "productCode": "SC-01-9570"
+    "sale": 25
   }
 ]

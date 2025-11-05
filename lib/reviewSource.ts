@@ -52,6 +52,7 @@ async function loadFromBlob(): Promise<ReviewStoreSchema> {
 
   const blob = await head(REVIEW_BLOB_SOURCE, {
     token: BLOB_TOKEN,
+    
   });
   return downloadBlobJson(blob.downloadUrl);
 }

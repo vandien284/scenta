@@ -21,6 +21,7 @@ async function fetchProductsFromBlob(): Promise<ProductType[] | null> {
               Authorization: `Bearer ${BLOB_TOKEN}`,
             }
           : undefined,
+          cache: "no-store",
         next: { revalidate: 0 },
       });
 
