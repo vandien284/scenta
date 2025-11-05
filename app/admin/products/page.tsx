@@ -23,11 +23,6 @@ export default async function AdminProductsPage() {
           <h1 className={styles.title}>Danh sách sản phẩm</h1>
           <p className={styles.subtitle}>Xem nhanh thông tin và thao tác với sản phẩm hiện có.</p>
         </div>
-        <div className={styles.headerActions}>
-          <Link href="/admin/products/new" className={styles.primaryButton}>
-            + Thêm sản phẩm
-          </Link>
-        </div>
       </div>
 
       {products.length ? (

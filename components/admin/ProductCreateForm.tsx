@@ -1,8 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { ChangeEvent, FormEvent, useEffect, useState, useTransition } from "react";
-import Image from "next/image";
+import { FormEvent, useState, useTransition } from "react";
 import { createProductAction } from "@/app/actions/adminProductsActions";
 import styles from "@/styles/components/admin/list.module.scss";
 
@@ -20,30 +19,6 @@ export default function ProductCreateForm({ categories }: ProductCreateFormProps
   const [isPending, startTransition] = useTransition();
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
-  const [selectedImages, setSelectedImages] = useState<Array<{ file: File; preview: string }>>([]);
-
-  useEffect(() => {
-    return () => {
-      selectedImages.forEach((item) => URL.revokeObjectURL(item.preview));
-    };
-  }, [selectedImages]);
-
-  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files ?? []);
-    if (!files.length) return;
-    const mapped = files.map((file) => ({ file, preview: URL.createObjectURL(file) }));
-    setSelectedImages((prev) => [...prev, ...mapped]);
-    event.target.value = "";
-  };
-
-  const handleRemoveNewImage = (preview: string) => {
-    setSelectedImages((prev) => {
-      const next = prev.filter((item) => item.preview !== preview);
-      const removed = prev.find((item) => item.preview === preview);
-      if (removed) URL.revokeObjectURL(removed.preview);
-      return next;
-    });
-  };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -60,11 +35,8 @@ export default function ProductCreateForm({ categories }: ProductCreateFormProps
 
     startTransition(async () => {
       try {
-        formData.delete("newImages");
-        selectedImages.forEach(({ file }) => formData.append("newImages", file));
         await createProductAction(formData);
         form.reset();
-        setSelectedImages([]);
         setSuccess("Đã thêm sản phẩm mới.");
         router.refresh();
       } catch (err) {
@@ -77,8 +49,8 @@ export default function ProductCreateForm({ categories }: ProductCreateFormProps
   return (
     <section className={styles.formCard}>
       <h2 className={styles.formTitle}>Thêm sản phẩm mới</h2>
-      <p className={styles.formSubtitle}>Điền thông tin cơ bản và tải lên hình ảnh nén tự động.</p>
-      <form onSubmit={handleSubmit} className={styles.productForm} encType="multipart/form-data">
+      <p className={styles.formSubtitle}>Điền đầy đủ thông tin cơ bản cho sản phẩm (không hỗ trợ tải hình ảnh).</p>
+      <form onSubmit={handleSubmit} className={styles.productForm}>
         <div className={styles.formRow}>
           <label>Tên sản phẩm*</label>
           <input name="name" type="text" required placeholder="Ví dụ: Autumn Ember" />
@@ -123,38 +95,6 @@ export default function ProductCreateForm({ categories }: ProductCreateFormProps
           <label>Mô tả</label>
           <textarea name="description" rows={3} placeholder="Mô tả ngắn cho sản phẩm" />
         </div>
-
-        <div className={styles.formRow}>
-          <label>Thêm hình ảnh mới</label>
-          <input name="newImages" type="file" accept="image/*" multiple onChange={handleFileChange} />
-          <span className={styles.formHint}>Ảnh sẽ được nén và lưu tại /public/images/product</span>
-        </div>
-
-        {selectedImages.length ? (
-          <div className={styles.imageGallery}>
-            {selectedImages.map((item) => (
-              <div key={item.preview} className={styles.imageItem}>
-                <Image
-                  src={item.preview}
-                  alt="Ảnh mới"
-                  width={140}
-                  height={140}
-                  className={styles.imagePreview}
-                  unoptimized
-                />
-                <button
-                  type="button"
-                  className={styles.imageRemove}
-                  onClick={() => handleRemoveNewImage(item.preview)}
-                >
-                  Xóa
-                </button>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className={styles.imageEmpty}>Chưa chọn hình ảnh mới.</div>
-        )}
 
         <div className={styles.checkboxRow}>
           <label><input type="checkbox" name="bestSeller" /> Bán chạy</label>
