@@ -98,8 +98,8 @@ export default function Product({ data }: ProductProps) {
               <Card.Text className={styles.priceWrapper}>
                 {hasSale ? (
                   <>
-                    <span className={styles.salePrice}>{formattedDiscounted}</span>
-                    <span className={styles.originalPrice}>{formattedOriginal}</span>
+                    <span className={styles.salePrice}>{formattedDiscounted} VND</span>
+                    <span className={styles.originalPrice}>{formattedOriginal} VND</span>
                   </>
                 ) : (
                   <span className={styles.regularPrice}>{formattedDiscounted}</span>

@@ -146,10 +146,10 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           </div>
 
           <div className={styles.priceRow}>
-            <span className={styles.salePrice}>{formattedDiscountedPrice}</span>
+            <span className={styles.salePrice}>{formattedDiscountedPrice} VND</span>
             {hasSale ? (
               <>
-                <span className={styles.originalPrice}>{formattedOriginalPrice}</span>
+                <span className={styles.originalPrice}>{formattedOriginalPrice} VND</span>
                 <span className={styles.saleTag}>-{salePercent}%</span>
               </>
             ) : null}
