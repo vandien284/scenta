@@ -1,6 +1,6 @@
 import { head, put } from "@vercel/blob";
 import { ProductType } from "@/types/ProductType";
-import { clearProductCache } from "./productSource";
+// import { clearProductCache } from "./productSource";
 
 const PRODUCT_BLOB_SOURCE =
   process.env.PRODUCTS_BLOB_URL ?? process.env.PRODUCTS_BLOB_PATH;
@@ -68,7 +68,7 @@ async function persistProducts(products: ProductType[]) {
     }
   );
 
-  clearProductCache();
+  // clearProductCache();
 }
 
 export async function applyInventoryAdjustments(

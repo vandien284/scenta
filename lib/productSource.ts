@@ -1,7 +1,7 @@
+"use server";
+
 import { head } from "@vercel/blob";
 import { ProductType } from "@/types/ProductType";
-
-let cachedProducts: ProductType[] | null = null;
 
 const BLOB_SOURCE = process.env.PRODUCTS_BLOB_URL ?? process.env.PRODUCTS_BLOB_PATH;
 const BLOB_TOKEN =
@@ -42,15 +42,9 @@ async function fetchFromBlob(): Promise<ProductType[]> {
 }
 
 export async function getAllProducts(): Promise<ProductType[]> {
-  if (cachedProducts) {
-    return cachedProducts;
-  }
-
-  const blobProducts = await fetchFromBlob();
-  cachedProducts = blobProducts;
-  return cachedProducts;
+  return fetchFromBlob();
 }
 
-export function clearProductCache() {
-  cachedProducts = null;
-}
+// export function clearProductCache() {
+//   // Không còn cache nội bộ; hàm giữ lại để tương thích với phần gọi hiện có.
+// }
