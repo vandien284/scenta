@@ -14,7 +14,8 @@
     "limited": true,
     "quantity": 120,
     "sold": 46,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-02-4444"
   },
   {
     "id": 2,
@@ -31,7 +32,8 @@
     "limited": true,
     "quantity": 115,
     "sold": 42,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-02-5209"
   },
   {
     "id": 3,
@@ -48,7 +50,8 @@
     "limited": false,
     "quantity": 110,
     "sold": 57,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-02-5577"
   },
   {
     "id": 4,
@@ -65,7 +68,8 @@
     "limited": false,
     "quantity": 98,
     "sold": 35,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-02-2414"
   },
   {
     "id": 5,
@@ -82,7 +86,8 @@
     "limited": true,
     "quantity": 140,
     "sold": 67,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-02-8423"
   },
   {
     "id": 6,
@@ -99,7 +104,8 @@
     "limited": false,
     "quantity": 133,
     "sold": 59,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-02-6837"
   },
   {
     "id": 7,
@@ -116,7 +122,8 @@
     "limited": true,
     "quantity": 150,
     "sold": 81,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-02-1539"
   },
   {
     "id": 8,
@@ -133,7 +140,8 @@
     "limited": false,
     "quantity": 124,
     "sold": 46,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-02-8035"
   },
   {
     "id": 9,
@@ -150,7 +158,8 @@
     "limited": true,
     "quantity": 160,
     "sold": 92,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-05-7092"
   },
   {
     "id": 10,
@@ -167,7 +176,8 @@
     "limited": true,
     "quantity": 118,
     "sold": 41,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-05-3557"
   },
   {
     "id": 11,
@@ -184,7 +194,8 @@
     "limited": true,
     "quantity": 112,
     "sold": 57,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-02-1349"
   },
   {
     "id": 12,
@@ -201,7 +212,8 @@
     "limited": true,
     "quantity": 105,
     "sold": 49,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-02-2115"
   },
   {
     "id": 13,
@@ -218,7 +230,8 @@
     "limited": false,
     "quantity": 140,
     "sold": 73,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-06-3139"
   },
   {
     "id": 14,
@@ -235,7 +248,8 @@
     "limited": false,
     "quantity": 135,
     "sold": 66,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-06-1273"
   },
   {
     "id": 15,
@@ -252,7 +266,8 @@
     "limited": false,
     "quantity": 125,
     "sold": 48,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-06-2694"
   },
   {
     "id": 16,
@@ -269,7 +284,8 @@
     "limited": true,
     "quantity": 150,
     "sold": 82,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-06-3089"
   },
   {
     "id": 17,
@@ -286,7 +302,8 @@
     "limited": false,
     "quantity": 130,
     "sold": 52,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-06-3995"
   },
   {
     "id": 18,
@@ -303,7 +320,8 @@
     "limited": true,
     "quantity": 120,
     "sold": 44,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-06-6261"
   },
   {
     "id": 19,
@@ -320,7 +338,8 @@
     "limited": false,
     "quantity": 110,
     "sold": 51,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-06-8529"
   },
   {
     "id": 20,
@@ -337,7 +356,8 @@
     "limited": false,
     "quantity": 145,
     "sold": 77,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-06-3648"
   },
   {
     "id": 21,
@@ -354,7 +374,8 @@
     "limited": true,
     "quantity": 118,
     "sold": 64,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-06-3976"
   },
   {
     "id": 22,
@@ -371,7 +392,8 @@
     "limited": false,
     "quantity": 126,
     "sold": 43,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-06-1644"
   },
   {
     "id": 23,
@@ -388,7 +410,8 @@
     "limited": false,
     "quantity": 132,
     "sold": 59,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-06-7003"
   },
   {
     "id": 24,
@@ -405,7 +428,8 @@
     "limited": true,
     "quantity": 138,
     "sold": 71,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-06-4186"
   },
   {
     "id": 25,
@@ -422,7 +446,8 @@
     "limited": false,
     "quantity": 160,
     "sold": 84,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-05-6072"
   },
   {
     "id": 26,
@@ -439,7 +464,8 @@
     "limited": false,
     "quantity": 150,
     "sold": 79,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-05-5471"
   },
   {
     "id": 27,
@@ -456,7 +482,8 @@
     "limited": false,
     "quantity": 140,
     "sold": 58,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-05-6829"
   },
   {
     "id": 28,
@@ -473,7 +500,8 @@
     "limited": true,
     "quantity": 132,
     "sold": 63,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-05-7408"
   },
   {
     "id": 29,
@@ -490,7 +518,8 @@
     "limited": false,
     "quantity": 148,
     "sold": 92,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-05-1620"
   },
   {
     "id": 30,
@@ -507,7 +536,8 @@
     "limited": false,
     "quantity": 142,
     "sold": 55,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-05-2423"
   },
   {
     "id": 31,
@@ -524,7 +554,8 @@
     "limited": false,
     "quantity": 165,
     "sold": 93,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-04-8586"
   },
   {
     "id": 32,
@@ -541,7 +572,8 @@
     "limited": true,
     "quantity": 142,
     "sold": 78,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-04-4235"
   },
   {
     "id": 33,
@@ -558,7 +590,8 @@
     "limited": false,
     "quantity": 138,
     "sold": 61,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-04-6943"
   },
   {
     "id": 34,
@@ -575,7 +608,8 @@
     "limited": false,
     "quantity": 150,
     "sold": 85,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-04-4837"
   },
   {
     "id": 35,
@@ -592,7 +626,8 @@
     "limited": false,
     "quantity": 148,
     "sold": 90,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-04-4262"
   },
   {
     "id": 36,
@@ -610,7 +645,8 @@
     "limited": false,
     "quantity": 155,
     "sold": 88,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-04-8128"
   },
   {
     "id": 37,
@@ -627,7 +663,8 @@
     "limited": false,
     "quantity": 140,
     "sold": 69,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-04-3668"
   },
   {
     "id": 38,
@@ -644,7 +681,8 @@
     "limited": true,
     "quantity": 136,
     "sold": 74,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-04-9298"
   },
   {
     "id": 39,
@@ -661,7 +699,8 @@
     "limited": false,
     "quantity": 144,
     "sold": 81,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-04-9531"
   },
   {
     "id": 40,
@@ -678,7 +717,8 @@
     "limited": false,
     "quantity": 158,
     "sold": 94,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-04-1864"
   },
   {
     "id": 41,
@@ -695,7 +735,8 @@
     "limited": false,
     "quantity": 140,
     "sold": 76,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-03-3223"
   },
   {
     "id": 42,
@@ -712,7 +753,8 @@
     "limited": true,
     "quantity": 132,
     "sold": 68,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-03-3498"
   },
   {
     "id": 43,
@@ -729,7 +771,8 @@
     "limited": false,
     "quantity": 138,
     "sold": 59,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-03-7431"
   },
   {
     "id": 44,
@@ -746,7 +789,8 @@
     "limited": false,
     "quantity": 146,
     "sold": 81,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-03-3050"
   },
   {
     "id": 45,
@@ -763,7 +807,8 @@
     "limited": false,
     "quantity": 134,
     "sold": 57,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-03-7358"
   },
   {
     "id": 46,
@@ -780,7 +825,8 @@
     "limited": false,
     "quantity": 152,
     "sold": 83,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-03-2855"
   },
   {
     "id": 47,
@@ -797,7 +843,8 @@
     "limited": false,
     "quantity": 148,
     "sold": 71,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-03-3466"
   },
   {
     "id": 48,
@@ -814,7 +861,8 @@
     "limited": true,
     "quantity": 136,
     "sold": 64,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-03-3517"
   },
   {
     "id": 49,
@@ -831,7 +879,8 @@
     "limited": false,
     "quantity": 130,
     "sold": 53,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-03-3521"
   },
   {
     "id": 50,
@@ -848,7 +897,8 @@
     "limited": false,
     "quantity": 142,
     "sold": 79,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-03-9789"
   },
   {
     "id": 51,
@@ -865,7 +915,8 @@
     "limited": true,
     "quantity": 128,
     "sold": 48,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-03-4619"
   },
   {
     "id": 52,
@@ -882,7 +933,8 @@
     "limited": false,
     "quantity": 150,
     "sold": 90,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-03-2732"
   },
   {
     "id": 53,
@@ -899,7 +951,8 @@
     "limited": false,
     "quantity": 120,
     "sold": 58,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-01-3078"
   },
   {
     "id": 54,
@@ -916,6 +969,7 @@
     "limited": false,
     "quantity": 140,
     "sold": 74,
-    "sale": 25
+    "sale": 25,
+    "productCode": "SC-01-9570"
   }
 ]

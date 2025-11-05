@@ -99,3 +99,83 @@ export async function applyInventoryAdjustments(
 
   await persistProducts(products);
 }
+
+export async function loadProducts(): Promise<ProductType[]> {
+  return loadProductStore();
+}
+
+function resolveNextProductId(products: ProductType[]): number {
+  const maxId = products.reduce((max, product) => Math.max(max, Number(product.id) || 0), 0);
+  return maxId + 1;
+}
+
+export interface ProductInput {
+  name: string;
+  url: string;
+  categoriesId: number;
+  price: number;
+  images: string[];
+  description?: string;
+  bestSeller?: boolean;
+  outstanding?: boolean;
+  limited?: boolean;
+  quantity: number;
+  sale?: number;
+  sold?: number;
+}
+
+export async function createProduct(input: ProductInput): Promise<ProductType> {
+  const products = await loadProductStore();
+  const id = resolveNextProductId(products);
+
+  const product: ProductType = {
+    id,
+    name: input.name,
+    url: input.url,
+    categoriesId: input.categoriesId,
+    price: input.price,
+    images: input.images,
+    description: input.description,
+    bestSeller: input.bestSeller,
+    outstanding: input.outstanding,
+    limited: input.limited,
+    quantity: input.quantity,
+    sold: input.sold ?? 0,
+    sale: input.sale,
+  };
+
+  products.push(product);
+  await persistProducts(products);
+  return product;
+}
+
+export async function updateProduct(id: number, changes: Partial<ProductInput>): Promise<ProductType> {
+  const products = await loadProductStore();
+  const index = products.findIndex((product) => product.id === id);
+  if (index === -1) {
+    throw new Error(`Không tìm thấy sản phẩm với ID ${id}.`);
+  }
+
+  const current = products[index];
+  const updated: ProductType = {
+    ...current,
+    ...changes,
+    id,
+    images: changes.images ?? current.images,
+    sale: changes.sale ?? current.sale,
+    sold: changes.sold ?? current.sold,
+  };
+
+  products[index] = updated;
+  await persistProducts(products);
+  return updated;
+}
+
+export async function deleteProduct(id: number): Promise<void> {
+  const products = await loadProductStore();
+  const filtered = products.filter((product) => product.id !== id);
+  if (filtered.length === products.length) {
+    throw new Error(`Không tìm thấy sản phẩm với ID ${id}.`);
+  }
+  await persistProducts(filtered);
+}

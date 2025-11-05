@@ -15,10 +15,10 @@ interface FavoritesContextValue {
   isLoading: boolean;
   isUpdating: boolean;
   refresh: () => Promise<void>;
-  addFavorite: (productId: number) => Promise<void>;
-  removeFavorite: (productId: number) => Promise<void>;
+  addFavorite: (productId: number) => Promise<FavoriteResponse>;
+  removeFavorite: (productId: number) => Promise<FavoriteResponse>;
   toggleFavorite: (productId: number) => Promise<void>;
-  clearFavorites: () => Promise<void>;
+  clearFavorites: () => Promise<FavoriteResponse>;
   isFavorite: (productId: number) => boolean;
 }
 

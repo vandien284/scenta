@@ -11,6 +11,9 @@ export default function PromoPoster() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+    if (window.location.pathname.startsWith("/admin")) {
+      return;
+    }
     const hasDismissed = sessionStorage.getItem(STORAGE_KEY);
     if (!hasDismissed) {
       startTransition(() => {
