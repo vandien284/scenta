@@ -1,4 +1,4 @@
-import { notFound, redirect } from "next/navigation";
+﻿import { notFound, redirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb from "@/components/common/Breadcrumb";
@@ -47,7 +47,7 @@ function renderBlock(block: ArticleBlock, index: number) {
       return (
         <figure key={index} className={styles.quote}>
           <blockquote>{block.text}</blockquote>
-          {block.author && <figcaption>— {block.author}</figcaption>}
+          {block.author && <figcaption>- {block.author}</figcaption>}
         </figure>
       );
     case "callout":
@@ -123,7 +123,10 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
 
   return (
     <Fragment>
-      <ParallaxBackground image={"/images/parallax/banner-page.webp"} height="45vh">
+      <ParallaxBackground
+        image={"/images/parallax/banner-page.webp"}
+        height="clamp(320px, 58vh, 480px)"
+      >
         <Breadcrumb
           crumbs={[
             { name: "Trang chủ", href: "/" },
@@ -222,3 +225,5 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
     </Fragment>
   );
 }
+
+
