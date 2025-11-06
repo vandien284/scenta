@@ -11,18 +11,43 @@ import CustomerReviews from "@/components/home/CustomerReview";
 import { getAllProducts } from "@/lib/productSource";
 import styles from "@/styles/view/home.module.scss";
 export default async function Home() {
-  const productData = await getAllProducts();
+  let productData: Awaited<ReturnType<typeof getAllProducts>> | null = null;
+
+  try {
+    productData = await getAllProducts();
+  } catch (error) {
+    console.error("[Home] Unable to load products from blob:", error);
+  }
+
+  const renderFallback = (message: string) => (
+    <div className={styles.loadingFallback} role="status">
+      {message}
+    </div>
+  );
+
   return (
     <PagesLayout>
       <Banner />
       <Highlight />
       <section className={styles.section}>
         <div className="container-width"  style={{ overflow: "hidden" }}>
-          <ProductSlider tabs={TabsData} data={productData} />
+          {productData ? (
+            <ProductSlider tabs={TabsData} data={productData} />
+          ) : (
+            renderFallback("Đang tải dữ liệu sản phẩm...")
+          )}
         </div>
       </section>
       <OurStory />
-      <ProductList tab={TabData} data={productData.filter(p => p.limited)} />
+      {productData ? (
+        <ProductList tab={TabData} data={productData.filter((p) => p.limited)} />
+      ) : (
+        <section className={styles.section}>
+          <div className="container-width">
+            {renderFallback("Đang tải dữ liệu sản phẩm...")}
+          </div>
+        </section>
+      )}
       <CustomerReviews />
     </PagesLayout>
   );

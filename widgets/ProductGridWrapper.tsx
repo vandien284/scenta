@@ -140,7 +140,7 @@ const ProductGridWrapper = forwardRef<ProductGridWrapperHandle, ProductGridWrapp
         window.dispatchEvent(
           new CustomEvent("initFilter", {
             detail: {
-              cateId: urlCateParam ?? "",
+              cateId: urlCate,
               priceMin: urlMin,
               priceMax: urlMax,
             },

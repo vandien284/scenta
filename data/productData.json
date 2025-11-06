@@ -138,7 +138,7 @@
   {
     "id": 9,
     "name": "Misty Calm",
-    "categoriesId": 5,
+    "categoriesId": 2,
     "url": "misty-calm",
     "price": 219000,
     "images": [
@@ -155,7 +155,7 @@
   {
     "id": 10,
     "name": "Purple Haven",
-    "categoriesId": 5,
+    "categoriesId": 2,
     "url": "purple-haven",
     "price": 219000,
     "images": [

@@ -362,6 +362,17 @@
   }
 }
 
+.loadingFallback {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.125rem;
+  color: #5f5a72;
+}
+
 @media (max-width: 992px) {
   .productDetail {
     .actionsWrapper {

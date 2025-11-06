@@ -8,3 +8,14 @@
     padding: 40px 0;
   }
 }
+
+.loadingFallback {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.125rem;
+  color: #5f5a72;
+}

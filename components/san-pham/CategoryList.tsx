@@ -33,7 +33,7 @@ export default function CategoryList({ categories, active, onChange }: CategoryL
       <h3 className={styles.heading}>DANH MỤC</h3>
       <ul className={styles.list}>
         <li
-          className={`${styles.item} ${selected === "" ? styles.active : ""}`}
+          className={`${styles.item} ${selected === 0 || selected === "" ? styles.active : ""}`}
           onClick={() => handleSelect("")}
         >
           <span className={styles.arrow}>
