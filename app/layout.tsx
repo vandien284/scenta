@@ -4,7 +4,7 @@ import "@/styles/globals.scss";
 import CartProvider from "@/components/common/CartProvider";
 import FavoritesProvider from "@/components/common/FavoritesProvider";
 import PromoPoster from "@/components/common/PromoPoster";
-
+import { Analytics } from "@vercel/analytics/next"
 const beVietnamPro = Be_Vietnam_Pro({
   variable: "--font-be-vietnam-pro",
   subsets: ["latin", "vietnamese"],
@@ -35,6 +35,7 @@ export default function RootLayout({
           <FavoritesProvider>
             <PromoPoster />
             {children}
+            <Analytics />
           </FavoritesProvider>
         </CartProvider>
       </body>
